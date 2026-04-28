@@ -927,3 +927,13 @@ SOURCE: console:?:?
 STACK:
 N/A
 ----------------------------------
+[2026-04-28T20:52:46.996Z] [WARN] [VFS] ensureDir EEXIST or error for /logs TypeError: Failed to fetch
+SOURCE: console:?:?
+STACK:
+N/A
+----------------------------------
+[2026-04-28T20:52:47.057Z] [WARN] [VFS] ensureDir EEXIST or error for /logs TypeError: Failed to fetch
+SOURCE: console:?:?
+STACK:
+N/A
+----------------------------------
