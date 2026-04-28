@@ -2316,3 +2316,288 @@ SOURCE: console:?:?
 STACK:
 N/A
 ----------------------------------
+[2026-04-28T20:54:46.951Z] [LOG] [SAERE_LOG] [2026-04-28T20:54:45.783Z] [CIRCUIT_FAILURE] [HASH:691402c4] {"errorSignature":"SPAM_ERROR_49","count":1}
+SOURCE: console:?:?
+STACK:
+N/A
+----------------------------------
+[2026-04-28T20:54:46.986Z] [LOG] [SAERE_LOG] [2026-04-28T20:54:45.783Z] [CIRCUIT_FAILURE] [HASH:691402c4] {"errorSignature":"SPAM_ERROR_49","count":1}
+SOURCE: console:?:?
+STACK:
+N/A
+----------------------------------
+[2026-04-28T20:54:47.026Z] [LOG] [SAERE_LOG] [2026-04-28T20:54:45.890Z] [CIRCUIT_FAILURE] [HASH:3d6f8fea] {"errorSignature":"SPAM_ERROR_50","count":1}
+SOURCE: console:?:?
+STACK:
+N/A
+----------------------------------
+[2026-04-28T20:54:47.029Z] [LOG] [SAERE_LOG] [2026-04-28T20:54:45.890Z] [CIRCUIT_FAILURE] [HASH:3d6f8fea] {"errorSignature":"SPAM_ERROR_50","count":1}
+SOURCE: console:?:?
+STACK:
+N/A
+----------------------------------
+[2026-04-28T20:54:47.162Z] [LOG] [SAERE_LOG] [2026-04-28T20:54:44.918Z] [CIRCUIT_FAILURE] [HASH:1c93e0ee] {"errorSignature":"SPAM_ERROR_43","count":1}
+SOURCE: console:?:?
+STACK:
+N/A
+----------------------------------
+[2026-04-28T20:54:47.190Z] [LOG] [SAERE_LOG] [2026-04-28T20:54:46.743Z] [CIRCUIT_FAILURE] [HASH:15f6b18e] {"errorSignature":"SPAM_ERROR_57","count":1}
+SOURCE: console:?:?
+STACK:
+N/A
+----------------------------------
+[2026-04-28T20:54:47.193Z] [LOG] [SAERE_LOG] [2026-04-28T20:54:46.743Z] [CIRCUIT_FAILURE] [HASH:15f6b18e] {"errorSignature":"SPAM_ERROR_57","count":1}
+SOURCE: console:?:?
+STACK:
+N/A
+----------------------------------
+[2026-04-28T20:54:47.252Z] [LOG] [SwarmOrchestrator] agent14 (Unit-14 (VFSArchitect)) berhasil di-booting.
+SOURCE: console:?:?
+STACK:
+N/A
+----------------------------------
+[2026-04-28T20:54:47.290Z] [LOG] [SAERE_LOG] [2026-04-28T20:54:44.918Z] [CIRCUIT_FAILURE] [HASH:1c93e0ee] {"errorSignature":"SPAM_ERROR_43","count":1}
+SOURCE: console:?:?
+STACK:
+N/A
+----------------------------------
+[2026-04-28T20:54:47.305Z] [LOG] [SAERE_LOG] [2026-04-28T20:54:44.978Z] [CIRCUIT_FAILURE] [HASH:1073f4b7] {"errorSignature":"SPAM_ERROR_44","count":1}
+SOURCE: console:?:?
+STACK:
+N/A
+----------------------------------
+[2026-04-28T20:54:47.307Z] [LOG] [SAERE_LOG] [EVOLUTION_PROPOSAL] 
+## Evolution Proposal [2026-04-28T20:54:44.936Z]
+**Trigger:** 5 failures on category: "worker_fatal"
+**Proposal:** {}
+---
+
+SOURCE: console:?:?
+STACK:
+N/A
+----------------------------------
+[2026-04-28T20:54:47.312Z] [LOG] [SAERE_LOG] [EVOLUTION_PROPOSAL] 
+## Evolution Proposal [2026-04-28T20:54:44.936Z]
+**Trigger:** 5 failures on category: "worker_fatal"
+**Proposal:** {}
+---
+
+SOURCE: console:?:?
+STACK:
+N/A
+----------------------------------
+[2026-04-28T20:54:47.314Z] [LOG] [SAERE_LOG] [2026-04-28T20:54:44.978Z] [CIRCUIT_FAILURE] [HASH:1073f4b7] {"errorSignature":"SPAM_ERROR_44","count":1}
+SOURCE: console:?:?
+STACK:
+N/A
+----------------------------------
+[2026-04-28T20:54:47.317Z] [WARN] [agent2] [FAILOVER] Model gemini-3.1-pro-preview failed. Key: AIzaSyD5E9... Error: {"error":{"code":429,"message":"You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 0, model: gemini-3.1-pro\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-3.1-pro\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-3.1-pro\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 0, model: gemini-3.1-pro\nPlease retry in 15.142298572s.","status":"RESOURCE_EXHAUSTED","details":[{"@type":"type.googleapis.com/google.rpc.Help","links":[{"description":"Learn more about Gemini API quotas","url":"https://ai.google.dev/gemini-api/docs/rate-limits"}]},{"@type":"type.googleapis.com/google.rpc.QuotaFailure","violations":[{"quotaMetric":"generativelanguage.googleapis.com/generate_content_free_tier_input_token_count","quotaId":"GenerateContentInputTokensPerModelPerMinute-FreeTier","quotaDimensions":{"location":"global","model":"gemini-3.1-pro"}},{"quotaMetric":"generativelanguage.googleapis.com/generate_content_free_tier_requests","quotaId":"GenerateRequestsPerMinutePerProjectPerModel-FreeTier","quotaDimensions":{"model":"gemini-3.1-pro","location":"global"}},{"quotaMetric":"generativelanguage.googleapis.com/generate_content_free_tier_requests","quotaId":"GenerateRequestsPerDayPerProjectPerModel-FreeTier","quotaDimensions":{"model":"gemini-3.1-pro","location":"global"}},{"quotaMetric":"generativelanguage.googleapis.com/generate_content_free_tier_input_token_count","quotaId":"GenerateContentInputTokensPerModelPerDay-FreeTier","quotaDimensions":{"model":"gemini-3.1-pro","location":"global"}}]},{"@type":"type.googleapis.com/google.rpc.RetryInfo","retryDelay":"15s"}]}}
+SOURCE: console:?:?
+STACK:
+N/A
+----------------------------------
+[2026-04-28T20:54:47.322Z] [LOG] [agent2] Attempting with: gemini-3-flash-preview...
+SOURCE: console:?:?
+STACK:
+N/A
+----------------------------------
+[2026-04-28T20:54:47.328Z] [WARN] [KeyRotator] PENALTY: Moving failed key AIzaSyD5E9... to the end of the global queue.
+SOURCE: console:?:?
+STACK:
+N/A
+----------------------------------
+[2026-04-28T20:54:47.331Z] [WARN] [KeyRotator] PENALTY: Moving failed key AIzaSyD5E9... to the end of the global queue.
+SOURCE: console:?:?
+STACK:
+N/A
+----------------------------------
+[2026-04-28T20:54:47.335Z] [WARN] [agent2] [FAILOVER] Model gemini-3.1-pro-preview failed. Key: AIzaSyD5E9... Error: {"error":{"code":429,"message":"You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 0, model: gemini-3.1-pro\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-3.1-pro\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-3.1-pro\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 0, model: gemini-3.1-pro\nPlease retry in 15.142298572s.","status":"RESOURCE_EXHAUSTED","details":[{"@type":"type.googleapis.com/google.rpc.Help","links":[{"description":"Learn more about Gemini API quotas","url":"https://ai.google.dev/gemini-api/docs/rate-limits"}]},{"@type":"type.googleapis.com/google.rpc.QuotaFailure","violations":[{"quotaMetric":"generativelanguage.googleapis.com/generate_content_free_tier_input_token_count","quotaId":"GenerateContentInputTokensPerModelPerMinute-FreeTier","quotaDimensions":{"location":"global","model":"gemini-3.1-pro"}},{"quotaMetric":"generativelanguage.googleapis.com/generate_content_free_tier_requests","quotaId":"GenerateRequestsPerMinutePerProjectPerModel-FreeTier","quotaDimensions":{"model":"gemini-3.1-pro","location":"global"}},{"quotaMetric":"generativelanguage.googleapis.com/generate_content_free_tier_requests","quotaId":"GenerateRequestsPerDayPerProjectPerModel-FreeTier","quotaDimensions":{"model":"gemini-3.1-pro","location":"global"}},{"quotaMetric":"generativelanguage.googleapis.com/generate_content_free_tier_input_token_count","quotaId":"GenerateContentInputTokensPerModelPerDay-FreeTier","quotaDimensions":{"model":"gemini-3.1-pro","location":"global"}}]},{"@type":"type.googleapis.com/google.rpc.RetryInfo","retryDelay":"15s"}]}}
+SOURCE: console:?:?
+STACK:
+N/A
+----------------------------------
+[2026-04-28T20:54:47.353Z] [LOG] [SAERE_LOG] [EVOLUTION_PROPOSAL] 
+## Evolution Proposal [2026-04-28T20:54:43.684Z]
+**Trigger:** 5 failures on category: "worker_fatal"
+**Proposal:** {}
+---
+
+SOURCE: console:?:?
+STACK:
+N/A
+----------------------------------
+[2026-04-28T20:54:47.369Z] [LOG] [SAERE_LOG] [2026-04-28T20:54:43.741Z] [CIRCUIT_FAILURE] [HASH:62858464] {"errorSignature":"SPAM_ERROR_34","count":1}
+SOURCE: console:?:?
+STACK:
+N/A
+----------------------------------
+[2026-04-28T20:54:47.377Z] [LOG] [SAERE_LOG] [EVOLUTION_PROPOSAL] 
+## Evolution Proposal [2026-04-28T20:54:43.684Z]
+**Trigger:** 5 failures on category: "worker_fatal"
+**Proposal:** {}
+---
+
+SOURCE: console:?:?
+STACK:
+N/A
+----------------------------------
+[2026-04-28T20:54:47.379Z] [LOG] [SAERE_LOG] [2026-04-28T20:54:43.741Z] [CIRCUIT_FAILURE] [HASH:62858464] {"errorSignature":"SPAM_ERROR_34","count":1}
+SOURCE: console:?:?
+STACK:
+N/A
+----------------------------------
+[2026-04-28T20:54:47.442Z] [LOG] [agent2 - The Logic Gate] Memulai task (SUPREME 9-TIER PROTOCOL)...
+SOURCE: console:?:?
+STACK:
+N/A
+----------------------------------
+[2026-04-28T20:54:47.470Z] [LOG] [SAERE_LOG] [2026-04-28T20:54:46.021Z] [CIRCUIT_FAILURE] [HASH:2df2ab4c] {"errorSignature":"SPAM_ERROR_52","count":1}
+SOURCE: console:?:?
+STACK:
+N/A
+----------------------------------
+[2026-04-28T20:54:47.473Z] [LOG] [SAERE_LOG] [2026-04-28T20:54:45.979Z] [CIRCUIT_FAILURE] [HASH:cd26a1d3] {"errorSignature":"SPAM_ERROR_51","count":1}
+SOURCE: console:?:?
+STACK:
+N/A
+----------------------------------
+[2026-04-28T20:54:47.485Z] [LOG] [SAERE_LOG] [2026-04-28T20:54:45.979Z] [CIRCUIT_FAILURE] [HASH:cd26a1d3] {"errorSignature":"SPAM_ERROR_51","count":1}
+SOURCE: console:?:?
+STACK:
+N/A
+----------------------------------
+[2026-04-28T20:54:47.487Z] [LOG] [SAERE_LOG] [2026-04-28T20:54:46.021Z] [CIRCUIT_FAILURE] [HASH:2df2ab4c] {"errorSignature":"SPAM_ERROR_52","count":1}
+SOURCE: console:?:?
+STACK:
+N/A
+----------------------------------
+[2026-04-28T20:54:47.558Z] [WARN] [KeyRotator] PENALTY: Moving failed key AIzaSyAaYF... to the end of the global queue.
+SOURCE: console:?:?
+STACK:
+N/A
+----------------------------------
+[2026-04-28T20:54:47.561Z] [WARN] [agent2] [FAILOVER] Model gemini-3-flash-preview failed. Key: AIzaSyAaYF... Error: {"error":{"code":403,"message":"Your API key was reported as leaked. Please use another API key.","status":"PERMISSION_DENIED"}}
+SOURCE: console:?:?
+STACK:
+N/A
+----------------------------------
+[2026-04-28T20:54:47.565Z] [WARN] [KeyRotator] PENALTY: Moving failed key AIzaSyAaYF... to the end of the global queue.
+SOURCE: console:?:?
+STACK:
+N/A
+----------------------------------
+[2026-04-28T20:54:47.573Z] [LOG] [agent2] Attempting with: gemini-1.5-flash...
+SOURCE: console:?:?
+STACK:
+N/A
+----------------------------------
+[2026-04-28T20:54:47.578Z] [LOG] [agent2] Attempting with: gemini-1.5-flash...
+SOURCE: console:?:?
+STACK:
+N/A
+----------------------------------
+[2026-04-28T20:54:47.580Z] [WARN] [agent2] [FAILOVER] Model gemini-3-flash-preview failed. Key: AIzaSyAaYF... Error: {"error":{"code":403,"message":"Your API key was reported as leaked. Please use another API key.","status":"PERMISSION_DENIED"}}
+SOURCE: console:?:?
+STACK:
+N/A
+----------------------------------
+[2026-04-28T20:54:47.681Z] [LOG] [SAERE_LOG] [EVOLUTION_PROPOSAL] 
+## Evolution Proposal [2026-04-28T20:54:46.863Z]
+**Trigger:** 5 failures on category: "worker_fatal"
+**Proposal:** {}
+---
+
+SOURCE: console:?:?
+STACK:
+N/A
+----------------------------------
+[2026-04-28T20:54:47.688Z] [LOG] [SAERE_LOG] [2026-04-28T20:54:46.845Z] [CIRCUIT_FAILURE] [HASH:7833336f] {"errorSignature":"SPAM_ERROR_58","count":1}
+SOURCE: console:?:?
+STACK:
+N/A
+----------------------------------
+[2026-04-28T20:54:47.694Z] [LOG] [SAERE_LOG] [2026-04-28T20:54:46.845Z] [CIRCUIT_FAILURE] [HASH:7833336f] {"errorSignature":"SPAM_ERROR_58","count":1}
+SOURCE: console:?:?
+STACK:
+N/A
+----------------------------------
+[2026-04-28T20:54:47.718Z] [LOG] [SAERE_LOG] [EVOLUTION_PROPOSAL] 
+## Evolution Proposal [2026-04-28T20:54:46.863Z]
+**Trigger:** 5 failures on category: "worker_fatal"
+**Proposal:** {}
+---
+
+SOURCE: console:?:?
+STACK:
+N/A
+----------------------------------
+[2026-04-28T20:54:47.730Z] [WARN] [agent2] [FAILOVER] Model gemini-2.0-flash failed. Key: AIzaSyDW27... Error: {"error":{"code":429,"message":"You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.0-flash\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.0-flash\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 0, model: gemini-2.0-flash\nPlease retry in 13.303370828s.","status":"RESOURCE_EXHAUSTED","details":[{"@type":"type.googleapis.com/google.rpc.Help","links":[{"description":"Learn more about Gemini API quotas","url":"https://ai.google.dev/gemini-api/docs/rate-limits"}]},{"@type":"type.googleapis.com/google.rpc.QuotaFailure","violations":[{"quotaMetric":"generativelanguage.googleapis.com/generate_content_free_tier_requests","quotaId":"GenerateRequestsPerDayPerProjectPerModel-FreeTier","quotaDimensions":{"location":"global","model":"gemini-2.0-flash"}},{"quotaMetric":"generativelanguage.googleapis.com/generate_content_free_tier_requests","quotaId":"GenerateRequestsPerMinutePerProjectPerModel-FreeTier","quotaDimensions":{"location":"global","model":"gemini-2.0-flash"}},{"quotaMetric":"generativelanguage.googleapis.com/generate_content_free_tier_input_token_count","quotaId":"GenerateContentInputTokensPerModelPerMinute-FreeTier","quotaDimensions":{"location":"global","model":"gemini-2.0-flash"}}]},{"@type":"type.googleapis.com/google.rpc.RetryInfo","retryDelay":"13s"}]}}
+SOURCE: console:?:?
+STACK:
+N/A
+----------------------------------
+[2026-04-28T20:54:47.735Z] [LOG] [SAERE_LOG] [2026-04-28T20:54:46.972Z] [CIRCUIT_FAILURE] [HASH:381d5cbe] {"errorSignature":"SPAM_ERROR_59","count":1}
+SOURCE: console:?:?
+STACK:
+N/A
+----------------------------------
+[2026-04-28T20:54:47.737Z] [LOG] [SAERE_LOG] [2026-04-28T20:54:46.972Z] [CIRCUIT_FAILURE] [HASH:381d5cbe] {"errorSignature":"SPAM_ERROR_59","count":1}
+SOURCE: console:?:?
+STACK:
+N/A
+----------------------------------
+[2026-04-28T20:54:47.750Z] [LOG] [agent2] Attempting with: gemini-2.0-pro-exp-02-05...
+SOURCE: console:?:?
+STACK:
+N/A
+----------------------------------
+[2026-04-28T20:54:47.759Z] [WARN] [KeyRotator] PENALTY: Moving failed key AIzaSyDW27... to the end of the global queue.
+SOURCE: console:?:?
+STACK:
+N/A
+----------------------------------
+[2026-04-28T20:54:47.769Z] [WARN] [agent2] [FAILOVER] Model gemini-2.0-flash failed. Key: AIzaSyDW27... Error: {"error":{"code":429,"message":"You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.0-flash\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.0-flash\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 0, model: gemini-2.0-flash\nPlease retry in 13.303370828s.","status":"RESOURCE_EXHAUSTED","details":[{"@type":"type.googleapis.com/google.rpc.Help","links":[{"description":"Learn more about Gemini API quotas","url":"https://ai.google.dev/gemini-api/docs/rate-limits"}]},{"@type":"type.googleapis.com/google.rpc.QuotaFailure","violations":[{"quotaMetric":"generativelanguage.googleapis.com/generate_content_free_tier_requests","quotaId":"GenerateRequestsPerDayPerProjectPerModel-FreeTier","quotaDimensions":{"location":"global","model":"gemini-2.0-flash"}},{"quotaMetric":"generativelanguage.googleapis.com/generate_content_free_tier_requests","quotaId":"GenerateRequestsPerMinutePerProjectPerModel-FreeTier","quotaDimensions":{"location":"global","model":"gemini-2.0-flash"}},{"quotaMetric":"generativelanguage.googleapis.com/generate_content_free_tier_input_token_count","quotaId":"GenerateContentInputTokensPerModelPerMinute-FreeTier","quotaDimensions":{"location":"global","model":"gemini-2.0-flash"}}]},{"@type":"type.googleapis.com/google.rpc.RetryInfo","retryDelay":"13s"}]}}
+SOURCE: console:?:?
+STACK:
+N/A
+----------------------------------
+[2026-04-28T20:54:47.772Z] [LOG] [agent2] Attempting with: gemini-2.0-pro-exp-02-05...
+SOURCE: console:?:?
+STACK:
+N/A
+----------------------------------
+[2026-04-28T20:54:47.777Z] [WARN] [KeyRotator] PENALTY: Moving failed key AIzaSyDW27... to the end of the global queue.
+SOURCE: console:?:?
+STACK:
+N/A
+----------------------------------
+[2026-04-28T20:54:47.790Z] [LOG] [SAERE_LOG] [2026-04-28T20:54:47.052Z] [CIRCUIT_FAILURE] [HASH:90834c1b] {"errorSignature":"SPAM_ERROR_60","count":1}
+SOURCE: console:?:?
+STACK:
+N/A
+----------------------------------
+[2026-04-28T20:54:47.793Z] [LOG] [SAERE_LOG] [2026-04-28T20:54:47.052Z] [CIRCUIT_FAILURE] [HASH:90834c1b] {"errorSignature":"SPAM_ERROR_60","count":1}
+SOURCE: console:?:?
+STACK:
+N/A
+----------------------------------
+[2026-04-28T20:54:47.812Z] [LOG] THREE.WebGLRenderer: Context Lost.
+SOURCE: console:?:?
+STACK:
+N/A
+----------------------------------
+[2026-04-28T20:54:47.831Z] [LOG] THREE.WebGLRenderer: Context Lost.
+SOURCE: console:?:?
+STACK:
+N/A
+----------------------------------
+[2026-04-28T20:54:47.844Z] [LOG] [SAERE_LOG] [2026-04-28T20:54:47.294Z] [CIRCUIT_FAILURE] [HASH:c04da8ac] {"errorSignature":"SPAM_ERROR_61","count":1}
+SOURCE: console:?:?
+STACK:
+N/A
+----------------------------------
+[2026-04-28T20:54:47.853Z] [LOG] [SAERE_LOG] [2026-04-28T20:54:47.294Z] [CIRCUIT_FAILURE] [HASH:c04da8ac] {"errorSignature":"SPAM_ERROR_61","count":1}
+SOURCE: console:?:?
+STACK:
+N/A
+----------------------------------
