@@ -34,13 +34,14 @@ import { AutonomousManager } from './src/sAgent/subagent/AutonomousManager';
 
 async function startServer() {
   const app = express();
-  const server = http.createServer();
+  const server = http.createServer(app);
   const PORT = Number(process.env.PORT) || 3000;
 
-  // Setup Socket.IO for Terminal FIRST
+  // Setup Socket.IO for Terminal
   const io = new SocketIOServer(server, {
     path: '/terminal-socket/',
     destroyUpgrade: false,
+    transports: ['websocket'],
     cors: {
       origin: '*',
       methods: ['GET', 'POST']
@@ -49,14 +50,10 @@ async function startServer() {
   setupTerminalSocket(io);
   setupUIUpdateSocket(io);
   (app as any).io = io;
-  app.set('server', { io });
+  app.set('server', { io, httpServer: server });
 
-  // Setup WebSocket (Yjs) FIRST
+  // Setup WebSocket (Yjs)
   await setupWebSocket(server);
-
-  // THEN attach Express
-  server.on('request', app);
-  app.set('server', server);
 
   app.set('trust proxy', 1); // Trust first proxy for rate limiting
 
