@@ -548,3 +548,224 @@ SOURCE: console:?:?
 STACK:
 N/A
 ----------------------------------
+[2026-04-28T20:52:38.115Z] [WARN] [App] Cross-Origin Isolation required for WebContainer
+SOURCE: console:?:?
+STACK:
+N/A
+----------------------------------
+[2026-04-28T20:52:38.130Z] [WARN] [App] Cross-Origin Isolation required for WebContainer
+SOURCE: console:?:?
+STACK:
+N/A
+----------------------------------
+[2026-04-28T20:52:38.204Z] [LOG] [ModelManager] Installing queued models in background...
+SOURCE: console:?:?
+STACK:
+N/A
+----------------------------------
+[2026-04-28T20:52:38.297Z] [ERROR] Unhandled Promise Rejection: TypeError: Cannot read properties of undefined (reading 'length')
+TypeError: Cannot read properties of undefined (reading 'length')
+    at https://fictional-sniffle-xr4ppx4gx4whgxp-3000.app.github.dev/src/services/vfsService.ts:369:21
+    at async VFSService.lock (https://fictional-sniffle-xr4ppx4gx4whgxp-3000.app.github.dev/src/services/vfsService.ts:177:14)
+SOURCE: console:?:?
+STACK:
+N/A
+----------------------------------
+[2026-04-28T20:52:38.399Z] Unhandled Rejection: TypeError: Cannot read properties of undefined (reading 'length')
+SOURCE: unhandledrejection:?:?
+STACK:
+TypeError: Cannot read properties of undefined (reading 'length')
+    at https://fictional-sniffle-xr4ppx4gx4whgxp-3000.app.github.dev/src/services/vfsService.ts:369:21
+    at async VFSService.lock (https://fictional-sniffle-xr4ppx4gx4whgxp-3000.app.github.dev/src/services/vfsService.ts:177:14)
+----------------------------------
+[2026-04-28T20:52:38.450Z] [LOG] [ModelManager] Installing queued models in background...
+SOURCE: console:?:?
+STACK:
+N/A
+----------------------------------
+[2026-04-28T20:52:38.647Z] [ERROR] [UNHANDLED_REJECTION] TypeError: Cannot read properties of undefined (reading 'length')
+TypeError: Cannot read properties of undefined (reading 'length')
+    at https://fictional-sniffle-xr4ppx4gx4whgxp-3000.app.github.dev/src/services/vfsService.ts:369:21
+    at async VFSService.lock (https://fictional-sniffle-xr4ppx4gx4whgxp-3000.app.github.dev/src/services/vfsService.ts:177:14)
+SOURCE: console:?:?
+STACK:
+N/A
+----------------------------------
+[2026-04-28T20:52:38.689Z] [LOG] [SAERE_LOG] [2026-04-28T20:52:38.241Z] [CIRCUIT_FAILURE] [HASH:24f5f979] {"errorSignature":"OFFLINE_FETCH_ERROR","count":1}
+SOURCE: console:?:?
+STACK:
+N/A
+----------------------------------
+[2026-04-28T20:52:38.707Z] [LOG] [SAERE_LOG] [2026-04-28T20:52:38.241Z] [CIRCUIT_FAILURE] [HASH:24f5f979] {"errorSignature":"OFFLINE_FETCH_ERROR","count":1}
+SOURCE: console:?:?
+STACK:
+N/A
+----------------------------------
+[2026-04-28T20:52:38.894Z] [LOG] [SAERE_LOG] [2026-04-28T20:52:38.770Z] [CIRCUIT_FAILURE] [HASH:b76a806a] {"errorSignature":"SPAM_ERROR_0","count":1}
+SOURCE: console:?:?
+STACK:
+N/A
+----------------------------------
+[2026-04-28T20:52:38.914Z] [LOG] [SAERE_LOG] [2026-04-28T20:52:38.770Z] [CIRCUIT_FAILURE] [HASH:b76a806a] {"errorSignature":"SPAM_ERROR_0","count":1}
+SOURCE: console:?:?
+STACK:
+N/A
+----------------------------------
+[2026-04-28T20:52:39.514Z] [ERROR] [SAERE_PROXY] Failed to write log to error_log.md TypeError: Cannot read properties of undefined (reading 'length')
+TypeError: Cannot read properties of undefined (reading 'length')
+    at https://fictional-sniffle-xr4ppx4gx4whgxp-3000.app.github.dev/src/services/vfsService.ts:369:21
+    at async VFSService.lock (https://fictional-sniffle-xr4ppx4gx4whgxp-3000.app.github.dev/src/services/vfsService.ts:177:14)
+SOURCE: console:?:?
+STACK:
+N/A
+----------------------------------
+[2026-04-28T20:52:39.611Z] [LOG] [SAERE_LOG] [2026-04-28T20:52:39.226Z] [CIRCUIT_FAILURE] [HASH:252838da] {"errorSignature":"SPAM_ERROR_1","count":1}
+SOURCE: console:?:?
+STACK:
+N/A
+----------------------------------
+[2026-04-28T20:52:39.644Z] [LOG] [SAERE_LOG] [2026-04-28T20:52:39.299Z] [CIRCUIT_FAILURE] [HASH:7acc3a3e] {"errorSignature":"SPAM_ERROR_2","count":1}
+SOURCE: console:?:?
+STACK:
+N/A
+----------------------------------
+[2026-04-28T20:52:39.692Z] [LOG] [SAERE_LOG] [2026-04-28T20:52:39.299Z] [CIRCUIT_FAILURE] [HASH:7acc3a3e] {"errorSignature":"SPAM_ERROR_2","count":1}
+SOURCE: console:?:?
+STACK:
+N/A
+----------------------------------
+[2026-04-28T20:52:39.789Z] [LOG] [SAERE_LOG] [2026-04-28T20:52:39.226Z] [CIRCUIT_FAILURE] [HASH:252838da] {"errorSignature":"SPAM_ERROR_1","count":1}
+SOURCE: console:?:?
+STACK:
+N/A
+----------------------------------
+[2026-04-28T20:52:39.961Z] [LOG] [SAERE_LOG] [2026-04-28T20:52:39.772Z] [CIRCUIT_FAILURE] [HASH:3c631f68] {"errorSignature":"SPAM_ERROR_3","count":1}
+SOURCE: console:?:?
+STACK:
+N/A
+----------------------------------
+[2026-04-28T20:52:40.006Z] [LOG] [SAERE_LOG] [2026-04-28T20:52:39.772Z] [CIRCUIT_FAILURE] [HASH:3c631f68] {"errorSignature":"SPAM_ERROR_3","count":1}
+SOURCE: console:?:?
+STACK:
+N/A
+----------------------------------
+[2026-04-28T20:52:40.035Z] [LOG] [SAERE_LOG] [EVOLUTION_PROPOSAL] 
+## Evolution Proposal [2026-04-28T20:52:39.806Z]
+**Trigger:** 5 failures on category: "worker_fatal"
+**Proposal:** {}
+---
+
+SOURCE: console:?:?
+STACK:
+N/A
+----------------------------------
+[2026-04-28T20:52:40.068Z] [LOG] [SAERE_LOG] [EVOLUTION_PROPOSAL] 
+## Evolution Proposal [2026-04-28T20:52:39.806Z]
+**Trigger:** 5 failures on category: "worker_fatal"
+**Proposal:** {}
+---
+
+SOURCE: console:?:?
+STACK:
+N/A
+----------------------------------
+[2026-04-28T20:52:40.093Z] [LOG] [SAERE_LOG] [2026-04-28T20:52:39.824Z] [CIRCUIT_FAILURE] [HASH:c47f21b7] {"errorSignature":"SPAM_ERROR_4","count":1}
+SOURCE: console:?:?
+STACK:
+N/A
+----------------------------------
+[2026-04-28T20:52:40.128Z] [LOG] [SAERE_LOG] [2026-04-28T20:52:39.824Z] [CIRCUIT_FAILURE] [HASH:c47f21b7] {"errorSignature":"SPAM_ERROR_4","count":1}
+SOURCE: console:?:?
+STACK:
+N/A
+----------------------------------
+[2026-04-28T20:52:40.417Z] [LOG] [SAERE_LOG] [2026-04-28T20:52:40.309Z] [CIRCUIT_FAILURE] [HASH:656ebf53] {"errorSignature":"SPAM_ERROR_5","count":1}
+SOURCE: console:?:?
+STACK:
+N/A
+----------------------------------
+[2026-04-28T20:52:40.445Z] [LOG] [SAERE_LOG] [2026-04-28T20:52:40.309Z] [CIRCUIT_FAILURE] [HASH:656ebf53] {"errorSignature":"SPAM_ERROR_5","count":1}
+SOURCE: console:?:?
+STACK:
+N/A
+----------------------------------
+[2026-04-28T20:52:40.495Z] [LOG] [SAERE_LOG] [2026-04-28T20:52:40.353Z] [CIRCUIT_FAILURE] [HASH:ac38859b] {"errorSignature":"SPAM_ERROR_6","count":1}
+SOURCE: console:?:?
+STACK:
+N/A
+----------------------------------
+[2026-04-28T20:52:40.525Z] [LOG] [SAERE_LOG] [2026-04-28T20:52:40.353Z] [CIRCUIT_FAILURE] [HASH:ac38859b] {"errorSignature":"SPAM_ERROR_6","count":1}
+SOURCE: console:?:?
+STACK:
+N/A
+----------------------------------
+[2026-04-28T20:52:41.040Z] [LOG] [SAERE_LOG] [2026-04-28T20:52:40.855Z] [CIRCUIT_FAILURE] [HASH:29ccfc40] {"errorSignature":"SPAM_ERROR_7","count":1}
+SOURCE: console:?:?
+STACK:
+N/A
+----------------------------------
+[2026-04-28T20:52:41.045Z] [LOG] [SAERE_LOG] [2026-04-28T20:52:40.855Z] [CIRCUIT_FAILURE] [HASH:29ccfc40] {"errorSignature":"SPAM_ERROR_7","count":1}
+SOURCE: console:?:?
+STACK:
+N/A
+----------------------------------
+[2026-04-28T20:52:41.090Z] [LOG] [SAERE_LOG] [2026-04-28T20:52:40.895Z] [CIRCUIT_FAILURE] [HASH:b29dd7ff] {"errorSignature":"SPAM_ERROR_8","count":1}
+SOURCE: console:?:?
+STACK:
+N/A
+----------------------------------
+[2026-04-28T20:52:41.099Z] [LOG] [SAERE_LOG] [2026-04-28T20:52:40.895Z] [CIRCUIT_FAILURE] [HASH:b29dd7ff] {"errorSignature":"SPAM_ERROR_8","count":1}
+SOURCE: console:?:?
+STACK:
+N/A
+----------------------------------
+[2026-04-28T20:52:41.125Z] [LOG] [SAERE_LOG] [EVOLUTION_PROPOSAL] 
+## Evolution Proposal [2026-04-28T20:52:40.915Z]
+**Trigger:** 5 failures on category: "worker_fatal"
+**Proposal:** {}
+---
+
+SOURCE: console:?:?
+STACK:
+N/A
+----------------------------------
+[2026-04-28T20:52:41.133Z] [LOG] [SAERE_LOG] [EVOLUTION_PROPOSAL] 
+## Evolution Proposal [2026-04-28T20:52:40.915Z]
+**Trigger:** 5 failures on category: "worker_fatal"
+**Proposal:** {}
+---
+
+SOURCE: console:?:?
+STACK:
+N/A
+----------------------------------
+[2026-04-28T20:52:41.504Z] [LOG] [ModelManager] Queued models installed.
+SOURCE: console:?:?
+STACK:
+N/A
+----------------------------------
+[2026-04-28T20:52:41.518Z] [LOG] [ModelManager] Queued models installed.
+SOURCE: console:?:?
+STACK:
+N/A
+----------------------------------
+[2026-04-28T20:52:41.557Z] [LOG] [SAERE_LOG] [2026-04-28T20:52:41.387Z] [CIRCUIT_FAILURE] [HASH:667711c6] {"errorSignature":"SPAM_ERROR_9","count":1}
+SOURCE: console:?:?
+STACK:
+N/A
+----------------------------------
+[2026-04-28T20:52:41.569Z] [LOG] [SAERE_LOG] [2026-04-28T20:52:41.387Z] [CIRCUIT_FAILURE] [HASH:667711c6] {"errorSignature":"SPAM_ERROR_9","count":1}
+SOURCE: console:?:?
+STACK:
+N/A
+----------------------------------
+[2026-04-28T20:52:41.584Z] [LOG] [SAERE_LOG] [2026-04-28T20:52:41.415Z] [CIRCUIT_FAILURE] [HASH:d8ff5f90] {"errorSignature":"SPAM_ERROR_10","count":1}
+SOURCE: console:?:?
+STACK:
+N/A
+----------------------------------
+[2026-04-28T20:52:41.598Z] [LOG] [SAERE_LOG] [2026-04-28T20:52:41.415Z] [CIRCUIT_FAILURE] [HASH:d8ff5f90] {"errorSignature":"SPAM_ERROR_10","count":1}
+SOURCE: console:?:?
+STACK:
+N/A
+----------------------------------
