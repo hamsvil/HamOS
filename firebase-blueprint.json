@@ -1,0 +1,45 @@
+{
+  "entities": {
+    "Project": {
+      "title": "Project",
+      "description": "A user project in Ham AiStudio",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "name": { "type": "string" },
+        "timestamp": { "type": "number" },
+        "ownerId": { "type": "string" },
+        "data": { "type": "object" },
+        "chatHistory": {
+          "type": "array",
+          "items": { "type": "object" },
+          "maxItems": 1000
+        }
+      },
+      "required": ["id", "name", "timestamp", "ownerId"]
+    },
+    "User": {
+      "title": "User",
+      "description": "User profile information",
+      "type": "object",
+      "properties": {
+        "uid": { "type": "string" },
+        "email": { "type": "string" },
+        "displayName": { "type": "string" },
+        "createdAt": { "type": "number" },
+        "updatedAt": { "type": "number" }
+      },
+      "required": ["uid", "email", "createdAt", "updatedAt"]
+    }
+  },
+  "firestore": {
+    "/users/{userId}": {
+      "schema": { "$ref": "User" },
+      "description": "Stores user profiles"
+    },
+    "/projects/{projectId}": {
+      "schema": { "$ref": "Project" },
+      "description": "Stores projects owned by users"
+    }
+  }
+}

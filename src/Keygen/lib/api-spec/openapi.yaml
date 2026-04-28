@@ -1,0 +1,1568 @@
+openapi: 3.1.0
+info:
+  title: Api
+  version: 0.1.0
+  description: Ham Key Gen API
+servers:
+  - url: /api
+tags:
+  - name: health
+  - name: auth
+  - name: providers
+  - name: keys
+  - name: validate
+  - name: analytics
+  - name: audit
+  - name: notifications
+  - name: environments
+  - name: tags
+  - name: scheduled
+  - name: export
+  - name: search
+  - name: webhooks
+
+paths:
+  /healthz:
+    get:
+      operationId: healthCheck
+      tags: [health]
+      summary: Health check
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/HealthStatus"
+
+  /auth/me:
+    get:
+      operationId: getMe
+      tags: [auth]
+      summary: Get current user
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/User"
+        "401":
+          description: Unauthorized
+
+  /auth/login:
+    post:
+      operationId: login
+      tags: [auth]
+      summary: Login
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/LoginBody"
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/User"
+        "401":
+          description: Invalid credentials
+
+  /auth/logout:
+    post:
+      operationId: logout
+      tags: [auth]
+      summary: Logout
+      responses:
+        "200":
+          description: OK
+
+  /providers:
+    get:
+      operationId: listProviders
+      tags: [providers]
+      summary: List all providers
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/Provider"
+    post:
+      operationId: createProvider
+      tags: [providers]
+      summary: Create custom provider
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/CreateProviderBody"
+      responses:
+        "201":
+          description: Created
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Provider"
+
+  /providers/circuit-status:
+    get:
+      operationId: getCircuitStatus
+      tags: [providers]
+      summary: Get circuit breaker status for all providers
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/CircuitStatus"
+
+  /providers/{slug}/ping:
+    get:
+      operationId: pingProvider
+      tags: [providers]
+      summary: Ping provider endpoint
+      parameters:
+        - name: slug
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/PingResult"
+
+  /providers/{slug}:
+    delete:
+      operationId: deleteProvider
+      tags: [providers]
+      summary: Delete custom provider
+      parameters:
+        - name: slug
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        "204":
+          description: Deleted
+
+  /keys:
+    get:
+      operationId: listKeys
+      tags: [keys]
+      summary: List API keys
+      parameters:
+        - name: provider
+          in: query
+          schema:
+            type: string
+        - name: status
+          in: query
+          schema:
+            type: string
+        - name: environmentId
+          in: query
+          schema:
+            type: ["integer","null"]
+        - name: tag
+          in: query
+          schema:
+            type: string
+        - name: search
+          in: query
+          schema:
+            type: string
+        - name: archived
+          in: query
+          schema:
+            type: string
+        - name: page
+          in: query
+          schema:
+            type: integer
+        - name: limit
+          in: query
+          schema:
+            type: integer
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/KeyList"
+
+  /keys/generate:
+    post:
+      operationId: generateKey
+      tags: [keys]
+      summary: Generate a new API key
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/GenerateKeyBody"
+      responses:
+        "201":
+          description: Created
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/GenerateKeyResult"
+
+  /keys/bulk-revoke:
+    post:
+      operationId: bulkRevokeKeys
+      tags: [keys]
+      summary: Bulk revoke keys
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/BulkKeyIds"
+      responses:
+        "200":
+          description: OK
+
+  /keys/bulk-archive:
+    post:
+      operationId: bulkArchiveKeys
+      tags: [keys]
+      summary: Bulk archive keys
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/BulkKeyIds"
+      responses:
+        "200":
+          description: OK
+
+  /keys/import:
+    post:
+      operationId: importKeys
+      tags: [keys]
+      summary: Import keys from text
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/ImportKeysBody"
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ImportKeysResult"
+
+  /keys/{id}:
+    get:
+      operationId: getKey
+      tags: [keys]
+      summary: Get a key by id
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: integer
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ApiKey"
+    patch:
+      operationId: updateKey
+      tags: [keys]
+      summary: Update a key
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: integer
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/UpdateKeyBody"
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ApiKey"
+    delete:
+      operationId: deleteKey
+      tags: [keys]
+      summary: Delete a key
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: integer
+      responses:
+        "204":
+          description: Deleted
+
+  /keys/{id}/revoke:
+    post:
+      operationId: revokeKey
+      tags: [keys]
+      summary: Revoke a key
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: integer
+      responses:
+        "200":
+          description: OK
+
+  /keys/{id}/archive:
+    post:
+      operationId: archiveKey
+      tags: [keys]
+      summary: Archive a key
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: integer
+      responses:
+        "200":
+          description: OK
+
+  /keys/{id}/restore:
+    post:
+      operationId: restoreKey
+      tags: [keys]
+      summary: Restore an archived key
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: integer
+      responses:
+        "200":
+          description: OK
+
+  /keys/{id}/tags:
+    post:
+      operationId: addKeyTag
+      tags: [tags]
+      summary: Add tag to key
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: integer
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/TagBody"
+      responses:
+        "200":
+          description: OK
+
+  /keys/{id}/tags/{tag}:
+    delete:
+      operationId: removeKeyTag
+      tags: [tags]
+      summary: Remove tag from key
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: integer
+        - name: tag
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        "204":
+          description: Deleted
+
+  /keys/{id}/history:
+    get:
+      operationId: getKeyHistory
+      tags: [keys]
+      summary: Get validation history for a key
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: integer
+        - name: page
+          in: query
+          schema:
+            type: integer
+        - name: limit
+          in: query
+          schema:
+            type: integer
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ValidationHistoryList"
+
+  /validate:
+    post:
+      operationId: validateKey
+      tags: [validate]
+      summary: Validate an API key against a provider
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/ValidateKeyBody"
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ValidationResult"
+
+  /validate/batch:
+    post:
+      operationId: validateBatch
+      tags: [validate]
+      summary: Validate multiple keys (batch)
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/ValidateBatchBody"
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/BatchResult"
+
+  /validate/history:
+    get:
+      operationId: getValidationHistory
+      tags: [validate]
+      summary: Get global validation history
+      parameters:
+        - name: provider
+          in: query
+          schema:
+            type: string
+        - name: status
+          in: query
+          schema:
+            type: string
+        - name: page
+          in: query
+          schema:
+            type: integer
+        - name: limit
+          in: query
+          schema:
+            type: integer
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ValidationHistoryList"
+
+  /analytics/summary:
+    get:
+      operationId: getAnalyticsSummary
+      tags: [analytics]
+      summary: Get analytics summary
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/AnalyticsSummary"
+
+  /analytics/usage:
+    get:
+      operationId: getUsageStats
+      tags: [analytics]
+      summary: Get daily usage stats
+      parameters:
+        - name: days
+          in: query
+          schema:
+            type: integer
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/DailyStat"
+
+  /analytics/providers:
+    get:
+      operationId: getProviderStats
+      tags: [analytics]
+      summary: Get per-provider stats
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/ProviderStat"
+
+  /analytics/security-score:
+    get:
+      operationId: getSecurityScore
+      tags: [analytics]
+      summary: Get security score
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/SecurityScore"
+
+  /audit:
+    get:
+      operationId: listAuditLogs
+      tags: [audit]
+      summary: List audit logs
+      parameters:
+        - name: action
+          in: query
+          schema:
+            type: string
+        - name: startDate
+          in: query
+          schema:
+            type: string
+        - name: endDate
+          in: query
+          schema:
+            type: string
+        - name: page
+          in: query
+          schema:
+            type: integer
+        - name: limit
+          in: query
+          schema:
+            type: integer
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/AuditLogList"
+
+  /notifications:
+    get:
+      operationId: listNotifications
+      tags: [notifications]
+      summary: List notifications
+      parameters:
+        - name: unreadOnly
+          in: query
+          schema:
+            type: string
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/Notification"
+
+  /notifications/read-all:
+    post:
+      operationId: markAllNotificationsRead
+      tags: [notifications]
+      summary: Mark all notifications as read
+      responses:
+        "200":
+          description: OK
+
+  /notifications/{id}/read:
+    post:
+      operationId: markNotificationRead
+      tags: [notifications]
+      summary: Mark notification as read
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: integer
+      responses:
+        "200":
+          description: OK
+
+  /environments:
+    get:
+      operationId: listEnvironments
+      tags: [environments]
+      summary: List environments
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/Environment"
+    post:
+      operationId: createEnvironment
+      tags: [environments]
+      summary: Create environment
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/CreateEnvironmentBody"
+      responses:
+        "201":
+          description: Created
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Environment"
+
+  /environments/{id}:
+    patch:
+      operationId: updateEnvironment
+      tags: [environments]
+      summary: Update environment
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: integer
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/CreateEnvironmentBody"
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Environment"
+    delete:
+      operationId: deleteEnvironment
+      tags: [environments]
+      summary: Delete environment
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: integer
+      responses:
+        "204":
+          description: Deleted
+
+  /tags:
+    get:
+      operationId: listTags
+      tags: [tags]
+      summary: List all tags
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/TagCount"
+
+  /scheduled:
+    get:
+      operationId: listScheduledJobs
+      tags: [scheduled]
+      summary: List scheduled jobs
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/ScheduledJob"
+    post:
+      operationId: createScheduledJob
+      tags: [scheduled]
+      summary: Create a scheduled job
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/CreateScheduledJobBody"
+      responses:
+        "201":
+          description: Created
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ScheduledJob"
+
+  /scheduled/{id}:
+    patch:
+      operationId: updateScheduledJob
+      tags: [scheduled]
+      summary: Update scheduled job
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: integer
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/UpdateScheduledJobBody"
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ScheduledJob"
+    delete:
+      operationId: deleteScheduledJob
+      tags: [scheduled]
+      summary: Delete scheduled job
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: integer
+      responses:
+        "204":
+          description: Deleted
+
+  /scheduled/{id}/run-now:
+    post:
+      operationId: triggerJobNow
+      tags: [scheduled]
+      summary: Manually trigger a scheduled job
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: integer
+      responses:
+        "200":
+          description: OK
+
+  /export/keys:
+    get:
+      operationId: exportKeys
+      tags: [export]
+      summary: Export keys as CSV or JSON
+      parameters:
+        - name: format
+          in: query
+          schema:
+            type: string
+      responses:
+        "200":
+          description: OK
+
+  /export/history:
+    get:
+      operationId: exportHistory
+      tags: [export]
+      summary: Export validation history
+      parameters:
+        - name: format
+          in: query
+          schema:
+            type: string
+      responses:
+        "200":
+          description: OK
+
+  /export/audit:
+    get:
+      operationId: exportAudit
+      tags: [export]
+      summary: Export audit log as CSV
+      responses:
+        "200":
+          description: OK
+
+  /search:
+    get:
+      operationId: globalSearch
+      tags: [search]
+      summary: Global search across keys, history, audit
+      parameters:
+        - name: q
+          in: query
+          required: true
+          schema:
+            type: string
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/SearchResults"
+
+  /webhooks/test:
+    post:
+      operationId: testWebhook
+      tags: [webhooks]
+      summary: Test a webhook URL
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/WebhookTestBody"
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/WebhookResult"
+
+  /webhooks/logs:
+    get:
+      operationId: getWebhookLogs
+      tags: [webhooks]
+      summary: Get webhook delivery logs
+      parameters:
+        - name: page
+          in: query
+          schema:
+            type: integer
+        - name: limit
+          in: query
+          schema:
+            type: integer
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/WebhookLogList"
+
+components:
+  schemas:
+    HealthStatus:
+      type: object
+      properties:
+        status:
+          type: string
+        db:
+          type: string
+      required: [status]
+
+    User:
+      type: object
+      properties:
+        id:
+          type: integer
+        username:
+          type: string
+        displayName:
+          type: string
+        role:
+          type: string
+      required: [id, username, displayName, role]
+
+    LoginBody:
+      type: object
+      properties:
+        username:
+          type: string
+        password:
+          type: string
+      required: [username, password]
+
+    Provider:
+      type: object
+      properties:
+        id:
+          type: integer
+        slug:
+          type: string
+        name:
+          type: string
+        category:
+          type: string
+        validateUrl:
+          type: string
+        validateMethod:
+          type: string
+        validateHeader:
+          type: string
+        prefixPattern:
+          type: ["string","null"]
+        keyExample:
+          type: ["string","null"]
+        docsUrl:
+          type: string
+        knownRateLimit:
+          type: ["string","null"]
+        timeoutMs:
+          type: integer
+        isActive:
+          type: boolean
+      required: [id, slug, name, category, validateUrl, validateMethod, validateHeader, docsUrl, timeoutMs, isActive]
+
+    CreateProviderBody:
+      type: object
+      properties:
+        slug:
+          type: string
+        name:
+          type: string
+        category:
+          type: string
+        validateUrl:
+          type: string
+        validateMethod:
+          type: string
+        validateHeader:
+          type: string
+        docsUrl:
+          type: string
+        prefixPattern:
+          type: ["string","null"]
+        timeoutMs:
+          type: integer
+      required: [slug, name, category, validateUrl, validateMethod, validateHeader, docsUrl]
+
+    CircuitStatus:
+      type: object
+      properties:
+        slug:
+          type: string
+        state:
+          type: string
+        failures:
+          type: integer
+        lastFailureAt:
+          type: ["string","null"]
+      required: [slug, state, failures]
+
+    PingResult:
+      type: object
+      properties:
+        slug:
+          type: string
+        reachable:
+          type: boolean
+        responseTime:
+          type: ["integer","null"]
+        statusCode:
+          type: ["integer","null"]
+      required: [slug, reachable]
+
+    ApiKey:
+      type: object
+      properties:
+        id:
+          type: integer
+        name:
+          type: string
+        provider:
+          type: string
+        keyPrefix:
+          type: string
+        keySuffix:
+          type: string
+        status:
+          type: string
+        scopes:
+          type: array
+          items:
+            type: string
+        expiresAt:
+          type: ["string","null"]
+        rateLimit:
+          type: integer
+        usageCount:
+          type: integer
+        isFavorite:
+          type: boolean
+        isArchived:
+          type: boolean
+        lastValidatedAt:
+          type: ["string","null"]
+        lastValidStatus:
+          type: ["string","null"]
+        environmentId:
+          type: ["integer","null"]
+        tags:
+          type: array
+          items:
+            type: string
+        createdAt:
+          type: string
+        updatedAt:
+          type: string
+      required: [id, name, provider, keyPrefix, keySuffix, status, scopes, rateLimit, usageCount, isFavorite, isArchived, createdAt, updatedAt, tags]
+
+    KeyList:
+      type: object
+      properties:
+        data:
+          type: array
+          items:
+            $ref: "#/components/schemas/ApiKey"
+        total:
+          type: integer
+        page:
+          type: integer
+        limit:
+          type: integer
+      required: [data, total, page, limit]
+
+    GenerateKeyBody:
+      type: object
+      properties:
+        name:
+          type: string
+        provider:
+          type: string
+        format:
+          type: string
+        length:
+          type: integer
+        customPrefix:
+          type: string
+        scopes:
+          type: array
+          items:
+            type: string
+        expiresAt:
+          type: ["string","null"]
+        rateLimit:
+          type: integer
+        environmentId:
+          type: ["integer","null"]
+        metadata:
+          type: object
+      required: [name, provider, format, length]
+
+    GenerateKeyResult:
+      type: object
+      properties:
+        id:
+          type: integer
+        fullKey:
+          type: string
+        keyPrefix:
+          type: string
+        keySuffix:
+          type: string
+        provider:
+          type: string
+        name:
+          type: string
+        entropy:
+          type: number
+      required: [id, fullKey, keyPrefix, keySuffix, provider, name, entropy]
+
+    BulkKeyIds:
+      type: object
+      properties:
+        ids:
+          type: array
+          items:
+            type: integer
+      required: [ids]
+
+    ImportKeysBody:
+      type: object
+      properties:
+        content:
+          type: string
+        provider:
+          type: string
+        environmentId:
+          type: ["integer","null"]
+      required: [content, provider]
+
+    ImportKeysResult:
+      type: object
+      properties:
+        imported:
+          type: integer
+        skipped:
+          type: integer
+      required: [imported, skipped]
+
+    UpdateKeyBody:
+      type: object
+      properties:
+        name:
+          type: string
+        scopes:
+          type: array
+          items:
+            type: string
+        expiresAt:
+          type: ["string","null"]
+        rateLimit:
+          type: integer
+        isFavorite:
+          type: boolean
+        environmentId:
+          type: ["integer","null"]
+
+    TagBody:
+      type: object
+      properties:
+        tag:
+          type: string
+      required: [tag]
+
+    TagCount:
+      type: object
+      properties:
+        tag:
+          type: string
+        count:
+          type: integer
+      required: [tag, count]
+
+    ValidateKeyBody:
+      type: object
+      properties:
+        key:
+          type: string
+        provider:
+          type: string
+        keyId:
+          type: ["integer","null"]
+      required: [key, provider]
+
+    ValidationResult:
+      type: object
+      properties:
+        status:
+          type: string
+        provider:
+          type: string
+        responseTime:
+          type: integer
+        error:
+          type: ["string","null"]
+        cached:
+          type: boolean
+      required: [status, provider, responseTime, cached]
+
+    ValidateBatchBody:
+      type: object
+      properties:
+        keys:
+          type: array
+          items:
+            type: string
+        provider:
+          type: string
+      required: [keys, provider]
+
+    BatchResult:
+      type: object
+      properties:
+        batchId:
+          type: string
+        total:
+          type: integer
+        results:
+          type: array
+          items:
+            $ref: "#/components/schemas/BatchResultItem"
+      required: [batchId, total, results]
+
+    BatchResultItem:
+      type: object
+      properties:
+        keyPreview:
+          type: string
+        status:
+          type: string
+        responseTime:
+          type: integer
+        error:
+          type: ["string","null"]
+      required: [keyPreview, status, responseTime]
+
+    ValidationHistory:
+      type: object
+      properties:
+        id:
+          type: integer
+        provider:
+          type: string
+        keyPrefix:
+          type: string
+        status:
+          type: string
+        responseTime:
+          type: ["integer","null"]
+        errorMessage:
+          type: ["string","null"]
+        isBatch:
+          type: boolean
+        validatedAt:
+          type: string
+      required: [id, provider, keyPrefix, status, isBatch, validatedAt]
+
+    ValidationHistoryList:
+      type: object
+      properties:
+        data:
+          type: array
+          items:
+            $ref: "#/components/schemas/ValidationHistory"
+        total:
+          type: integer
+        page:
+          type: integer
+        limit:
+          type: integer
+      required: [data, total, page, limit]
+
+    AnalyticsSummary:
+      type: object
+      properties:
+        totalKeys:
+          type: integer
+        activeKeys:
+          type: integer
+        revokedKeys:
+          type: integer
+        expiredKeys:
+          type: integer
+        validatedToday:
+          type: integer
+        successRate:
+          type: number
+        totalValidations:
+          type: integer
+      required: [totalKeys, activeKeys, revokedKeys, expiredKeys, validatedToday, successRate, totalValidations]
+
+    DailyStat:
+      type: object
+      properties:
+        date:
+          type: string
+        validations:
+          type: integer
+        success:
+          type: integer
+        failed:
+          type: integer
+      required: [date, validations, success, failed]
+
+    ProviderStat:
+      type: object
+      properties:
+        provider:
+          type: string
+        total:
+          type: integer
+        success:
+          type: integer
+        failed:
+          type: integer
+        avgResponseTime:
+          type: number
+      required: [provider, total, success, failed, avgResponseTime]
+
+    SecurityScore:
+      type: object
+      properties:
+        score:
+          type: integer
+        factors:
+          type: array
+          items:
+            $ref: "#/components/schemas/ScoreFactor"
+      required: [score, factors]
+
+    ScoreFactor:
+      type: object
+      properties:
+        name:
+          type: string
+        points:
+          type: integer
+        maxPoints:
+          type: integer
+        description:
+          type: string
+      required: [name, points, maxPoints, description]
+
+    AuditLog:
+      type: object
+      properties:
+        id:
+          type: integer
+        action:
+          type: string
+        entityType:
+          type: string
+        entityId:
+          type: ["integer","null"]
+        details:
+          type: object
+        ipAddress:
+          type: ["string","null"]
+        createdAt:
+          type: string
+      required: [id, action, entityType, createdAt]
+
+    AuditLogList:
+      type: object
+      properties:
+        data:
+          type: array
+          items:
+            $ref: "#/components/schemas/AuditLog"
+        total:
+          type: integer
+        page:
+          type: integer
+        limit:
+          type: integer
+      required: [data, total, page, limit]
+
+    Notification:
+      type: object
+      properties:
+        id:
+          type: integer
+        type:
+          type: string
+        title:
+          type: string
+        message:
+          type: string
+        isRead:
+          type: boolean
+        keyId:
+          type: ["integer","null"]
+        createdAt:
+          type: string
+      required: [id, type, title, message, isRead, createdAt]
+
+    Environment:
+      type: object
+      properties:
+        id:
+          type: integer
+        name:
+          type: string
+        color:
+          type: string
+        isDefault:
+          type: boolean
+        keyCount:
+          type: integer
+      required: [id, name, color, isDefault, keyCount]
+
+    CreateEnvironmentBody:
+      type: object
+      properties:
+        name:
+          type: string
+        color:
+          type: string
+        isDefault:
+          type: boolean
+      required: [name]
+
+    ScheduledJob:
+      type: object
+      properties:
+        id:
+          type: integer
+        keyId:
+          type: integer
+        keyName:
+          type: string
+        cronExpression:
+          type: string
+        isActive:
+          type: boolean
+        isRunning:
+          type: boolean
+        lastRunAt:
+          type: ["string","null"]
+        lastRunStatus:
+          type: ["string","null"]
+        nextRunAt:
+          type: ["string","null"]
+        createdAt:
+          type: string
+      required: [id, keyId, cronExpression, isActive, isRunning, createdAt]
+
+    CreateScheduledJobBody:
+      type: object
+      properties:
+        keyId:
+          type: integer
+        cronExpression:
+          type: string
+        isActive:
+          type: boolean
+      required: [keyId, cronExpression]
+
+    UpdateScheduledJobBody:
+      type: object
+      properties:
+        cronExpression:
+          type: string
+        isActive:
+          type: boolean
+
+    SearchResults:
+      type: object
+      properties:
+        keys:
+          type: array
+          items:
+            $ref: "#/components/schemas/ApiKey"
+        history:
+          type: array
+          items:
+            $ref: "#/components/schemas/ValidationHistory"
+        audit:
+          type: array
+          items:
+            $ref: "#/components/schemas/AuditLog"
+      required: [keys, history, audit]
+
+    WebhookTestBody:
+      type: object
+      properties:
+        url:
+          type: string
+        method:
+          type: string
+        payload:
+          type: object
+      required: [url]
+
+    WebhookResult:
+      type: object
+      properties:
+        success:
+          type: boolean
+        statusCode:
+          type: ["integer","null"]
+        responseBody:
+          type: ["string","null"]
+        durationMs:
+          type: integer
+        hmacSignature:
+          type: string
+      required: [success, durationMs, hmacSignature]
+
+    WebhookLog:
+      type: object
+      properties:
+        id:
+          type: integer
+        url:
+          type: string
+        method:
+          type: string
+        responseStatus:
+          type: ["integer","null"]
+        durationMs:
+          type: ["integer","null"]
+        createdAt:
+          type: string
+      required: [id, url, method, createdAt]
+
+    WebhookLogList:
+      type: object
+      properties:
+        data:
+          type: array
+          items:
+            $ref: "#/components/schemas/WebhookLog"
+        total:
+          type: integer
+        page:
+          type: integer
+        limit:
+          type: integer
+      required: [data, total, page, limit]

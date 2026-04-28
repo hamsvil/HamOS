@@ -1,0 +1,20 @@
+{
+  "name": "Remix: SAERE v7.2 - Singularity Architect",
+  "description": "Autonomous Agentic Swarm IDE with Singularity Architect Protocol, Neural Link Write-Back, and 8 Specialized Sub-Agents.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone",
+    "geolocation",
+    "usb",
+    "bluetooth",
+    "clipboard-read",
+    "serial",
+    "display-capture",
+    "notifications",
+    "midi",
+    "payment",
+    "accelerometer",
+    "gyroscope",
+    "magnetometer"
+  ]
+}

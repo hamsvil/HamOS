@@ -1,0 +1,11 @@
+{
+  "theme": "dark",
+  "layout": "v2",
+  "openTabs": [
+    "ide",
+    "chat"
+  ],
+  "settings": {
+    "font": "jetbrains"
+  }
+}

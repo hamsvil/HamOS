@@ -1,0 +1,8 @@
+uploads = []
+generated = []
+
+[[outputs]]
+id = "21YtjFt-eXSbDGwWKTWRc"
+uri = "file://blueprint.md"
+type = "text"
+title = "Ham Key Gen — Blueprint Red/Blue Team Final (155 Komponen)"

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VFS Bridge Test</title>
+    <style>
+        body { font-family: monospace; padding: 20px; line-height: 1.5; background: #121212; color: #e0e0e0; }
+        .success { color: #4caf50; font-weight: bold; }
+        .fail { color: #f44336; font-weight: bold; }
+        .log { margin-top: 10px; border-left: 3px solid #333; padding-left: 10px; }
+        h1 { color: #fff; }
+    </style>
+</head>
+<body>
+    <h1>VFS Bridge Test</h1>
+    <div id="status">Testing...</div>
+    <div id="logs" class="log"></div>
+    <button id="picker-btn">Pick Directory (First Time)</button>
+
+    <script type="module">
+        import { get, set } from 'https://cdn.jsdelivr.net/npm/idb-keyval@6/+esm';
+
+        const statusEl = document.getElementById('status');
+        const logsEl = document.getElementById('logs');
+        const pickerBtn = document.getElementById('picker-btn');
+
+        function log(msg, isError = false) {
+            const div = document.createElement('div');
+            div.textContent = `[${new Date().toLocaleTimeString()}] ${msg}`;
+            if (isError) div.className = 'fail';
+            logsEl.appendChild(div);
+            console.log(msg);
+        }
+
+        async function testVFS() {
+            try {
+                log('Starting VFS Bridge Test...');
+
+                // 0. Test Persisted Handle
+                log('Checking for persisted directory handle...');
+                let rootHandle = await get('ham-vfs-handle');
+                
+                if (rootHandle) {
+                    log('Found persisted handle. Requesting permission...');
+                    const perm = await rootHandle.requestPermission({ mode: 'readwrite' });
+                    if (perm !== 'granted') {
+                        log('Permission denied for persisted handle.', true);
+                        rootHandle = null;
+                    } else {
+                        log('Permission granted for persisted handle.');
+                    }
+                }
+
+                if (!rootHandle) {
+                    log('No valid persisted handle. Please click "Pick Directory".');
+                    pickerBtn.style.display = 'block';
+                    pickerBtn.onclick = async () => {
+                        try {
+                            rootHandle = await window.showDirectoryPicker({ mode: 'readwrite' });
+                            await set('ham-vfs-handle', rootHandle);
+                            log('Directory handle saved to IndexedDB.');
+                            pickerBtn.style.display = 'none';
+                            runTests(rootHandle);
+                        } catch (e) {
+                            log('Picker failed: ' + e.message, true);
+                        }
+                    };
+                    return;
+                } else {
+                    pickerBtn.style.display = 'none';
+                    await runTests(rootHandle);
+                }
+            } catch (err) {
+                log('ERROR: ' + err.message, true);
+                statusEl.innerHTML = '<span class="fail">VFS Bridge Test: FAIL</span>';
+            }
+        }
+
+        async function runTests(root) {
+            try {
+                // 1. Test OPFS
+                log('Testing OPFS...');
+                if (!navigator.storage || !navigator.storage.getDirectory) {
+                    throw new Error('OPFS not supported in this browser');
+                }
+
+                const opfsRoot = await navigator.storage.getDirectory();
+                const hamDirOpfs = await opfsRoot.getDirectoryHandle('HamStudio', { create: true });
+                const fileHandleOpfs = await hamDirOpfs.getFileHandle('test.example', { create: true });
+                
+                const writableOpfs = await fileHandleOpfs.createWritable();
+                const testContentOpfs = 'Hello HamStudio OPFS ' + new Date().toISOString();
+                await writableOpfs.write(testContentOpfs);
+                await writableOpfs.close();
+                log('Successfully wrote to OPFS: HamStudio/test.example');
+
+                // 2. Test Picked Directory (Handle)
+                log('Testing Picked Directory...');
+                const hamDir = await root.getDirectoryHandle('HamStudio', { create: true });
+                const fileHandle = await hamDir.getFileHandle('test.example', { create: true });
+                
+                const writable = await fileHandle.createWritable();
+                const testContent = 'Hello HamStudio Persistent ' + new Date().toISOString();
+                await writable.write(testContent);
+                await writable.close();
+                log('Successfully wrote to Persistent Directory: HamStudio/test.example');
+
+                const file = await fileHandle.getFile();
+                const readContent = await file.text();
+                log(`Read from Persistent Directory: "${readContent}"`);
+
+                if (readContent !== testContent) {
+                    throw new Error('Persistent data mismatch');
+                }
+                log('Persistent verification: SUCCESS');
+
+                // 3. Test Server-side VFS Bridge
+                log('Testing Server API Bridge...');
+                try {
+                    const apiResponse = await fetch('/api/private-source/write', {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify({
+                            path: 'public/vfs-test-result.txt',
+                            content: 'VFS Test Success at ' + new Date().toISOString()
+                        })
+                    });
+                    
+                    if (apiResponse.ok) {
+                        log('Successfully wrote to server-side via /api/private-source/write');
+                    } else {
+                        log('Server API write failed (expected if not configured): ' + apiResponse.status, true);
+                    }
+                } catch (e) {
+                    log('Server API test error: ' + e.message, true);
+                }
+
+                statusEl.innerHTML = '<span class="success">VFS Bridge Test: SUCCESS</span>';
+                log('GLOBAL TEST RESULT: PASS');
+
+            } catch (err) {
+                log('ERROR: ' + err.message, true);
+                statusEl.innerHTML = '<span class="fail">VFS Bridge Test: FAIL</span>';
+            }
+        }
+
+        testVFS();
+    </script>
+</body>
+</html>

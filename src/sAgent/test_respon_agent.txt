@@ -1,0 +1,2 @@
+TEST 1 (Agent 1): LULUS. Response: "Hallo! Wie kann ich helfen?"
+TEST 2 (Agent 2): LULUS. Response: "Siap. Apa yang bisa saya bantu?"

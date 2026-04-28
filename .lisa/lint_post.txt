@@ -1,0 +1,14 @@
+npm warn Unknown project config "auto-install-peers". This will stop working in the next major version of npm.
+npm warn Unknown project config "strict-peer-dependencies". This will stop working in the next major version of npm.
+
+> react-example@0.0.0 lint
+> NODE_OPTIONS=--max-old-space-size=4096 tsc --noEmit
+
+src/components/HamAiStudio/Deployment/DeploymentModal.tsx(3,65): error TS2305: Module '"lucide-react"' has no exported member 'Github'.
+src/components/HamAiStudio/Settings/IntegrationsSettings.tsx(146,65): error TS2322: Type '{ size: number; }' is not assignable to type 'IntrinsicAttributes'.
+  Property 'size' does not exist on type 'IntrinsicAttributes'.
+src/components/HamAiStudio/TerminalEmulator/TerminalEmulator_Part1.tsx(142,19): error TS2322: Type '{ children: Element[]; direction: string; autoSaveId: string; }' is not assignable to type 'IntrinsicAttributes & HTMLAttributes<HTMLDivElement> & { children?: ReactNode; className?: string; defaultLayout?: Layout; ... 9 more ...; style?: CSSProperties; }'.
+  Property 'direction' does not exist on type 'IntrinsicAttributes & HTMLAttributes<HTMLDivElement> & { children?: ReactNode; className?: string; defaultLayout?: Layout; ... 9 more ...; style?: CSSProperties; }'.
+src/lib/firebase.ts(1,31): error TS2307: Cannot find module 'firebase/app' or its corresponding type declarations.
+src/lib/firebase.ts(2,25): error TS2307: Cannot find module 'firebase/auth' or its corresponding type declarations.
+src/lib/firebase.ts(3,30): error TS2307: Cannot find module 'firebase/firestore' or its corresponding type declarations.

@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Aeterna Glass v10 — SINGULARITY</title>
+<style>
+  :root {
+    --cyan: #00ffcc;
+    --magenta: #ff0055;
+    --dark: #0a0a0c;
+    --glass: rgba(12,12,16,0.97);
+    --gray: #222;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Courier New', monospace; }
+  html, body { background: transparent; height: 100%; width: 100%; overflow: hidden; }
+  body {
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    border-left: 2px solid var(--cyan);
+    border-right: 2px solid var(--cyan);
+    border-bottom: 2px solid var(--cyan);
+    border-radius: 0 0 14px 14px;
+  }
+
+  /* Tab Bar */
+  #tab-bar {
+    display: flex;
+    background: #111;
+    border-bottom: 1px solid rgba(0,255,204,0.25);
+    flex-shrink: 0;
+  }
+  .tab-btn {
+    flex: 1;
+    padding: 7px 4px;
+    background: transparent;
+    color: rgba(255,255,255,0.5);
+    border: none;
+    font-size: 10px;
+    font-weight: bold;
+    cursor: pointer;
+    letter-spacing: 0.5px;
+    transition: 0.2s;
+    border-bottom: 2px solid transparent;
+  }
+  .tab-btn.active {
+    color: var(--cyan);
+    border-bottom: 2px solid var(--cyan);
+    background: rgba(0,255,204,0.07);
+  }
+
+  /* Status Bar */
+  #agent-status-bar {
+    padding: 5px 8px;
+    font-size: 10px;
+    font-weight: bold;
+    color: #fff;
+    background: #333;
+    flex-shrink: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  #task-progress {
+    width: 100%;
+    height: 3px;
+    background: #111;
+    flex-shrink: 0;
+  }
+  #task-progress-bar {
+    height: 100%;
+    width: 0%;
+    background: var(--cyan);
+    transition: width 0.4s;
+    box-shadow: 0 0 8px var(--cyan);
+  }
+
+  /* Panels */
+  .panel { flex: 1; display: none; flex-direction: column; overflow: hidden; }
+  .panel.active { display: flex; }
+
+  /* Chat Panel */
+  #chat-history {
+    flex: 1;
+    padding: 8px;
+    overflow-y: auto;
+    font-size: 11px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+  .msg { padding: 7px 9px; border-radius: 6px; max-width: 96%; word-wrap: break-word; line-height: 1.4; }
+  .msg.user { background: rgba(0,255,204,0.1); border: 1px solid rgba(0,255,204,0.35); align-self: flex-end; color: var(--cyan); border-bottom-right-radius: 0; }
+  .msg.ai { background: rgba(255,0,85,0.09); border: 1px solid rgba(255,0,85,0.3); align-self: flex-start; color: #ffb3c6; border-bottom-left-radius: 0; white-space: pre-wrap; }
+  .msg.thought { background: rgba(255,255,255,0.04); border: 1px dashed rgba(255,255,255,0.18); align-self: flex-start; color: #aaa; font-style: italic; font-size: 10px; border-radius: 4px; }
+  .activity-container { background: rgba(0,255,204,0.04); border: 1px solid rgba(0,255,204,0.18); border-radius: 6px; padding: 4px; align-self: flex-start; max-width: 96%; }
+  .activity-summary { font-size: 10px; color: var(--cyan); cursor: pointer; padding: 3px 4px; font-weight: bold; user-select: none; }
+  .activity-details { display: none; flex-direction: column; gap: 3px; padding-left: 8px; border-left: 1px solid rgba(0,255,204,0.25); margin: 4px 0 0 4px; }
+  .msg.ai-step { font-size: 10px; color: #ccc; padding: 3px 4px; background: rgba(255,255,255,0.02); border-radius: 3px; }
+
+  #chat-input-container {
+    display: flex;
+    padding: 7px;
+    border-top: 1px solid rgba(255,0,85,0.3);
+    background: #000;
+    flex-shrink: 0;
+    gap: 6px;
+  }
+  #chat-input {
+    flex: 1;
+    background: rgba(255,0,85,0.09);
+    border: 1px solid var(--magenta);
+    color: #fff;
+    padding: 7px;
+    border-radius: 4px;
+    outline: none;
+    font-size: 11px;
+  }
+  #send-btn {
+    background: var(--magenta);
+    color: #fff;
+    border: none;
+    padding: 0 14px;
+    border-radius: 4px;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 11px;
+  }
+
+  /* Settings Panel */
+  #settings-panel {
+    flex: 1;
+    overflow-y: auto;
+    padding: 10px;
+    display: none;
+    flex-direction: column;
+    gap: 10px;
+  }
+  #settings-panel.active { display: flex; }
+  .setting-group { background: rgba(0,255,204,0.05); border: 1px solid rgba(0,255,204,0.2); border-radius: 8px; padding: 10px; }
+  .setting-label { font-size: 10px; color: var(--cyan); font-weight: bold; margin-bottom: 6px; letter-spacing: 0.5px; }
+  .setting-input {
+    width: 100%;
+    background: #111;
+    border: 1px solid rgba(0,255,204,0.3);
+    color: #fff;
+    padding: 7px;
+    border-radius: 4px;
+    font-size: 11px;
+    outline: none;
+  }
+  .setting-input:focus { border-color: var(--cyan); }
+  select.setting-input { cursor: pointer; }
+  .setting-row { display: flex; align-items: center; justify-content: space-between; }
+  .toggle-switch { position: relative; width: 40px; height: 22px; }
+  .toggle-switch input { opacity: 0; width: 0; height: 0; }
+  .toggle-slider { position: absolute; inset: 0; background: #333; border-radius: 22px; cursor: pointer; transition: 0.3s; }
+  .toggle-switch input:checked + .toggle-slider { background: var(--cyan); }
+  .toggle-slider:before { content: ''; position: absolute; width: 16px; height: 16px; left: 3px; top: 3px; background: #fff; border-radius: 50%; transition: 0.3s; }
+  .toggle-switch input:checked + .toggle-slider:before { transform: translateX(18px); }
+  .action-btn {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid rgba(0,255,204,0.4);
+    background: rgba(0,255,204,0.07);
+    color: var(--cyan);
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 11px;
+    font-weight: bold;
+    margin-top: 4px;
+  }
+  .action-btn.danger { border-color: rgba(255,0,85,0.4); background: rgba(255,0,85,0.07); color: var(--magenta); }
+  .action-btn:active { opacity: 0.7; }
+  .slider-container { display: flex; align-items: center; gap: 8px; }
+  .setting-slider { flex: 1; accent-color: var(--cyan); }
+  #timeout-value { font-size: 11px; color: var(--cyan); min-width: 32px; text-align: right; }
+  #ltm-count { font-size: 10px; color: rgba(0,255,204,0.6); margin-top: 4px; }
+
+  ::-webkit-scrollbar { width: 3px; }
+  ::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.18); border-radius: 2px; }
+</style>
+</head>
+<body>
+  <div id="tab-bar">
+    <button class="tab-btn active" onclick="switchTab('chat')">AGENT</button>
+    <button class="tab-btn" onclick="switchTab('settings')">SETTINGS</button>
+  </div>
+
+  <div id="agent-status-bar">[IDLE] Aeterna v10 — SINGULARITY ARCHITECTURE</div>
+  <div id="task-progress"><div id="task-progress-bar"></div></div>
+
+  <!-- AGENT CHAT TAB -->
+  <div id="chat-panel" class="panel active">
+    <div id="chat-history">
+      <div class="msg ai">SINGULARITY ARCHITECTURE v10 — READY.
+
+Cara penggunaan:
+1. [Settings] → Masukkan Gemini API Key
+2. Ketik tujuan Anda (contoh: "buka YouTube dan cari lagu")
+3. Ketik "stop" untuk pause, "resume" untuk lanjut
+4. "status" untuk melihat state agent</div>
+    </div>
+    <div id="chat-input-container">
+      <input type="text" id="chat-input" placeholder="Ketik tujuan atau perintah..." />
+      <button id="send-btn">EXE</button>
+    </div>
+  </div>
+
+  <!-- SETTINGS TAB -->
+  <div id="settings-panel">
+    <div class="setting-group">
+      <div class="setting-label">🔑 GEMINI API KEY</div>
+      <input type="password" class="setting-input" id="api-key-input" placeholder="AIza..." />
+      <button class="action-btn" onclick="saveApiKey()" style="margin-top:6px;">Simpan API Key</button>
+    </div>
+
+    <div class="setting-group">
+      <div class="setting-label">🤖 MODEL AI</div>
+      <select class="setting-input" id="model-select">
+        <option value="gemini-2.5-flash">gemini-2.5-flash (Cepat)</option>
+        <option value="gemini-2.5-pro">gemini-2.5-pro (Akurat)</option>
+        <option value="gemini-1.5-pro">gemini-1.5-pro (Stabil)</option>
+        <option value="gemini-pro">gemini-pro (Legacy)</option>
+      </select>
+      <button class="action-btn" onclick="saveModel()" style="margin-top:6px;">Terapkan Model</button>
+    </div>
+
+    <div class="setting-group">
+      <div class="setting-label">⏱ TIMEOUT PER TASK</div>
+      <div class="slider-container">
+        <input type="range" class="setting-slider" id="timeout-slider"
+               min="10" max="120" value="60"
+               oninput="document.getElementById('timeout-value').innerText=this.value+'s'" />
+        <span id="timeout-value">60s</span>
+      </div>
+    </div>
+
+    <div class="setting-group">
+      <div class="setting-label">🛡 SHELL WHITELIST MODE</div>
+      <div class="setting-row">
+        <span style="font-size:11px;color:#ccc;">Hanya izinkan perintah yang disetujui</span>
+        <label class="toggle-switch">
+          <input type="checkbox" id="whitelist-toggle" onchange="toggleWhitelist(this.checked)" />
+          <div class="toggle-slider"></div>
+        </label>
+      </div>
+    </div>
+
+    <div class="setting-group">
+      <div class="setting-label">🧠 LONG-TERM MEMORY</div>
+      <div id="ltm-count">Memuat jumlah entri...</div>
+      <button class="action-btn danger" onclick="confirmClearLTM()">Hapus Semua Memori LTM</button>
+    </div>
+
+    <div class="setting-group">
+      <div class="setting-label">📊 STATUS AGENT</div>
+      <div id="settings-agent-status" style="font-size:10px;color:var(--cyan);line-height:1.6;">Memuat...</div>
+      <button class="action-btn" onclick="refreshStatus()">Refresh Status</button>
+    </div>
+  </div>
+
+<script>
+  var chatHistory = document.getElementById('chat-history');
+  var chatInput  = document.getElementById('chat-input');
+  var statusBar  = document.getElementById('agent-status-bar');
+  var progressBar = document.getElementById('task-progress-bar');
+  var currentActivityContainer = null, currentActivitySummary = null, currentActivityDetails = null;
+
+  function switchTab(tab) {
+    document.querySelectorAll('.tab-btn').forEach(function(b) { b.classList.remove('active'); });
+    document.querySelectorAll('.panel, #settings-panel').forEach(function(p) { p.classList.remove('active'); p.style.display='none'; });
+
+    if (tab === 'chat') {
+      document.querySelector('.tab-btn').classList.add('active');
+      var cp = document.getElementById('chat-panel');
+      cp.classList.add('active'); cp.style.display = 'flex';
+    } else {
+      document.querySelectorAll('.tab-btn')[1].classList.add('active');
+      var sp = document.getElementById('settings-panel');
+      sp.style.display = 'flex'; sp.classList.add('active');
+      refreshStatus();
+      loadLtmCount();
+    }
+  }
+
+  window.appendMessage = function(text, sender) {
+    var isThought = text.startsWith("AGENT: THOUGHT:") || text.startsWith("AGENT: PLAN:");
+    var isIntermediate = !isThought && sender === 'ai' &&
+        (text.startsWith("AGENT: STATE:") || text.startsWith("AGENT: Executing") ||
+         text.startsWith("AGENT: Aksi") || text.startsWith("AGENT: Planning") ||
+         text.startsWith("AGENT: Re-plan") || text.startsWith("AGENT: Task") ||
+         text.startsWith("AGENT: AI Error") || text.startsWith("AGENT: ANOMALY") ||
+         text.startsWith("AGENT: TIMEOUT") || text.startsWith("AGENT: Parse"));
+
+    updateStatusBarFromText(text);
+
+    var msgDiv = document.createElement('div');
+    if (sender === 'user') {
+      currentActivityContainer = null;
+      msgDiv.className = 'msg user';
+      msgDiv.innerText = text;
+      chatHistory.appendChild(msgDiv);
+    } else if (!isThought && !isIntermediate) {
+      msgDiv.className = 'msg ai';
+      msgDiv.innerText = text.replace(/^AGENT: /, '');
+      chatHistory.appendChild(msgDiv);
+      currentActivityContainer = null;
+    } else {
+      if (!currentActivityContainer) {
+        currentActivityContainer = document.createElement('div');
+        currentActivityContainer.className = 'activity-container';
+        currentActivitySummary = document.createElement('div');
+        currentActivitySummary.className = 'activity-summary';
+        currentActivitySummary.innerText = '▶ Processing...';
+        currentActivitySummary.onclick = function() {
+          var show = currentActivityDetails.style.display !== 'flex';
+          currentActivityDetails.style.display = show ? 'flex' : 'none';
+        };
+        currentActivityDetails = document.createElement('div');
+        currentActivityDetails.className = 'activity-details';
+        currentActivityDetails.style.display = 'none';
+        currentActivityContainer.appendChild(currentActivitySummary);
+        currentActivityContainer.appendChild(currentActivityDetails);
+        chatHistory.appendChild(currentActivityContainer);
+      }
+      var short = text.replace(/^AGENT: /, '');
+      var detailDiv = document.createElement('div');
+      detailDiv.className = isThought ? 'msg thought' : 'msg ai-step';
+      detailDiv.innerText = short;
+      currentActivityDetails.appendChild(detailDiv);
+      if (short.length > 38) short = short.substring(0, 38) + '...';
+      currentActivitySummary.innerText = '▶ ' + short;
+    }
+    chatHistory.scrollTop = chatHistory.scrollHeight;
+  };
+
+  function updateStatusBarFromText(text) {
+    var stateMap = {
+      'PLANNING': ['#0055ff', '[PLANNING]'],
+      'EXECUTING': ['#007700', '[EXECUTING]'],
+      'INTERRUPTED': ['#886600', '[INTERRUPTED]'],
+      'TASK_TIMEOUT': ['#886600', '[TIMEOUT]'],
+      'FATAL_ERROR': ['#cc0000', '[FATAL ERROR]'],
+      'DONE': ['#005588', '[DONE ✓]'],
+      'PAUSED': ['#553399', '[PAUSED]'],
+      'IDLE': ['#333', '[IDLE]']
+    };
+    for (var state in stateMap) {
+      if (text.indexOf('STATE: ' + state) >= 0) {
+        statusBar.style.background = stateMap[state][0];
+        break;
+      }
+    }
+    var m = text.match(/Task (\d+)\/(\d+)/);
+    if (m) {
+      var pct = Math.round((parseInt(m[1])-1) / parseInt(m[2]) * 100);
+      progressBar.style.width = pct + '%';
+    }
+  }
+
+  window.updateProgress = function(p) {
+    progressBar.style.width = p + '%';
+  };
+
+  window.updateUrl = function(url) {};
+
+  function processCommand() {
+    var text = chatInput.value.trim();
+    if (!text) return;
+    window.appendMessage(text, 'user');
+    chatInput.value = '';
+    currentActivityContainer = null;
+    if (window.AeternaAPI) {
+      setTimeout(function() {
+        try {
+          var result = AeternaAPI.askAI(text);
+          if (result) window.appendMessage(result, 'ai');
+        } catch(e) {
+          window.appendMessage('ERROR: ' + e.message, 'ai');
+        }
+      }, 80);
+    } else {
+      window.appendMessage('ERROR: Bridge tidak terhubung.', 'ai');
+    }
+  }
+
+  document.getElementById('send-btn').addEventListener('click', processCommand);
+  chatInput.addEventListener('keypress', function(e) { if (e.key === 'Enter') processCommand(); });
+
+  function saveApiKey() {
+    var key = document.getElementById('api-key-input').value.trim();
+    if (!key) { alert('API Key tidak boleh kosong.'); return; }
+    if (window.AeternaAPI) {
+      AeternaAPI.saveApiKey(key);
+      document.getElementById('api-key-input').value = '';
+      alert('API Key tersimpan aman (AES256-GCM).');
+    }
+  }
+
+  function saveModel() {
+    var model = document.getElementById('model-select').value;
+    if (window.AeternaAPI) {
+      AeternaAPI.setModel(model);
+      alert('Model diatur ke: ' + model);
+    }
+  }
+
+  function toggleWhitelist(enabled) {
+    if (window.AeternaAPI) {
+      AeternaAPI.log('whitelist_mode:' + (enabled ? '1' : '0'));
+    }
+  }
+
+  function confirmClearLTM() {
+    if (confirm('Hapus semua memori jangka panjang? Tindakan ini tidak bisa dibatalkan.')) {
+      if (window.AeternaAPI) {
+        AeternaAPI.clearLTM();
+        loadLtmCount();
+        alert('Memori LTM berhasil dihapus.');
+      }
+    }
+  }
+
+  function loadLtmCount() {
+    if (window.AeternaAPI) {
+      try {
+        var count = AeternaAPI.getLTMEntryCount();
+        document.getElementById('ltm-count').innerText = count + ' entri tersimpan';
+      } catch(e) {}
+    }
+  }
+
+  function refreshStatus() {
+    if (window.AeternaAPI) {
+      try {
+        var status = AeternaAPI.getAgentStatus();
+        document.getElementById('settings-agent-status').innerText = status;
+      } catch(e) {
+        document.getElementById('settings-agent-status').innerText = 'Tidak tersedia';
+      }
+    }
+  }
+
+  var checkBridge = setInterval(function() {
+    if (window.AeternaAPI) {
+      clearInterval(checkBridge);
+      AeternaAPI.log('UI loaded — Singularity v10 ready.');
+      statusBar.innerText = '[IDLE] Aeterna v10 — SINGULARITY ARCHITECTURE';
+    }
+  }, 100);
+
+  setInterval(function() {
+    if (window.AeternaAPI) {
+      try {
+        var state = AeternaAPI.getAgentState();
+        var stateColors = {
+          'PLANNING': '#0055ff', 'EXECUTING': '#007700',
+          'INTERRUPTED': '#886600', 'TASK_TIMEOUT': '#886600',
+          'FATAL_ERROR': '#cc0000', 'DONE': '#005588',
+          'PAUSED': '#553399', 'IDLE': '#333'
+        };
+        statusBar.style.background = stateColors[state] || '#333';
+      } catch(e) {}
+    }
+  }, 2000);
+</script>
+</body>
+</html>

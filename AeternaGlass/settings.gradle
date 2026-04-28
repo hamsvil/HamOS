@@ -1,0 +1,2 @@
+rootProject.name = "AeternaGlass"
+include ':app'

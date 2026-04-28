@@ -1,0 +1,67 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    match /{document=**} {
+      allow read, write: if false;
+    }
+    
+    function isValidId(id) { 
+      return id is string && id.size() <= 128 && id.matches('^[a-zA-Z0-9_\\-]+$'); 
+    }
+    function incoming() { return request.resource.data; }
+    function existing() { return resource.data; }
+    function isSignedIn() { return request.auth != null; }
+    
+    function isValidUser(data) {
+      return data.size() >= 4 && data.keys().hasAll(['uid', 'email', 'createdAt', 'updatedAt'])
+        && data.uid is string && data.uid.size() <= 128 && data.uid == request.auth.uid
+        && data.email is string && data.email.size() <= 256
+        && data.createdAt is timestamp
+        && data.updatedAt is timestamp;
+    }
+    
+    match /users/{userId} {
+      allow get: if isSignedIn() && request.auth.uid == userId;
+      allow create: if isSignedIn() 
+        && isValidId(userId)
+        && request.auth.uid == userId 
+        && isValidUser(incoming())
+        && incoming().createdAt == request.time
+        && incoming().updatedAt == request.time;
+      allow update: if isSignedIn()
+        && request.auth.uid == userId
+        && isValidUser(incoming())
+        && incoming().uid == existing().uid
+        && incoming().createdAt == existing().createdAt
+        && incoming().updatedAt == request.time
+        && incoming().diff(existing()).affectedKeys().hasOnly(['email', 'displayName', 'updatedAt']);
+    }
+
+    function isValidProject(data) {
+      return data.size() >= 4 && data.keys().hasAll(['id', 'name', 'timestamp', 'ownerId'])
+        && data.id is string && data.id.size() <= 128
+        && data.name is string && data.name.size() <= 256
+        && data.timestamp is number
+        && data.ownerId is string && data.ownerId == request.auth.uid
+        && (data.get('data', {}) is map)
+        && (data.get('chatHistory', []) is list && data.get('chatHistory', []).size() <= 1000);
+    }
+    
+    match /projects/{projectId} {
+      allow get: if isSignedIn() && existing().ownerId == request.auth.uid;
+      allow list: if isSignedIn() && resource.data.ownerId == request.auth.uid;
+      allow create: if isSignedIn()
+        && isValidId(projectId)
+        && isValidProject(incoming())
+        && incoming().ownerId == request.auth.uid
+        && exists(/databases/$(database)/documents/users/$(request.auth.uid));
+      allow update: if isSignedIn()
+        && existing().ownerId == request.auth.uid
+        && isValidProject(incoming())
+        && incoming().id == existing().id
+        && incoming().ownerId == existing().ownerId
+        && incoming().diff(existing()).affectedKeys().hasOnly(['name', 'timestamp', 'data', 'chatHistory']);
+      allow delete: if isSignedIn() && existing().ownerId == request.auth.uid;
+    }
+  }
+}

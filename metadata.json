@@ -1,0 +1,20 @@
+{
+  "name": "Supreme Swarm IDE (Evolved)",
+  "description": "HAM OS Quantum-Level IDE with v24 Autonomous Swarm Protocol. Integrated Generator Studio, H-Camera, and Sovereign Project Governance via Agent 24 (The Eternal Mover).",
+  "requestFramePermissions": [
+    "camera",
+    "microphone",
+    "geolocation",
+    "usb",
+    "bluetooth",
+    "clipboard-read",
+    "serial",
+    "display-capture",
+    "notifications",
+    "midi",
+    "payment",
+    "accelerometer",
+    "gyroscope",
+    "magnetometer"
+  ]
+}

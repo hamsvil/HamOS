@@ -1,0 +1,30 @@
+{
+  "timestamp": "2026-04-21T17:48:32.998Z",
+  "unit": {
+    "allPass": true,
+    "tests": {
+      "Post + size": true,
+      "Subscribe fires": true,
+      "Topic filter": true,
+      "AgentId filter": true,
+      "Snapshot format": true,
+      "Eviction (cap)": true,
+      "Unsubscribe": true,
+      "Export/Import": true
+    }
+  },
+  "integration": {
+    "allPass": true,
+    "checks": {
+      "Solve tidak crash": true,
+      "Routing terjadi": true,
+      "Architect post ke board": true,
+      "Snapshot berisi prior": true,
+      "Total entries bertambah": true
+    },
+    "blackboardSize": 3,
+    "llmSuccess": 0
+  },
+  "totalMs": 1717,
+  "overall": true
+}

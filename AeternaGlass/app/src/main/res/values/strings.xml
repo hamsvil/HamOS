@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="accessibility_desc">Aeterna OS-Level Autopilot Service. Allows the AI to view and interact with other apps autonomously.</string>
+</resources>

@@ -1,0 +1,156 @@
+npm warn Unknown project config "auto-install-peers". This will stop working in the next major version of npm.
+npm warn Unknown project config "strict-peer-dependencies". This will stop working in the next major version of npm.
+
+> react-example@0.0.0 lint
+> NODE_OPTIONS=--max-old-space-size=4096 tsc --noEmit
+
+src/_archive/Keygen/artifacts/api-server/src/app.ts(3,22): error TS2307: Cannot find module 'pino-http' or its corresponding type declarations.
+src/_archive/Keygen/artifacts/api-server/src/app.ts(4,20): error TS2307: Cannot find module 'helmet' or its corresponding type declarations.
+src/_archive/Keygen/artifacts/api-server/src/app.ts(6,21): error TS2307: Cannot find module 'express-session' or its corresponding type declarations.
+src/_archive/Keygen/artifacts/api-server/src/app.ts(8,26): error TS2307: Cannot find module 'cookie-parser' or its corresponding type declarations.
+src/_archive/Keygen/artifacts/api-server/src/index.ts(18,18): error TS2769: No overload matches this call.
+  The last overload gave the following error.
+    Argument of type '(err: any) => void' is not assignable to parameter of type '() => void'.
+      Target signature provides too few arguments. Expected 1 or more, but got 0.
+src/_archive/Keygen/artifacts/api-server/src/lib/agent-tools.ts(131,29): error TS2352: Conversion of type 'ExecException' to type 'ErrnoException' may be a mistake because neither type sufficiently overlaps with the other. If this was intentional, convert the expression to 'unknown' first.
+  Types of property 'code' are incompatible.
+    Type 'number' is not comparable to type 'string'.
+src/_archive/Keygen/artifacts/api-server/src/lib/auth.ts(7,16): error TS2664: Invalid module name in augmentation, module 'express-session' cannot be found.
+src/_archive/Keygen/artifacts/api-server/src/lib/auth.ts(16,12): error TS2339: Property 'session' does not exist on type 'Request<ParamsDictionary, any, any, ParsedQs, Record<string, any>>'.
+src/_archive/Keygen/artifacts/api-server/src/lib/auth.ts(23,12): error TS2339: Property 'session' does not exist on type 'Request<ParamsDictionary, any, any, ParsedQs, Record<string, any>>'.
+src/_archive/Keygen/artifacts/api-server/src/lib/auth.ts(24,79): error TS2339: Property 'session' does not exist on type 'Request<ParamsDictionary, any, any, ParsedQs, Record<string, any>>'.
+src/_archive/Keygen/artifacts/api-server/src/routes/admin.ts(47,19): error TS2339: Property 'session' does not exist on type 'Request<{}, any, any, ParsedQs, Record<string, any>>'.
+src/_archive/Keygen/artifacts/api-server/src/routes/admin.ts(73,17): error TS2339: Property 'session' does not exist on type 'Request<{ id: string; }, any, any, ParsedQs, Record<string, any>>'.
+src/_archive/Keygen/artifacts/api-server/src/routes/admin.ts(82,18): error TS2339: Property 'session' does not exist on type 'Request<{ id: string; }, any, any, ParsedQs, Record<string, any>>'.
+src/_archive/Keygen/artifacts/api-server/src/routes/admin.ts(85,17): error TS2339: Property 'session' does not exist on type 'Request<{ id: string; }, any, any, ParsedQs, Record<string, any>>'.
+src/_archive/Keygen/artifacts/api-server/src/routes/admin.ts(105,17): error TS2339: Property 'session' does not exist on type 'Request<{}, any, any, ParsedQs, Record<string, any>>'.
+src/_archive/Keygen/artifacts/api-server/src/routes/agent.ts(15,11): error TS2339: Property 'session' does not exist on type 'Request<ParamsDictionary, any, any, ParsedQs, Record<string, any>>'.
+src/_archive/Keygen/artifacts/api-server/src/routes/analytics.ts(11,22): error TS2339: Property 'session' does not exist on type 'Request<{}, any, any, ParsedQs, Record<string, any>>'.
+src/_archive/Keygen/artifacts/api-server/src/routes/analytics.ts(85,22): error TS2339: Property 'session' does not exist on type 'Request<{}, any, any, ParsedQs, Record<string, any>>'.
+src/_archive/Keygen/artifacts/api-server/src/routes/analytics.ts(119,22): error TS2339: Property 'session' does not exist on type 'Request<{}, any, any, ParsedQs, Record<string, any>>'.
+src/_archive/Keygen/artifacts/api-server/src/routes/audit.ts(12,22): error TS2339: Property 'session' does not exist on type 'Request<{}, any, any, ParsedQs, Record<string, any>>'.
+src/_archive/Keygen/artifacts/api-server/src/routes/auth.ts(90,7): error TS2339: Property 'session' does not exist on type 'Request<{}, any, any, ParsedQs, Record<string, any>>'.
+src/_archive/Keygen/artifacts/api-server/src/routes/auth.ts(91,7): error TS2339: Property 'session' does not exist on type 'Request<{}, any, any, ParsedQs, Record<string, any>>'.
+src/_archive/Keygen/artifacts/api-server/src/routes/auth.ts(92,7): error TS2339: Property 'session' does not exist on type 'Request<{}, any, any, ParsedQs, Record<string, any>>'.
+src/_archive/Keygen/artifacts/api-server/src/routes/auth.ts(107,22): error TS2339: Property 'session' does not exist on type 'Request<ParamsDictionary, any, any, ParsedQs, Record<string, any>>'.
+src/_archive/Keygen/artifacts/api-server/src/routes/auth.ts(109,7): error TS2339: Property 'session' does not exist on type 'Request<ParamsDictionary, any, any, ParsedQs, Record<string, any>>'.
+src/_archive/Keygen/artifacts/api-server/src/routes/auth.ts(143,23): error TS2339: Property 'session' does not exist on type 'Request<ParamsDictionary, any, any, ParsedQs, Record<string, any>>'.
+src/_archive/Keygen/artifacts/api-server/src/routes/auth.ts(144,20): error TS2339: Property 'session' does not exist on type 'Request<ParamsDictionary, any, any, ParsedQs, Record<string, any>>'.
+src/_archive/Keygen/artifacts/api-server/src/routes/environments.ts(11,22): error TS2339: Property 'session' does not exist on type 'Request<{}, any, any, ParsedQs, Record<string, any>>'.
+src/_archive/Keygen/artifacts/api-server/src/routes/environments.ts(24,22): error TS2339: Property 'session' does not exist on type 'Request<{}, any, any, ParsedQs, Record<string, any>>'.
+src/_archive/Keygen/artifacts/api-server/src/routes/environments.ts(41,22): error TS2339: Property 'session' does not exist on type 'Request<{ id: string; }, any, any, ParsedQs, Record<string, any>>'.
+src/_archive/Keygen/artifacts/api-server/src/routes/environments.ts(63,22): error TS2339: Property 'session' does not exist on type 'Request<{ id: string; }, any, any, ParsedQs, Record<string, any>>'.
+src/_archive/Keygen/artifacts/api-server/src/routes/environments.ts(85,22): error TS2339: Property 'session' does not exist on type 'Request<{ id: string; }, any, any, ParsedQs, Record<string, any>>'.
+src/_archive/Keygen/artifacts/api-server/src/routes/export.ts(11,22): error TS2339: Property 'session' does not exist on type 'Request<{}, any, any, ParsedQs, Record<string, any>>'.
+src/_archive/Keygen/artifacts/api-server/src/routes/export.ts(58,22): error TS2339: Property 'session' does not exist on type 'Request<{}, any, any, ParsedQs, Record<string, any>>'.
+src/_archive/Keygen/artifacts/api-server/src/routes/keys.ts(13,22): error TS2339: Property 'session' does not exist on type 'Request<{}, any, any, ParsedQs, Record<string, any>>'.
+src/_archive/Keygen/artifacts/api-server/src/routes/keys.ts(41,22): error TS2339: Property 'session' does not exist on type 'Request<{}, any, any, ParsedQs, Record<string, any>>'.
+src/_archive/Keygen/artifacts/api-server/src/routes/keys.ts(87,22): error TS2339: Property 'session' does not exist on type 'Request<{}, any, any, ParsedQs, Record<string, any>>'.
+src/_archive/Keygen/artifacts/api-server/src/routes/keys.ts(143,22): error TS2339: Property 'session' does not exist on type 'Request<{}, any, any, ParsedQs, Record<string, any>>'.
+src/_archive/Keygen/artifacts/api-server/src/routes/keys.ts(153,22): error TS2339: Property 'session' does not exist on type 'Request<{}, any, any, ParsedQs, Record<string, any>>'.
+src/_archive/Keygen/artifacts/api-server/src/routes/keys.ts(162,22): error TS2339: Property 'session' does not exist on type 'Request<{}, any, any, ParsedQs, Record<string, any>>'.
+src/_archive/Keygen/artifacts/api-server/src/routes/keys.ts(186,22): error TS2339: Property 'session' does not exist on type 'Request<{ id: string; }, any, any, ParsedQs, Record<string, any>>'.
+src/_archive/Keygen/artifacts/api-server/src/routes/keys.ts(196,22): error TS2339: Property 'session' does not exist on type 'Request<{ id: string; }, any, any, ParsedQs, Record<string, any>>'.
+src/_archive/Keygen/artifacts/api-server/src/routes/keys.ts(215,22): error TS2339: Property 'session' does not exist on type 'Request<{ id: string; }, any, any, ParsedQs, Record<string, any>>'.
+src/_archive/Keygen/artifacts/api-server/src/routes/keys.ts(223,22): error TS2339: Property 'session' does not exist on type 'Request<{ id: string; }, any, any, ParsedQs, Record<string, any>>'.
+src/_archive/Keygen/artifacts/api-server/src/routes/keys.ts(261,22): error TS2339: Property 'session' does not exist on type 'Request<{ id: string; }, any, any, ParsedQs, Record<string, any>>'.
+src/_archive/Keygen/artifacts/api-server/src/routes/keys.ts(270,22): error TS2339: Property 'session' does not exist on type 'Request<{ id: string; }, any, any, ParsedQs, Record<string, any>>'.
+src/_archive/Keygen/artifacts/api-server/src/routes/keys.ts(278,22): error TS2339: Property 'session' does not exist on type 'Request<{ id: string; }, any, any, ParsedQs, Record<string, any>>'.
+src/_archive/Keygen/artifacts/api-server/src/routes/notifications.ts(11,22): error TS2339: Property 'session' does not exist on type 'Request<{}, any, any, ParsedQs, Record<string, any>>'.
+src/_archive/Keygen/artifacts/api-server/src/routes/notifications.ts(25,22): error TS2339: Property 'session' does not exist on type 'Request<{}, any, any, ParsedQs, Record<string, any>>'.
+src/_archive/Keygen/artifacts/api-server/src/routes/notifications.ts(32,22): error TS2339: Property 'session' does not exist on type 'Request<{ id: string; }, any, any, ParsedQs, Record<string, any>>'.
+src/_archive/Keygen/artifacts/api-server/src/routes/scheduled.ts(7,18): error TS2307: Cannot find module 'node-cron' or its corresponding type declarations.
+src/_archive/Keygen/artifacts/api-server/src/routes/scheduled.ts(52,22): error TS2339: Property 'session' does not exist on type 'Request<{}, any, any, ParsedQs, Record<string, any>>'.
+src/_archive/Keygen/artifacts/api-server/src/routes/scheduled.ts(68,22): error TS2339: Property 'session' does not exist on type 'Request<{}, any, any, ParsedQs, Record<string, any>>'.
+src/_archive/Keygen/artifacts/api-server/src/routes/scheduled.ts(85,22): error TS2339: Property 'session' does not exist on type 'Request<{ id: string; }, any, any, ParsedQs, Record<string, any>>'.
+src/_archive/Keygen/artifacts/api-server/src/routes/scheduled.ts(110,22): error TS2339: Property 'session' does not exist on type 'Request<{ id: string; }, any, any, ParsedQs, Record<string, any>>'.
+src/_archive/Keygen/artifacts/api-server/src/routes/search.ts(11,22): error TS2339: Property 'session' does not exist on type 'Request<{}, any, any, ParsedQs, Record<string, any>>'.
+src/_archive/Keygen/artifacts/api-server/src/routes/tags.ts(11,22): error TS2339: Property 'session' does not exist on type 'Request<{}, any, any, ParsedQs, Record<string, any>>'.
+src/_archive/Keygen/artifacts/api-server/src/routes/validate.ts(20,22): error TS2339: Property 'session' does not exist on type 'Request<{}, any, any, ParsedQs, Record<string, any>>'.
+src/_archive/Keygen/artifacts/api-server/src/routes/validate.ts(79,22): error TS2339: Property 'session' does not exist on type 'Request<{}, any, any, ParsedQs, Record<string, any>>'.
+src/_archive/Keygen/artifacts/ham-key-gen/src/App.tsx(2,65): error TS2307: Cannot find module 'wouter' or its corresponding type declarations.
+src/_archive/Keygen/artifacts/ham-key-gen/src/App.tsx(3,50): error TS2307: Cannot find module '@tanstack/react-query' or its corresponding type declarations.
+src/_archive/Keygen/artifacts/ham-key-gen/src/components/layout/app-layout.tsx(3,45): error TS2307: Cannot find module 'wouter' or its corresponding type declarations.
+src/_archive/Keygen/artifacts/ham-key-gen/src/components/ui/chart.tsx(117,7): error TS2339: Property 'payload' does not exist on type 'Omit<Omit<Props<ValueType, NameType>, PropertiesReadFromContext> & { active?: boolean; allowEscapeViewBox?: AllowInDimension; ... 24 more ...; wrapperStyle?: CSSProperties; } & ClassAttributes<...> & HTMLAttributes<...> & { ...; }, "ref">'.
+src/_archive/Keygen/artifacts/ham-key-gen/src/components/ui/chart.tsx(122,7): error TS2339: Property 'label' does not exist on type 'Omit<Omit<Props<ValueType, NameType>, PropertiesReadFromContext> & { active?: boolean; allowEscapeViewBox?: AllowInDimension; ... 24 more ...; wrapperStyle?: CSSProperties; } & ClassAttributes<...> & HTMLAttributes<...> & { ...; }, "ref">'.
+src/_archive/Keygen/artifacts/ham-key-gen/src/components/ui/chart.tsx(264,41): error TS2344: Type '"verticalAlign" | "payload"' does not satisfy the constraint '"string" | "origin" | "type" | "filter" | "fill" | "values" | "version" | "id" | "role" | "content" | "format" | "name" | "x" | "path" | "key" | "slot" | "style" | "target" | "children" | ... 431 more ... | "onBBoxUpdate"'.
+  Type '"payload"' is not assignable to type '"string" | "origin" | "type" | "filter" | "fill" | "values" | "version" | "id" | "role" | "content" | "format" | "name" | "x" | "path" | "key" | "slot" | "style" | "target" | "children" | ... 431 more ... | "onBBoxUpdate"'.
+src/_archive/Keygen/artifacts/ham-key-gen/src/components/ui/chart.tsx(275,19): error TS2339: Property 'length' does not exist on type 'unknown'.
+src/_archive/Keygen/artifacts/ham-key-gen/src/components/ui/chart.tsx(289,12): error TS2339: Property 'filter' does not exist on type 'unknown'.
+src/_archive/Keygen/artifacts/ham-key-gen/src/components/ui/resizable.tsx(11,51): error TS2339: Property 'PanelGroup' does not exist on type 'typeof import("/home/runner/workspace/node_modules/react-resizable-panels/dist/react-resizable-panels")'.
+src/_archive/Keygen/artifacts/ham-key-gen/src/components/ui/resizable.tsx(12,23): error TS2339: Property 'PanelGroup' does not exist on type 'typeof import("/home/runner/workspace/node_modules/react-resizable-panels/dist/react-resizable-panels")'.
+src/_archive/Keygen/artifacts/ham-key-gen/src/components/ui/resizable.tsx(27,51): error TS2339: Property 'PanelResizeHandle' does not exist on type 'typeof import("/home/runner/workspace/node_modules/react-resizable-panels/dist/react-resizable-panels")'.
+src/_archive/Keygen/artifacts/ham-key-gen/src/components/ui/resizable.tsx(30,23): error TS2339: Property 'PanelResizeHandle' does not exist on type 'typeof import("/home/runner/workspace/node_modules/react-resizable-panels/dist/react-resizable-panels")'.
+src/_archive/Keygen/artifacts/ham-key-gen/src/components/ui/resizable.tsx(42,24): error TS2339: Property 'PanelResizeHandle' does not exist on type 'typeof import("/home/runner/workspace/node_modules/react-resizable-panels/dist/react-resizable-panels")'.
+src/_archive/Keygen/artifacts/ham-key-gen/src/pages/audit.tsx(1,27): error TS2307: Cannot find module '@/components/layout/app-layout' or its corresponding type declarations.
+src/_archive/Keygen/artifacts/ham-key-gen/src/pages/chat.tsx(1,27): error TS2307: Cannot find module '@/components/layout/app-layout' or its corresponding type declarations.
+src/_archive/Keygen/artifacts/ham-key-gen/src/pages/chat.tsx(6,26): error TS2307: Cannot find module '@tanstack/react-query' or its corresponding type declarations.
+src/_archive/Keygen/artifacts/ham-key-gen/src/pages/chat.tsx(43,20): error TS2347: Untyped function calls may not accept type arguments.
+src/_archive/Keygen/artifacts/ham-key-gen/src/pages/chat.tsx(78,5): error TS2347: Untyped function calls may not accept type arguments.
+src/_archive/Keygen/artifacts/ham-key-gen/src/pages/chat.tsx(115,25): error TS2347: Untyped function calls may not accept type arguments.
+src/_archive/Keygen/artifacts/ham-key-gen/src/pages/chat.tsx(131,25): error TS2347: Untyped function calls may not accept type arguments.
+src/_archive/Keygen/artifacts/ham-key-gen/src/pages/dashboard.tsx(1,27): error TS2307: Cannot find module '@/components/layout/app-layout' or its corresponding type declarations.
+src/_archive/Keygen/artifacts/ham-key-gen/src/pages/dashboard.tsx(7,22): error TS2307: Cannot find module 'wouter' or its corresponding type declarations.
+src/_archive/Keygen/artifacts/ham-key-gen/src/pages/environments.tsx(1,27): error TS2307: Cannot find module '@/components/layout/app-layout' or its corresponding type declarations.
+src/_archive/Keygen/artifacts/ham-key-gen/src/pages/environments.tsx(11,32): error TS2307: Cannot find module '@tanstack/react-query' or its corresponding type declarations.
+src/_archive/Keygen/artifacts/ham-key-gen/src/pages/export.tsx(2,27): error TS2307: Cannot find module '@/components/layout/app-layout' or its corresponding type declarations.
+src/_archive/Keygen/artifacts/ham-key-gen/src/pages/keys/[id].tsx(1,27): error TS2307: Cannot find module '@/components/layout/app-layout' or its corresponding type declarations.
+src/_archive/Keygen/artifacts/ham-key-gen/src/pages/keys/[id].tsx(6,39): error TS2307: Cannot find module 'wouter' or its corresponding type declarations.
+src/_archive/Keygen/artifacts/ham-key-gen/src/pages/keys/[id].tsx(15,32): error TS2307: Cannot find module '@tanstack/react-query' or its corresponding type declarations.
+src/_archive/Keygen/artifacts/ham-key-gen/src/pages/keys/[id].tsx(21,22): error TS2307: Cannot find module 'wouter' or its corresponding type declarations.
+src/_archive/Keygen/artifacts/ham-key-gen/src/pages/keys/generate.tsx(1,27): error TS2307: Cannot find module '@/components/layout/app-layout' or its corresponding type declarations.
+src/_archive/Keygen/artifacts/ham-key-gen/src/pages/keys/generate.tsx(10,29): error TS2307: Cannot find module 'wouter' or its corresponding type declarations.
+src/_archive/Keygen/artifacts/ham-key-gen/src/pages/keys/generate.tsx(22,32): error TS2307: Cannot find module '@tanstack/react-query' or its corresponding type declarations.
+src/_archive/Keygen/artifacts/ham-key-gen/src/pages/keys/generate.tsx(164,15): error TS2347: Untyped function calls may not accept type arguments.
+src/_archive/Keygen/artifacts/ham-key-gen/src/pages/keys/index.tsx(1,27): error TS2307: Cannot find module '@/components/layout/app-layout' or its corresponding type declarations.
+src/_archive/Keygen/artifacts/ham-key-gen/src/pages/keys/index.tsx(14,22): error TS2307: Cannot find module 'wouter' or its corresponding type declarations.
+src/_archive/Keygen/artifacts/ham-key-gen/src/pages/keys/index.tsx(26,32): error TS2307: Cannot find module '@tanstack/react-query' or its corresponding type declarations.
+src/_archive/Keygen/artifacts/ham-key-gen/src/pages/login.tsx(3,29): error TS2307: Cannot find module 'wouter' or its corresponding type declarations.
+src/_archive/Keygen/artifacts/ham-key-gen/src/pages/login.tsx(4,24): error TS2307: Cannot find module '@/components/logo' or its corresponding type declarations.
+src/_archive/Keygen/artifacts/ham-key-gen/src/pages/notifications.tsx(1,27): error TS2307: Cannot find module '@/components/layout/app-layout' or its corresponding type declarations.
+src/_archive/Keygen/artifacts/ham-key-gen/src/pages/notifications.tsx(8,32): error TS2307: Cannot find module '@tanstack/react-query' or its corresponding type declarations.
+src/_archive/Keygen/artifacts/ham-key-gen/src/pages/providers.tsx(1,27): error TS2307: Cannot find module '@/components/layout/app-layout' or its corresponding type declarations.
+src/_archive/Keygen/artifacts/ham-key-gen/src/pages/providers.tsx(10,32): error TS2307: Cannot find module '@tanstack/react-query' or its corresponding type declarations.
+src/_archive/Keygen/artifacts/ham-key-gen/src/pages/scheduled.tsx(1,27): error TS2307: Cannot find module '@/components/layout/app-layout' or its corresponding type declarations.
+src/_archive/Keygen/artifacts/ham-key-gen/src/pages/search.tsx(2,27): error TS2307: Cannot find module '@/components/layout/app-layout' or its corresponding type declarations.
+src/_archive/Keygen/artifacts/ham-key-gen/src/pages/search.tsx(4,26): error TS2307: Cannot find module '@tanstack/react-query' or its corresponding type declarations.
+src/_archive/Keygen/artifacts/ham-key-gen/src/pages/search.tsx(6,22): error TS2307: Cannot find module 'wouter' or its corresponding type declarations.
+src/_archive/Keygen/artifacts/ham-key-gen/src/pages/settings.tsx(2,27): error TS2307: Cannot find module '@/components/layout/app-layout' or its corresponding type declarations.
+src/_archive/Keygen/artifacts/ham-key-gen/src/pages/settings.tsx(7,26): error TS2307: Cannot find module '@/lib/theme' or its corresponding type declarations.
+src/_archive/Keygen/artifacts/ham-key-gen/src/pages/settings.tsx(8,55): error TS2307: Cannot find module '@tanstack/react-query' or its corresponding type declarations.
+src/_archive/Keygen/artifacts/ham-key-gen/src/pages/system.tsx(1,27): error TS2307: Cannot find module '@/components/layout/app-layout' or its corresponding type declarations.
+src/_archive/Keygen/artifacts/ham-key-gen/src/pages/validate.tsx(1,27): error TS2307: Cannot find module '@/components/layout/app-layout' or its corresponding type declarations.
+src/_archive/Keygen/artifacts/ham-key-gen/src/pages/webhooks.tsx(2,27): error TS2307: Cannot find module '@/components/layout/app-layout' or its corresponding type declarations.
+src/_archive/Keygen/artifacts/ham-key-gen/src/pages/webhooks.tsx(6,55): error TS2307: Cannot find module '@tanstack/react-query' or its corresponding type declarations.
+src/_archive/Keygen/artifacts/ham-key-gen/vite.config.ts(5,33): error TS2307: Cannot find module '@replit/vite-plugin-runtime-error-modal' or its corresponding type declarations.
+src/_archive/Keygen/artifacts/ham-key-gen/vite.config.ts(38,24): error TS2307: Cannot find module '@replit/vite-plugin-cartographer' or its corresponding type declarations.
+src/_archive/Keygen/artifacts/ham-key-gen/vite.config.ts(43,24): error TS2307: Cannot find module '@replit/vite-plugin-dev-banner' or its corresponding type declarations.
+src/_archive/Keygen/artifacts/mockup-sandbox/mockupPreviewPlugin.ts(3,18): error TS2307: Cannot find module 'fast-glob' or its corresponding type declarations.
+src/_archive/Keygen/artifacts/mockup-sandbox/src/components/ui/chart.tsx(116,7): error TS2339: Property 'payload' does not exist on type 'Omit<Omit<Props<ValueType, NameType>, PropertiesReadFromContext> & { active?: boolean; allowEscapeViewBox?: AllowInDimension; ... 24 more ...; wrapperStyle?: CSSProperties; } & ClassAttributes<...> & HTMLAttributes<...> & { ...; }, "ref">'.
+src/_archive/Keygen/artifacts/mockup-sandbox/src/components/ui/chart.tsx(121,7): error TS2339: Property 'label' does not exist on type 'Omit<Omit<Props<ValueType, NameType>, PropertiesReadFromContext> & { active?: boolean; allowEscapeViewBox?: AllowInDimension; ... 24 more ...; wrapperStyle?: CSSProperties; } & ClassAttributes<...> & HTMLAttributes<...> & { ...; }, "ref">'.
+src/_archive/Keygen/artifacts/mockup-sandbox/src/components/ui/chart.tsx(263,41): error TS2344: Type '"verticalAlign" | "payload"' does not satisfy the constraint '"string" | "origin" | "type" | "filter" | "fill" | "values" | "version" | "id" | "role" | "content" | "format" | "name" | "x" | "path" | "key" | "slot" | "style" | "target" | "children" | ... 431 more ... | "onBBoxUpdate"'.
+  Type '"payload"' is not assignable to type '"string" | "origin" | "type" | "filter" | "fill" | "values" | "version" | "id" | "role" | "content" | "format" | "name" | "x" | "path" | "key" | "slot" | "style" | "target" | "children" | ... 431 more ... | "onBBoxUpdate"'.
+src/_archive/Keygen/artifacts/mockup-sandbox/src/components/ui/chart.tsx(274,19): error TS2339: Property 'length' does not exist on type 'unknown'.
+src/_archive/Keygen/artifacts/mockup-sandbox/src/components/ui/chart.tsx(288,12): error TS2339: Property 'filter' does not exist on type 'unknown'.
+src/_archive/Keygen/artifacts/mockup-sandbox/src/components/ui/resizable.tsx(11,51): error TS2339: Property 'PanelGroup' does not exist on type 'typeof import("/home/runner/workspace/node_modules/react-resizable-panels/dist/react-resizable-panels")'.
+src/_archive/Keygen/artifacts/mockup-sandbox/src/components/ui/resizable.tsx(12,23): error TS2339: Property 'PanelGroup' does not exist on type 'typeof import("/home/runner/workspace/node_modules/react-resizable-panels/dist/react-resizable-panels")'.
+src/_archive/Keygen/artifacts/mockup-sandbox/src/components/ui/resizable.tsx(27,51): error TS2339: Property 'PanelResizeHandle' does not exist on type 'typeof import("/home/runner/workspace/node_modules/react-resizable-panels/dist/react-resizable-panels")'.
+src/_archive/Keygen/artifacts/mockup-sandbox/src/components/ui/resizable.tsx(30,23): error TS2339: Property 'PanelResizeHandle' does not exist on type 'typeof import("/home/runner/workspace/node_modules/react-resizable-panels/dist/react-resizable-panels")'.
+src/_archive/Keygen/artifacts/mockup-sandbox/src/components/ui/resizable.tsx(42,24): error TS2339: Property 'PanelResizeHandle' does not exist on type 'typeof import("/home/runner/workspace/node_modules/react-resizable-panels/dist/react-resizable-panels")'.
+src/_archive/Keygen/artifacts/mockup-sandbox/vite.config.ts(5,33): error TS2307: Cannot find module '@replit/vite-plugin-runtime-error-modal' or its corresponding type declarations.
+src/_archive/Keygen/artifacts/mockup-sandbox/vite.config.ts(40,24): error TS2307: Cannot find module '@replit/vite-plugin-cartographer' or its corresponding type declarations.
+src/components/AgentWorker/AgentWorker.tsx(25,26): error TS2304: Cannot find name 'useMemo'.
+src/components/HamAiStudio/Deployment/DeploymentModal.tsx(3,65): error TS2305: Module '"lucide-react"' has no exported member 'Github'.
+src/components/HamAiStudio/Settings/IntegrationsSettings.tsx(2,58): error TS2305: Module '"lucide-react"' has no exported member 'Github'.
+src/components/HamAiStudio/StudioOverlayControls.tsx(5,14): error TS2305: Module '"lucide-react"' has no exported member 'Github'.
+src/components/HamAiStudio/TerminalEmulator/TerminalEmulator_Part1.tsx(7,17): error TS2724: '"react-resizable-panels"' has no exported member named 'PanelGroup'. Did you mean 'PanelProps'?
+src/components/HamAiStudio/TerminalEmulator/TerminalEmulator_Part1.tsx(7,29): error TS2305: Module '"react-resizable-panels"' has no exported member 'PanelResizeHandle'.
+src/components/HamAiStudio/hooks/useStudioCommands.tsx(4,44): error TS2305: Module '"lucide-react"' has no exported member 'Github'.
+src/features/SocialWorker/index.tsx(10,3): error TS2305: Module '"lucide-react"' has no exported member 'Twitter'.
+src/features/SocialWorker/index.tsx(10,12): error TS2305: Module '"lucide-react"' has no exported member 'Facebook'.
+src/features/SocialWorker/index.tsx(10,22): error TS2305: Module '"lucide-react"' has no exported member 'Instagram'.
+src/features/SocialWorker/index.tsx(10,33): error TS2305: Module '"lucide-react"' has no exported member 'Linkedin'.
+src/features/SocialWorker/index.tsx(10,50): error TS2305: Module '"lucide-react"' has no exported member 'Youtube'.
+src/lib/firebase.ts(1,31): error TS2307: Cannot find module 'firebase/app' or its corresponding type declarations.
+src/lib/firebase.ts(2,25): error TS2307: Cannot find module 'firebase/auth' or its corresponding type declarations.
+src/lib/firebase.ts(3,30): error TS2307: Cannot find module 'firebase/firestore' or its corresponding type declarations.

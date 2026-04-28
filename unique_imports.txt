@@ -1,0 +1,1388 @@
+@
+acorn
+adm-zip
+archiver
+async-mutex
+axios
+bcryptjs
+buffer
+@capacitor
+child_process
+chokidar
+class-variance-authority
+clsx
+cmdk
+compression
+cookie-parser
+cors
+crypto
+crypto-js
+d3
+dexie
+dexie-react-hooks
+diff
+@dnd-kit
+drizzle-kit
+drizzle-orm
+drizzle-zod
+esbuild
+esbuild-plugin-pino
+es-toolkit
+events
+express
+express-rate-limit
+express-session
+fast-glob
+firebase
+flexsearch
+framer-motion
+fs
+fs-extra
+@google
+helmet
+http
+idb
+idb-keyval
+import { AbstractPlatformAdapter } from '.
+import { accelerator } from '.
+import ActionPill from '.
+import { ActiveAgentMatrix } from '.
+import { ActiveSessionTable } from '.
+import { AdblockConfig } from '.
+import adminRouter from ".
+import { AdvancedAssistantUI } from '.
+import { AdvancedDiagnosticsToolkit } from '.
+import { AdvancedDiagnosticsToolkit } from '..
+import { aeternaGlassRuleset } from '..
+import { AeternaGlassService, AeternaStatus } from '..
+import { AeternaHealthMeter } from '.
+import { AeternaStatusBadge } from '.
+import { AgentAction } from '.
+import { AgentActivity } from '..
+import { AgentActivity, ProjectData, ChatMessageData } from '..
+import { AgentActivity, ProjectFile } from '..
+import { agentIdentityRegistry, AgentIdentity } from '.
+import { agentIdentityRegistry } from '..
+import { AgentLog } from '..
+import { agentLogsRuleset } from '..
+import { agentObservabilityRouter } from '.
+import { agentObservabilityService, AgentLog } from '..
+import { agentObservabilityService, AgentResult } from '..
+import { AgentPersona, FeatureRuleset } from '..
+import { agentPersonaRegistry } from '..
+import { AgentResult } from '..
+import { agentResultsRuleset } from '..
+import { AGENT_ROLES } from '.
+import { AGENT_ROLES } from '..
+import agentRouter from ".
+import { AgentState, AgentAction, agentReducer, INITIAL_STATE } from '.
+import { AgentState, AgentAction } from '.
+import { agentWorkerRouter } from '.
+import { AgentWorkerSettings } from '.
+import { AIContentGenerator } from '..
+import AIHubChat from '.
+import AIHubSidebar from '.
+import { AI_MODELS } from '..
+import { aiPilotService } from '.
+import { aiPilotService } from '..
+import { AIRequest } from '..
+import { AISettings } from '.
+import { AiWorkerService } from ".
+import { AiWorkerService } from "..
+import { AiWorkerService } from '.
+import { AiWorkerService } from '..
+import { Alert, AlertDescription } from '..
+import AnalyticsDashboardModal from '.
+import analyticsRouter from ".
+import { androidBuildService } from '..
+import { AndroidStrategy, WebContainerStrategy, CloudShellStrategy, ChamsStrategy, ShellResult } from '.
+import { androidTemplates } from '.
+import AndroidXmlRenderer from '.
+import { Anonymizer } from '.
+import { Anonymizer } from '..
+import { apiKeysTable } from ".
+import { ApiSectionProps } from '.
+import { apkBuilder } from '..
+import ApkBuilderModal from '.
+import apkRouter from '.
+import { APP_CONFIG } from '..
+import AppDrawer from '.
+import { AppearanceSectionProps } from '.
+import app from ".
+import App from ".
+import App from '.
+import { AppLauncher } from '.
+import { appLogicTemplate } from '.
+import { AppView, ChatSession } from '..
+import { AppView, ConnectionState, AppSettings, LocalBrainState } from '.
+import { AppView, ConnectionState, VPNServer, LogEntry, ChatMessage, AppSettings, Attachment, ChatSession, LocalBrainState } from '.
+import { archivist } from '.
+import { AspectRatioPreview } from '.
+import { AspectRatioSwitcher } from '.
+import * as schema from ".
+import AssistantAvatar from '.
+import { AssistantEvent, AssistantStatus, ToolCall, FileEdit, StepItem } from '.
+import { AssistantEvent } from '.
+import AssistantHeader from '.
+import AssistantMessageBubble from '.
+import { AssistantStatus } from '.
+import { ASTSurgeon, OmniGraph, ShadowEngine } from '..
+import { ASTSurgeon, ShadowEngine } from '.
+import * as vfsGit from '.
+import { AtlasKnowledge } from '..
+import AuditLog from ".
+import { AuditLogPanel } from '.
+import auditRouter from ".
+import { AuthCredentialInput } from '.
+import { AuthModal } from '.
+import authRouter from ".
+import { AutoCleanupToggle } from '.
+import { AutoDownloadToggle } from '.
+import { AutonomousAgent } from '.
+import { AutonomousManager } from '.
+import { autopilotKernel } from '..
+import autopilotRouter from ".
+import { AutoResumeManager } from '..
+import { AutoSaveToggle } from '.
+import { BackForwardControls } from '.
+import { Badge } from '.
+import { Badge } from '..
+import { BaseAgent, AgentConfig } from '.
+import { BaseAgent, AgentConfig } from '..
+import { BaseAgent } from '.
+import { BaseBrain } from '.
+import { BaseToolkit } from '.
+import { BatchDownloadControl } from '.
+import { BatchResultGrid } from '.
+import { BatteryLevelMeter } from '.
+import { BgTaskState } from '..
+import { Blackboard } from '.
+import { BookmarkBar } from '.
+import { BookmarkManager } from '.
+import { BookmarkToggle } from '.
+import BottomDock from '.
+import { BrainSectionProps } from '.
+import { Breadcrumb } from '.
+import { broadcast } from '.
+import { BroadcastMessageForm } from '.
+import { browserBuildService } from '..
+import { BrowserContent } from '.
+import { BrowserDataSchema } from '.
+import { BrowserErrorBoundary } from '.
+import { BrowserHistoryItem, BrowserBookmark } from '..
+import { browserPilotService } from '.
+import { browserPilotService } from '..
+import browserRouter from '.
+import { BrowserSettingsDrawer } from '.
+import { BrowserTab } from '.
+import { BrowserTab } from '..
+import { BrowserTabs } from '.
+import { BrowserToolbar } from '.
+import { BudgetGuardian } from '.
+import { bugHunterRuleset } from '..
+import { buildExecutionBatches, processStreamingChunk } from '.
+import { BuildHealer } from '..
+import { BuildSimulationResult } from '..
+import { buildSystemInstruction, compressHistory } from '..
+import { buildSystemInstruction } from '..
+import { BUILTIN_TOOL_DEFINITIONS } from "..
+import { BulkActionToolbar } from '.
+import { BurstShotButton } from '.
+import { BurstShotGallery } from '.
+import { Button, buttonVariants } from "..
+import { Button } from "..
+import { Button } from '..
+import { ButtonProps, buttonVariants } from "..
+import { buttonVariants } from "..
+import { bypassUrls } from '.
+import { CalibrationLedger } from '.
+import CalloutBox from '.
+import { CameraDevicePicker } from '.
+import { CameraSettingsDrawer } from '.
+import { CameraState } from '..
+import { CancelTaskButton } from '.
+import { CaptureActivityTimeline } from '.
+import { CaptureHistoryList } from '.
+import { CaptureScheduleForm } from '.
+import { Card, CardContent, CardFooter, CardHeader } from '..
+import { Card, CardHeader, CardTitle, CardContent } from "..
+import { Card, CardHeader, CardTitle, CardContent } from '..
+import { Card } from '..
+import { CausalArchitect } from '..
+import { CDN_URLS } from '..
+import { CertExceptionList } from '.
+import { ChamsEngine } from '.
+import { ChamsEngine } from '..
+import { ChamsLanguage, OmniAST } from '.
+import { ChamsState } from '..
+import { ChaosEngine, QuantumSimulator, ResilienceEngine } from '.
+import { ChaosEngine, QuantumSimulator, ResilienceEngine } from '..
+import { ChatHeader } from '.
+import { ChatInput } from '.
+import ChatInput from '.
+import { ChatMessage, Attachment, AppSettings, EngineConfig } from "..
+import { ChatMessage, ChatSession, FileAttachment } from '..
+import { ChatMessageData } from '..
+import { ChatMessageData, ProjectData, AgentActivity } from '.
+import { ChatMessageData, ProjectData, AgentActivity, ProjectFile } from '.
+import { ChatMessageData, ProjectData, Command } from '.
+import { ChatMessageData, ProjectData } from '..
+import { ChatMessageData, ProjectData, GenerationStep } from '..
+import { ChatMessage, FileAttachment } from '..
+import { ChatMessage } from "..
+import { ChatMessage } from '..
+import ChatMessage from '.
+import { ChatMessageList } from '.
+import { ChatMessage, SelectedFile, ChatSession } from '..
+import { ChatMessage, SelectedFile } from '..
+import ChatPage from ".
+import chatRouter from ".
+import { ChatSettings } from '.
+import ChatView from '.
+import { checkOPFSSupport } from '..
+import { CircuitBreaker } from '.
+import { CircuitBreakerState } from '.
+import { CircuitMaster } from '.
+import { CircuitMaster } from '..
+import { Citation, CitationSource } from '..
+import { CitationSource } from '..
+import { cleanCodeBlock } from '..
+import { cleanCodeBlock, truncateForLog } from '..
+import { CleanSessionButton } from '.
+import { cleanupTask } from '..
+import { ClearCanvasButton } from '.
+import { ClearHistoryButton } from '.
+import { ClipboardSyncButton } from '.
+import { ClockDisplay } from '.
+import { CloneRulesetButton } from '.
+import CloneSelector from '.
+import { CLONES } from '..
+import { CloseTabButton } from '.
+import { CloudSyncToggle } from '.
+import { cn } from "..
+import { CodeBlock } from '.
+import CodeBlock from '.
+import { CoderToolkit } from '.
+import CollaborationPanel from '.
+import CommandPalette from '.
+import { CommandResponseLog } from '.
+import { CommandTemplatePicker } from '.
+import { CompareView } from '.
+import { componentsTemplate } from '.
+import { CompressionResult, ContextPayload } from '.
+import { ConfidenceOracle } from '..
+import { ConfirmProvider } from '.
+import { ConflictResolverPanel } from '.
+import { ConnectionRetryConfig } from '.
+import { ConsoleLogOverlay } from '.
+import { ConstitutionalCore, executeAction } from '..
+import { ContentTemplateLibrary } from '.
+import { ContextCompressor } from '.
+import { contextInjector } from '..
+import { ContextManager } from '.
+import { ContextManager } from '..
+import { ContextMenu } from '.
+import { ContextPayload } from '..
+import { ContextPayload, OrchestratorConfig, RouteDecision, AIRequest, AIResponse } from '.
+import { contextPruner } from '.
+import { contextPruner } from '..
+import { ContextWeaver } from '.
+import { ControlNetConfig } from '.
+import { CookieEditor } from '.
+import Counter from '.
+import { createNativeMockWebContainer, getBridgeScript } from '.
+import { CredentialVault } from '..
+import { cssTemplate } from '.
+import { customFetch } from "..
+import { DailyQuota } from '.
+import Dashboard from ".
+import Dashboard from '.
+import { DashboardView, SettingsView, PayloadView, ToolsView, HAMLIView, ExportAideView, AboutView, AutorenderView, QuantumMiningView, VirtualRoomView, MemoryInjectionView, SovereignGatewayView, RandomizeToolView } from '.
+import DatabaseVisualizerModal from '.
+import { dataTemplate } from '.
+import { DB_FILE, HAMLI_MEMORY_FILE, APP_STATUS_FILE } from '.
+import { db } from '..
+import DebuggerPanel from '.
+import { debuggerService, DebugSession } from '..
+import { deepAgentic } from '.
+import { DeepAutonomousAgent } from '.
+import { DeepResearchAgent } from '.
+import { DeleteResultButton } from '.
+import { DeparserDictionary } from '..
+import { Deparser } from '.
+import { DependencyOracle } from '..
+import DeploymentModal from '.
+import DeviceFrame from '.
+import DeviceMonitor from '.
+import { deviceMonitorService, DeviceSnapshot } from '..
+import { DeviceStatusGrid } from '.
+import { DevModeToggle } from '.
+import { DevOpsToolkit } from '.
+import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogFooter } from '..
+import { Dialog, DialogContent } from "..
+import DiffViewer from '.
+import { DirectoryPickerModal } from '.
+import { DiskUsageBar } from '.
+import { DiskUsageProps } from '.
+import { DiversityEngine } from '..
+import { docParserService } from '.
+import { DocumentVault } from '.
+import { DomInspectorView } from '.
+import { DOMSnapshot } from '.
+import { DownloadBatchButton } from '.
+import { DownloaderProgressList } from '.
+import { DownloadsPanel } from '.
+import { EnableDisableRuleToggle } from '.
+import { EncodingStatsTable } from '.
+import { EngagementChart } from '.
+import { engineEventBus } from ".
+import { engineEventBus } from "..
+import { EngineState } from ".
+import { EngineState, TaskModule } from ".
+import { EnvironmentChecker } from "..
+import { EnvironmentChecker } from '.
+import { EnvironmentChecker } from '..
+import { Environment } from '.
+import { Environment, MemoryManager } from '.
+import Environments from ".
+import environmentsRouter from ".
+import { environmentsTable } from ".
+import { ErrorBoundary } from '.
+import { ErrorBoundary } from '..
+import { ErrorBoundaryProps, ErrorBoundaryState } from '.
+import { ErrorInterceptor } from '.
+import { ErrorInterceptor } from '..
+import ErrorMessage from '.
+import { ErrorRecovery } from '.
+import { eternalMover } from '.
+import { EvaluatorCore } from '.
+import { EvaluatorCore, OSRegistry } from '.
+import { EvaluatorExpressions } from '.
+import { EvaluatorExpressions_Part1 } from '.
+import { Evaluator } from '.
+import { eventBus } from '.
+import { eventBus } from '..
+import { EVENTS } from '..
+import { EventStreamMonitor } from '.
+import { executeModelRequest } from '.
+import { executeShellCommand } from '..
+import { executeToolWithDynamic, BUILTIN_TOOL_DEFINITIONS, WORKSPACE_ROOT } from ".
+import { ExportConfigModal } from '.
+import Export from ".
+import { ExportLogsButton } from '.
+import exportRouter from ".
+import { ExportRulesetButton } from '.
+import { ExposureLockToggle } from '.
+import { ExposureSlider } from '.
+import { ExtensionList } from '.
+import { ExtensionManager } from '.
+import { extensionService } from '.
+import { FacebookAdapter } from '.
+import { FacebookAdapter } from '..
+import { FaceDetectionBox } from '.
+import { FavoriteMediaManager } from '.
+import { FavoritePromptsManager } from '.
+import { FeatureBindingConfig } from '.
+import { FeatureRuleset } from '..
+import { featureRulesRegistry, FeatureRuleset } from '.
+import { featureRulesRegistry } from '..
+import { FileAttachment, ChatMessage } from '..
+import { FileAttachment } from '..
+import { FileData } from '.
+import { FileData } from '..
+import { FileDetailsModalProps, RenameModalProps, CreateFolderModalProps, UploadProgressProps, FileActionMenuProps, SortDropdownProps, ViewModeToggleProps, FileExtensionBadgeProps, BreadcrumbItemProps, ErrorMessageProps, SuccessToastProps, PasswordInputProps, FileGridProps, FileListProps, ActionTooltipProps, FileContextMenuProps } from '.
+import FileEditCard from '.
+import { FileEdit } from '.
+import { FileExplorer } from '.
+import fileExplorerRouter from '..
+import { FileGrid } from '.
+import { FileIcon, FileSize, FileDate, FileTagBadge, FileEncryptionStatus, FileOwnerAvatar, FileSyncStatus, FileFavoriteButton } from '.
+import { FileIcon, FileSize, FileDate } from '..
+import { FileInfoModalProps } from '.
+import { FileItem as FileItemType } from '..
+import { FileItem, FileVersion, FileComment, FileActivity } from '..
+import { FileItem } from '.
+import { FileItem } from '..
+import { FilePathBreadcrumbProps, FileStatusIndicatorProps } from '.
+import { FilePermissionBadge, FileAccessTime, FileChangeTime, FileMimeType } from '.
+import { FilePreviewModalProps } from '.
+import { FileSearchHistory } from '.
+import { FileSelectionSummaryProps } from '.
+import { FileSidebar } from '.
+import { FileStorageQuotaBadge as StorageUsage } from '.
+import { FileStorageQuotaBadgeProps, ServerHealthIndicatorProps } from '.
+import { fileSystemTools, FileSystemBridge } from '.
+import { fileSystemTools, fileSystemImplementations } from '..
+import { FileTransferControl } from '.
+import { FileTrashBin as TrashBinModal } from '.
+import { FileTreeContextMenu } from '.
+import FileTree from '.
+import { FileVersion, FileComment, FileActivity } from '..
+import { FileVersionHistory, FileCommentSection, FileActivityLog, FileDownloadStats } from '.
+import { FilterPackSelector } from '.
+import { FilterRuleEditor } from '.
+import firebaseConfig from '..
+import { FiveTierDegradation } from '.
+import { FiveTierDegradation } from '..
+import { FlashModeToggle } from '.
+import { flexibleReplace } from '..
+import { FlipCameraButton } from '.
+import { FocusLockToggle } from '.
+import { FocusModeSelector } from '.
+import FollowUpChips from '.
+import { FontSizeSlider } from '.
+import { ForceDisconnectButton } from '.
+import { FormatSelector } from '.
+import { FormAutofillManager } from '.
+import { FrameRatePicker } from '.
+import FullAppPreviewModal from '.
+import { GalleryQuickAccess } from '.
+import { geminiKeyManager } from ".
+import { geminiKeyManager } from "..
+import { geminiKeyManager } from '.
+import { geminiKeyManager } from '..
+import geminiRouter from '.
+import geminiRouter from '..
+import { geminiService } from '..
+import { GeneralSectionProps } from '.
+import { GeneralSettings } from '.
+import { GenerateButton } from '.
+import { generateContent, extractCodeBlock, ENGINE_CONFIG } from ".
+import { generateContent, saveState, sanitizePath, extractCodeBlock, healAndParseJSON, ENGINE_CONFIG } from ".
+import { generateGeminiKey } from ".
+import { generateHamEngineContent } from ".
+import { generatePreviewContent } from '.
+import { generateRawKey, hashKey, calculateEntropy, getKeyPrefix, getKeySuffix } from "..
+import { generateUUID } from '..
+import { GenerationCanvas } from '.
+import { GenerationHistoryList } from '.
+import { GenerationRequest, GenerationResult } from '..
+import { GenerationResult } from '..
+import { GenerationStep } from "..
+import { GenerationStep } from '..
+import { GenerationTimeline } from '.
+import { generatorStudioRuleset } from '..
+import { GeneratorStudioService } from '..
+import { GET_AGENTIC_SYSTEM_PROMPT } from '..
+import { getAllCircuitStatus } from "..
+import { getAppStatus, readHamliMemory, writeHamliMemory } from '..
+import { getBridgeScript } from '..
+import { getBuiltinProvider, isSsrfBlocked, BUILTIN_PROVIDERS } from "..
+import { getBuiltinProvider, isSsrfBlocked } from "..
+import { getDynamicGeminiKeys } from '..
+import { getFileContext } from "..
+import { getGlobalInstructions, generateContent, saveState, ENGINE_CONFIG } from ".
+import { getGlobalInstructions, generateContent, saveState, ENGINE_CONFIG, healAndParseJSON, extractSkeleton } from ".
+import { getGlobalInstructions, generateContent, saveState, extractCodeBlock, ENGINE_CONFIG, extractSkeleton } from ".
+import { getGlobalInstructions, generateContent, saveState, sanitizePath, healAndParseJSON, ENGINE_CONFIG } from ".
+import { getGlobalInstructions, saveState } from ".
+import { getRandomUserAgent } from '..
+import { getReactiveDb } from '..
+import { getSystemInfo, runningTasks } from "..
+import { getSystemInstructionModifier } from '..
+import { getToolkitByName } from '.
+import { getToolsForMode } from "..
+import { getToolsForMode } from '.
+import { getToolsForMode } from '..
+import { getValidGeminiKeys } from "..
+import { getValidGeminiKeys } from '..
+import { GhostDeduplicator } from '.
+import { GhostDeduplicator } from '..
+import GitControlPanel from '.
+import { githubMemoryService } from "..
+import { githubService } from '..
+import { githubService, GitHubUser } from '..
+import { GitHubUser } from '..
+import { GLOBAL_AI_CAPABILITIES } from '.
+import { GLOBAL_AI_CAPABILITIES } from '..
+import { GlobalDropzone } from '.
+import GlobalErrorBoundary from '.
+import { globalRateLimiter, stateRateLimiter, agentRateLimiter } from '.
+import { GlobalRuleDefaults } from '.
+import { GlobalStateContext } from '..
+import { GlobalStateContext, StateScope } from '..
+import { GlobalStateProvider } from '.
+import { GridOverlayControl } from '.
+import { GuidanceScaleSlider } from '.
+import HamAiStudioTab from '.
+import { HamAST, HamASTNode } from '..
+import { HamASTNode, Opcode, HamAST } from '..
+import HamBackground from '.
+import { HamEngineCollaborator } from '..
+import { HamEngineEngine } from '.
+import { HamEngineLanguage, HamAST, HamEngineProgram, Opcode, HamASTNode, HamEngineState } from '.
+import { hamEngineQuantum } from '..
+import { HamEngineState } from '..
+import { hamEventBus } from '.
+import { hamEventBus } from '..
+import { HamEvent } from '..
+import { HamEvent, HamEventType } from '.
+import { HamEvent, HamEventType, HamWorkerMessage } from '..
+import { HamEventType } from '..
+import { HamInquisitor } from '..
+import { hamliCoreMemory } from '.
+import { hamliMemoryService } from '..
+import { hamliMemoryService, HamliMemory } from '..
+import hamliRouter from '..
+import { HamMode, HamState, HamToolName } from '.
+import { HamMode, ToolkitType } from '..
+import { HamNode, HamType } from '..
+import { HamSecurity } from '..
+import { HamState } from '.
+import { HamState, HamToolName, ToolkitType } from '.
+import { HamState, ToolResponse, HamToolName } from '.
+import { HamToolName } from '.
+import { HamToolName } from '..
+import { HamToolName, HamMode, ToolkitType } from '.
+import { HamToolName, ToolExecutionResult } from '.
+import { handleComplexOpcode } from '.
+import { handleControlFlow } from '.
+import { handleDependencies } from ".
+import { handleProxy } from '.
+import { handleReader } from '.
+import { haptic } from '..
+import { HASChatWindow } from '.
+import { HASCoreMemory } from '.
+import { HASModelExplorer } from '.
+import { HASQueueManager } from '.
+import { HASSettingsModal } from '.
+import { hCameraRuleset } from '..
+import { HCameraService } from '..
+import { HeaderModifier } from '.
+import { Header, Sidebar, Footer, SelectionModal, ChatHistoryPanel } from '.
+import { healAndParseJSON } from '.
+import { healAndParseJSON, sanitizePath, saveState } from ".
+import healthRouter from ".
+import { HighQualityModeSwitch } from '.
+import { HistogramOverlay } from '.
+import { HistoryManager } from '.
+import { HybridMind } from '.
+import { HybridRouter } from '.
+import { hybridVFS } from '..
+import { ImageMetadataInspector } from '.
+import { ImportRulesetButton } from '.
+import { IncognitoToggle } from '.
+import { initAIWorker } from '.
+import { initAppSecurityConfig } from '..
+import { initStorage } from '..
+import { initTheme } from ".
+import { initVault } from '..
+import { Input } from "..
+import { Input } from '..
+import { inquisitor } from '.
+import { InspectElementToggle } from '.
+import { InstagramAdapter } from '.
+import { IntegrationsSettings } from '.
+import { IntentClassifier } from '.
+import { intentRouterService } from "..
+import InternalBrowser from '.
+import { InterpretabilityEngine } from '..
+import { InterruptButton } from '.
+import { isBlocked } from '..
+import { isCircuitOpen, recordSuccess, recordFailure } from ".
+import { ISOSelector } from '.
+import { isSsrfBlocked } from "..
+import { IWebContainer, IWebContainerProcess } from '..
+import { JockeyPanel } from '.
+import { kaggleLlmService } from "..
+import { kaggleLlmService } from '..
+import KeyDetail from ".
+import KeyGenerate from ".
+import { KeyInjectionPanel } from '.
+import { KeyPool } from '.
+import { KeyRotator } from '.
+import { KeyRotator } from '..
+import KeysList from ".
+import keysRouter from ".
+import { KMSProxy } from ".
+import { Label } from "..
+import { LanguagePicker } from '.
+import { LanguageProvider } from '.
+import { LastCapturePreview } from '.
+import { LexerDictionary, OperatorDictionary } from '..
+import { Lexer } from '.
+import { Lexer } from '..
+import { LicenseConfig } from '..
+import { LinkedinAdapter } from '.
+import { LinkedinAdapter } from '..
+import { LisaBaseAgent } from '..
+import { LisaBaseAgent, LisaAgentConfig } from '..
+import { lisaCoreRuleset } from '..
+import { LisaDaemon } from '.
+import { LisaDaemon } from '..
+import { lisaInstructRateLimiter } from '..
+import lisaRouter, { setLisaDaemon } from '.
+import LisaThinkingAnimation from '.
+import { LiveCallOverlay } from '.
+import { LivePreviewViewport } from '.
+import LiveSessionModal from '.
+import LiveUpdateIndicator from '.
+import { LoadingSpinner, EmptyState, ErrorMessage } from '.
+import { loadState, saveState } from "..
+import { loadState, saveState, generateContent } from "..
+import { localLlmService } from '..
+import { LogEntry } from '.
+import { LogExportControl } from '.
+import { LogFilterChips } from '.
+import { logger as pinoLogger } from '..
+import { logger } from ".
+import { logger } from "..
+import { logger } from '.
+import { logger } from '..
+import { LoggerService } from "..
+import { LoggerService } from '.
+import { LoggerService } from '..
+import { logicGate } from '.
+import Login from ".
+import { LogLevelLegend } from '.
+import { LogList } from '.
+import { Logo3D } from "..
+import { LogPreserveOnReloadToggle } from '.
+import logsRouter from ".
+import { LogStatsBar } from '.
+import { LogToolbar } from '.
+import { LongTerm } from '.
+import { LoraWeightEditor } from '.
+import { lspClient } from '..
+import { lspService } from '.
+import { lspService } from '..
+import { mainAssistantRuleset } from '..
+import MainContent from '.
+import ManualPlanningModal from '.
+import MarketplacePanel from '.
+import { marketplaceService, Extension } from '..
+import { massiveDb } from '..
+import { MastodonAdapter } from '.
+import { MastodonAdapter } from '..
+import { mechanic } from '.
+import { mediaAgentRuleset } from '..
+import { MediaAgentService } from '..
+import { MediaDiffViewer } from '.
+import { MediaGalleryGrid } from '.
+import { MediaMetadataTable } from '.
+import { MediaPost, Trend } from '..
+import { MediaPreviewModal } from '.
+import { MediaSettingsPanel } from '.
+import { MediaSourcePicker } from '.
+import { memory } from '..
+import { memoryGraph } from '..
+import { MemoryManager, Environment } from '.
+import memoryRouter from ".
+import { memoryService } from ".
+import { memoryService } from '..
+import { memoryService, MemoryCategory } from '..
+import { MemorySystem } from '..
+import { memoryWorker } from '.
+import { memoryWorker } from '..
+import MenuButton from '.
+import { MerkleScribe } from '.
+import { MerkleScribe } from '..
+import MessageActionsMenu from '.
+import MessageContentRenderer from '.
+import { Message } from '.
+import { Message } from '..
+import { MetaDataEditor } from '.
+import { MetaToolkit } from '.
+import { mockupPreviewPlugin } from ".
+import { ModelClient } from '.
+import { ModelDownloader } from '.
+import { ModelInfoCard } from '.
+import { ModelMigrator } from '.
+import { ModelPicker } from '.
+import { ModelProvider, RouteDecision } from '.
+import { ModuleCache } from '.
+import { modules as discoveredModules } from ".
+import { MotionDetectionIndicator } from '.
+import MultimodalContent from '.
+import { MultiProviderRouter } from '.
+import { MultiProviderRouter } from '..
+import { NativeAI } from '..
+import { nativeBridge as safeNativeBridge } from '..
+import { nativeBridge } from "..
+import { nativeBridge } from '..
+import { nativeBridgeService } from '.
+import { nativeFileService } from '.
+import { nativeFileService } from '..
+import { NativeGit } from '..
+import { NativeShell } from '..
+import { NativeStorageBulk } from '.
+import { NativeStorage } from '..
+import { NegativePromptInput } from '.
+import { NetworkLatencyChart } from '.
+import { NetworkTrafficTable } from '.
+import { NeuralAtlas } from '.
+import { NeuralAtlas } from '..
+import { NeuralContextService, AntiPattern } from '..
+import { NeuralContextService } from '..
+import NeuralNetworkVisualizer from '.
+import { neuralPilotRuleset } from '..
+import { neuralRouter, AIProvider } from '.
+import { neuralRouter, AIProvider } from '..
+import { neuralRouter, AIProvider, ModelConfig } from ".
+import { neuralRouter, AIProvider, ModelConfig } from '.
+import { NewTabButton } from '.
+import { NexusTopology } from '.
+import { NexusTopology } from '..
+import NotFound from ".
+import { notification } from '..
+import { NotificationPreferences } from '.
+import Notifications from ".
+import notificationsRouter from ".
+import { OmniAST, OmniASTNode, Opcode } from '..
+import { omniEventBus } from '.
+import { omniEventBus } from '..
+import { OmniEvent, OmniEventType } from '.
+import { OmniEvent, OmniEventType } from '..
+import { OmniEvent, OmniEventType, OmniWorkerMessage } from '..
+import { OmniEvent, OmniStateHash } from '..
+import { OmniEvent, OmniStateHash, OmniStateDelta, OmniEventType } from '..
+import { OmniEventType } from '.
+import { OmniGraph, ASTSurgeon } from '..
+import { OmniInquisitor } from '..
+import { OmniMemoryNode } from '..
+import { OmniMemoryNode, OmniMemoryGraph, OmniStateHash } from '..
+import { OmniMode, OmniState, OmniToolName, ToolkitType } from '.
+import { OmniSanitizer } from '..
+import { OmniSecurity } from '.
+import { OmniSecurity } from '..
+import { OmniToolName } from '.
+import { OmniToolName, OmniMode, ToolkitType } from '.
+import { OmniToolName, ToolExecutionResult } from '.
+import { Opcode, ChamsLanguage } from '.
+import { Opcode } from '..
+import { Opcode, HamAST, HamASTNode } from '..
+import { Opcode, HamAST, HamASTNode, HamEngineLanguage } from '..
+import { Opcode, HamASTNode } from '..
+import { Opcode, HamEngineLanguage } from '.
+import { Opcode, OmniASTNode } from '..
+import { Opcode, OmniAST, OmniASTNode, ChamsLanguage } from '..
+import { Opcode, OmniAST, OmniASTNode } from '..
+import { OpenRouterCollaborator } from '..
+import { opfsSyncService } from '.
+import { opfsSyncService } from '..
+import { OracleEye } from '..
+import { Orchestrator } from '.
+import { Orchestrator } from '..
+import { OSRegistry } from '.
+import { OSRegistry } from '..
+import { OutputNamingPattern } from '.
+import PackageManager from '.
+import { PageInfoPanel } from '.
+import { PageLoadTimer } from '.
+import { ParserCore } from '.
+import { ParserDeclarations } from '.
+import { ParserExpressionsBinary } from '.
+import { ParserExpressions } from '.
+import { ParserExpressions_Part1 } from '.
+import { ParserExpressions_Part2 } from '.
+import { ParserExpressionsPrimary } from '.
+import { ParserExpressionsUnary } from '.
+import { Parser } from '.
+import { Parser } from '..
+import { PathSanitizer } from '..
+import { PauseResumeControl } from '.
+import { PayloadJsonEditor } from '.
+import { PerformanceManager } from '..
+import { PerformanceModeToggle } from '.
+import { PerformanceOptimizer } from '..
+import PerformanceOverlay from '.
+import { PersistenceLayer } from '.
+import { PersistenceLayer } from '..
+import { Persona } from '..
+import { PhotoVideoHistory } from '.
+import { pingProviderEndpoint, BUILTIN_PROVIDERS } from "..
+import { PinterestAdapter } from '.
+import { PlatformAdapter } from '..
+import { Platform, AdapterResult } from '..
+import { Platform, Credential, AdapterResult } from '..
+import { Platform } from '..
+import { Platform, Post, AdapterResult } from '..
+import { PlatformStatusGrid } from '.
+import { PluginAPI, SidebarItem, StatusBarItem, ContextMenuAction } from '.
+import { PostComposer } from '.
+import PreviewView from '.
+import { PriorityToggle } from '.
+import { PrivacyClearControl } from '.
+import { PrivateSourceAssistant } from '.
+import privateSourceRouter from '.
+import privateSourceRouter from '..
+import { processTask } from ".
+import { processVFSCommand } from '.
+import { processWorkerTask } from ".
+import { ProjectData, AgentActivity } from '.
+import { ProjectData, AgentActivity } from '..
+import { ProjectData, ChatMessageData, AgentActivity, ProjectFile } from '..
+import { ProjectData, ChatMessageData } from "..
+import { ProjectData, ChatMessageData } from '.
+import { ProjectData, ChatMessageData } from '..
+import { ProjectData, ChatMessageData, ProjectFile, AgentActivity } from '..
+import { ProjectData, ChatMessageData, ProjectFile } from '..
+import { ProjectData, ChatMessageData, ProjectFile, StudioUI } from '..
+import { ProjectData } from '.
+import { ProjectData } from '..
+import { ProjectData, GenerationStep } from "..
+import { ProjectData, ProjectFile, ChatMessageData, AgentActivity } from '.
+import { ProjectData, ProjectFile } from '.
+import { ProjectData, ProjectFile } from '..
+import { ProjectData, StudioUI } from '..
+import ProjectExportModal from '.
+import { ProjectFile } from '.
+import { ProjectFile } from '..
+import { projectGenerator } from '..
+import ProjectHistoryModal from '.
+import ProjectPreview from '.
+import { projectService } from '..
+import projectsRouter from '..
+import { PromptAnalysisPanel } from '.
+import { PromptEditor } from '.
+import { PromptHistoryTable } from '.
+import { PromptPresetLibrary } from '.
+import { PromptProvider } from '.
+import Providers from ".
+import providersRouter from ".
+import { ProxyConfigForm } from '.
+import proxyRouter from '..
+import { ProxySettingsForm } from '.
+import { QATesterAgent } from "..
+import { QAVisionToolkit } from '.
+import { QualitySlider } from '.
+import { quantumBridge } from '..
+import { QuantumDropzone } from '.
+import { QueueList } from '.
+import { QueuePositionIndicator } from '.
+import { RawOutputToggle } from '.
+import { readDB, writeDB } from '..
+import { ReaderMode } from '.
+import { ReaderModeSettings } from '.
+import readerRouter from '..
+import { RealJudge } from '..
+import { RealtimePresence } from '.
+import { ReasoningEngine } from '..
+import { RebootRemoteButton } from '.
+import { RecordingTimeDisplay } from '.
+import { RecordToggleButton } from '.
+import { RedditAdapter } from '.
+import { registerAdvancedTools } from '.
+import { registerBlobUrl } from '..
+import { registerDefaultTools } from '.
+import { registerFileOperations } from '.
+import { registerGodPrimitives } from '.
+import { RelayEndpointInput } from '.
+import { RelaySettingsPanel } from '.
+import { ReloadButton } from '.
+import { RemoteHistoryList } from '.
+import { RemoteShellToggle } from '.
+import { renderNode } from '.
+import { requireAuth } from "..
+import { requireAuth, getClientIp } from "..
+import { requireAuth, getUserFromSession } from "..
+import { requireAuth, hashPassword, getClientIp, getUserFromSession } from "..
+import { requireAuth, verifyPassword, hashPassword, getClientIp, getUserFromSession } from "..
+import { ResetSettingsButton } from '.
+import { resilienceEngine } from ".
+import { resilienceEngine } from '.
+import { resilienceEngine } from '..
+import { resilienceEngine, ServiceStatus } from '.
+import { resilienceEngine, ServiceStatus } from '..
+import { ResolutionSelector } from '.
+import { resolvePkgCommand } from '.
+import { ResourceLoadChart } from '.
+import { ResourceMetrics } from '..
+import { ResourceMetrics, TopologyNode, AtlasKnowledge } from '..
+import { ResourceSentinel } from '.
+import { ResourceSentinel } from '..
+import { ResourceUsageBar } from '.
+import { RestoreModal } from '.
+import { ResultCard } from '.
+import { ResultDetailModal } from '.
+import { ResultDiffViewer } from '.
+import { ResultExportButton } from '.
+import { ResultFilterBar } from '.
+import { ResultSearchBox } from '.
+import { ResultsGrid } from '.
+import { RetryFailedButton } from '.
+import { revokeAllBlobUrls } from '..
+import { RollingKeyManager } from '..
+import { RouteDecision, Intent } from '.
+import router from ".
+import { RuleAssignmentManager } from '.
+import { RuleCategoryManager } from '.
+import { RuleCoverageStats } from '.
+import { RuleDescriptionEditor } from '.
+import { RuleDisplayNameInput } from '.
+import { RuleExportButton } from '.
+import { RuleImportButton } from '.
+import { RuleQuickAction } from '.
+import { RulesetHierarchyTree } from '.
+import { RulesetVersionHistory } from '.
+import { RuleSeverityPicker } from '.
+import { RuleTemplateLibrary } from '.
+import { RuleTestPanel } from '.
+import { RuleTypeSelector } from '.
+import { RuleViolationHistory } from '.
+import { runArchitectPhase } from "..
+import { runBlobPreview } from '..
+import { runSupervisorPhase } from "..
+import { runWorkerPhase } from "..
+import { SAEREValidationPanel } from '.
+import { SAEREWorkerProxy } from '.
+import { SafeModeOverlay } from '.
+import { safeStorage } from "..
+import { safeStorage } from '.
+import { safeStorage } from '..
+import { SamplerSelector } from '.
+import { sanitizeInput } from '..
+import { sanitizePath, flexibleReplace } from '.
+import { SavedDeviceManager } from '.
+import { ScheduleCalendar } from '.
+import ScheduledJobs from ".
+import scheduledRouter from ".
+import { scrapeUrl, summarizeConversation } from '.
+import { ScreenshotPageButton } from '.
+import { ScreenshotViewer } from '.
+import { scribe } from '.
+import { ScriptInjectorInput } from '.
+import { ScrollArea } from '..
+import { SearchBar } from '.
+import { SearchEnginePicker } from '.
+import Search from ".
+import SearchPanel from '.
+import searchRouter from ".
+import { SecretKeyManager } from '.
+import { SecretManager } from '..
+import { SecureVault } from '.
+import { SecureVault } from '..
+import { SecurityGuard } from '..
+import { SecurityPolicyEditor } from '.
+import { SecurityService } from '..
+import { SecurityStatusBadge } from '.
+import { SeedGenerator } from '.
+import { SelectedFile } from '..
+import { SelectionCheckboxProps, SelectAllCheckboxProps, BulkActionToolbarProps } from '.
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '..
+import { SelfArchitect } from '..
+import { selfHealingOrchestrator, OrchestratorStatus } from '..
+import { SemanticNeuralPatcher } from '.
+import { SemanticNeuralPatcher } from '..
+import { SendToEditorButton } from '.
+import { SensorHealthBadge } from '.
+import { sentinel } from '.
+import { Separator } from "..
+import { ServerGeminiAgent } from '.
+import { serverList, commonPorts, baseTunnelOptions, tlsVersions, bypassUrls, connModes } from '..
+import { serverList, commonPorts, payloadMethods, baseTunnelOptions, tlsVersions, connModes } from '.
+import { ServerResilience } from '..
+import Settings from ".
+import SettingsModal from '.
+import { SettingsSection } from '.
+import { SettingsSectionProps } from '.
+import SettingsSidebar from '.
+import { setupFileOpsRoutes } from '.
+import { setupMonaco } from '.
+import { setupProxyRoutes } from '.
+import { setupTerminalSocket } from '.
+import { setupTerminalSocket } from '..
+import { setupWebSocket } from '..
+import { setupWebSocket, setupUIUpdateSocket, emitComponentRefresh } from '.
+import { shadowEngine } from '..
+import { ShadowState } from '.
+import { ShadowStorage } from '.
+import { shadowVFS } from ".
+import { shadowVFS } from '..
+import { ShareToGalleryButton } from '.
+import shellRouter from '.
+import shellRouter from '..
+import { ShellSanitizer } from '.
+import { shellService } from '..
+import { ShortTerm } from '.
+import { ShutterButton } from '.
+import { SingularityBridge } from '.
+import { SingularityIgnition } from '..
+import { SitePermissionsTable } from '.
+import { Skeleton } from "..
+import { SocialWorkerErrorBoundary } from '.
+import socialWorkerRouter from '.
+import { socialWorkerRuleset } from '..
+import { SortControls, SortConfig } from '.
+import { SovereignBuild } from '.
+import { SovereignBuild } from '..
+import { SovereignDeep } from '.
+import { sovereign } from '..
+import { SovereignKernel } from '.
+import { SovereignMind } from '.
+import { SovereignPlan } from '.
+import { SovereignResponse, SovereignPlan } from '.
+import SplashScreen from '.
+import { SRE_INSTRUCTIONS } from '..
+import { StartCaptureButton } from '.
+import { startTask, cancelTask, createTask } from "..
+import { StartupPageConfig } from '.
+import { StatePersister } from '.
+import StatePersistIndicator from '.
+import { StateRehydrator } from '.
+import { StateRehydrator } from '..
+import { stateRouter } from '.
+import statusRouter from ".
+import { StepItem } from '.
+import { StepSlider } from '.
+import { StopAllTasksButton } from '.
+import { StopLoadingButton } from '.
+import { StorageCapacityMeter } from '.
+import { storage } from '..
+import { StorageRetentionConfig } from '.
+import storageRouter from '.
+import { StorageUsageChart } from '.
+import StreamingCursor from '.
+import { StreamStatusBadge } from '.
+import { STRINGS } from '..
+import { structuredDb, BrowserCookie } from '..
+import { structuredDb } from '..
+import { structuredDb, MemoryEntry } from '..
+import { structuredDb, ProjectRecord } from '..
+import StudioModals from '.
+import StudioOverlayControls from '.
+import { StudioSettingsPanel } from '.
+import StudioSidebar from '.
+import StudioSidePanels from '.
+import { StudioStatusBar } from '.
+import { SubAgentToolkit } from '.
+import { SubAgentToolkit } from '..
+import { SupremeClient } from "..
+import { SupremeClient } from '..
+import supremeToolsRouter from '..
+import { supremeTools, supremeImplementations } from '.
+import { SwarmConductor } from '..
+import { SwarmDISPanel } from '.
+import { SwarmDIS, type DISStatus } from '..
+import { SwarmOrchestrator } from '.
+import { SwarmOrchestrator } from '..
+import { SwarmTelepathy, Chronos } from '.
+import { SwarmTelepathy, Chronos } from '..
+import { SynapseVision } from '..
+import { SyncService } from '..
+import { SyntaxValidator } from "..
+import { sysErrorRouter } from '.
+import SystemInfoModal from '.
+import SystemInstructionInput from '.
+import SystemPage from ".
+import systemRouter from ".
+import systemRouter from '..
+import { SystemStatsDisplay } from '.
+import { TabRenderer } from '.
+import { Tabs, TabsList, TabsTrigger, TabsContent } from '..
+import { TabSwitcherStrip } from '.
+import tagsRouter from ".
+import { TargetDeviceSelector } from '.
+import { TargetFolderPicker } from '.
+import { taskEventBus } from ".
+import { taskEventBus, type TaskLogEvent } from "..
+import { TaskModule, EngineState } from ".
+import { TaskProgress, TaskType, BgInitStatus, BgTaskState } from '..
+import { TaskProgress, TaskType } from '..
+import { TaskProgress, UploadStatus } from '..
+import { TaskQueue } from '..
+import { TaskQueueManager } from '.
+import tasksRouter from ".
+import { TelemetryEvent } from '.
+import { telemetry } from '.
+import TemplateGalleryModal from '.
+import { TemporalContextEngine } from '..
+import { TEMP_PROJECTS_DIR } from '..
+import { TerminalEmulatorContent, TerminalEmulatorHandle, TerminalEmulatorProps } from '.
+import TerminalEmulator, { TerminalEmulatorHandle } from '.
+import { TerminalView } from '.
+import { Textarea } from "..
+import { Textarea } from '..
+import { ThemeProvider } from '.
+import { ThemeSelector } from '.
+import { ThemeSettings } from '.
+import { ThreadsAdapter } from '.
+import { ThumbnailStrip } from '.
+import { TiktokAdapter } from '.
+import { TimerSelector } from '.
+import { Toaster } from ".
+import { ToastProvider } from '.
+import { toggleVariants } from "..
+import { TokenBucket } from '.
+import { Token, TokenType } from '.
+import { Token, TokenType, HamScriptDictionary } from '.
+import { Token, TokenType, Lexer } from '.
+import { TokenType } from '.
+import { TokenType, Token } from '.
+import ToolCallCard from '.
+import { ToolCall } from '.
+import { ToolExecutionResult } from '.
+import { ToolExecutionResult } from '..
+import { ToolExecutor } from '.
+import { ToolHandlers as HamHandlers } from '.
+import { ToolHandlers as OmniHandlers } from '.
+import { ToolHandlers } from "..
+import { ToolHandlers } from '.
+import { ToolHandlers } from '..
+import { ToolHandlersPart2 as HamHandlersPart2 } from '.
+import { ToolHandlersPart2 } from '.
+import { ToolRegistry } from '.
+import { ToolRegistry } from '..
+import toolsRouter from ".
+import { TooltipProvider } from ".
+import { TopBar } from '.
+import { TopologyNode } from '..
+import TourOverlay from '.
+import { TranspilerBase } from '.
+import { TranspilerDeclarations } from '.
+import { TranspilerExpressions } from '.
+import { Transpiler } from '.
+import { TranspilerPart1 } from '.
+import { TranspilerPart2 } from '.
+import { TranspilerStatements } from '.
+import { treasury } from '..
+import { treeSitterService } from '..
+import TrialGuard from '.
+import tunnelRouter from '.
+import tunnelRouter from '..
+import { TwitterAdapter } from '.
+import { TwitterAdapter } from '..
+import type { DISEvent } from '..
+import type { ErrorType, BodyType } from "..
+import type { IWebContainer, IWebContainerProcess } from '..
+import type { ToolRegistry } from '.
+import { TypeValidator } from '..
+import type { XTermProxyHandle } from '..
+import { universalFs } from '.
+import { UniversalHolographicPreviewer } from '.
+import { UniversalToolRunner } from '..
+import { UploadStatus } from '..
+import { UpscaleControl } from '.
+import { UrlBar } from '.
+import { useAeternaGlass } from '.
+import { useAgentExecution } from '.
+import { useAgenticAiReActLoop } from '.
+import { useAgenticAiSend } from '.
+import { useAgentLogStream } from '..
+import { useAgentObservabilityStore } from '..
+import { useAgentResults } from '..
+import { useAgentState } from '.
+import { useAiActions } from '.
+import { useAiAgent } from '.
+import { useAiGeneration } from '.
+import { useAiGeneration_Part1 } from ".
+import { useAIHubChat } from '.
+import { useAIHubChatLogic } from '.
+import { useAIHubChat_Part1 } from '.
+import { useAIHubChat_Part2 } from '.
+import { useAIHubLogic } from '.
+import { useAIHubMedia } from '.
+import { useAIHubSession } from '.
+import { useAIHubStore } from '..
+import { useAppDrawerStore, AppIconDefinition } from '..
+import { useAppDrawerStore } from '..
+import { useAppInitialization } from '.
+import { useArchiveOperations } from '.
+import { useAutoHeal } from '.
+import { useBrain } from '..
+import { useBrowserCookies } from '.
+import { useBrowserEvents } from '.
+import { useBrowserPilot } from '.
+import { useBrowserStore } from '.
+import { useBrowserStore } from '..
+import { useBrowserTabs } from '.
+import { useBuildSystem } from '.
+import { useBulkOperations } from '.
+import { useConfirm } from '.
+import { useConfirm } from '..
+import { useCredentialVault } from '.
+import { useDeepScan } from '.
+import { useFeatureAgent } from '.
+import { useFeatureAgent } from '..
+import { useFeatureAgentStore } from '..
+import { useFileAuth } from '.
+import { useFileInput } from '.
+import { useFileOperations } from '.
+import { useFileSearch } from '.
+import { useFileSelection } from '.
+import { useFileSystemCore } from '.
+import { useFileSystem } from '.
+import { useFileTreeLogic } from '.
+import { useFIMGhostText } from '.
+import { useGeneratorStudio } from '..
+import { useGithubSync } from '.
+import { useGlobalErrors } from '.
+import { useGlobalState } from '..
+import { useHamAiStudioLogic } from '.
+import { useHCamera } from '..
+import { useInitializeApp } from '.
+import { useIsMobile } from "..
+import { useLanguage } from '..
+import { useMediaAgent } from '..
+import { usePresence } from '..
+import { usePrivateSourceAssistantLogic } from '.
+import { useProjectLifecycle } from '.
+import { useProjectState } from '.
+import { useProjectStateStore } from '..
+import { useProjectStore } from "..
+import { useProjectStore } from '..
+import { useProjectStore, initProjectStoreListener, cleanupProjectStoreListener } from '..
+import { usePrompt } from '..
+import { UserAgentSwitcher } from '.
+import { useRateLimitStore } from '..
+import { usersTable } from ".
+import { useSettings } from '..
+import { useSettingsLogic } from '.
+import { useSidebar } from ".
+import { useSidebar, SIDEBAR_WIDTH_MOBILE } from ".
+import { useSmoothStream } from '..
+import { useSocialQueue } from '.
+import { useSocialWorker } from '..
+import { useSocialWorkerStore } from "..
+import { useSocialWorkerStore } from '..
+import { useStudioBuild } from '.
+import { useStudioChat } from '.
+import { useStudioCommands } from '.
+import { useStudioFiles } from '.
+import { useStudioLifecycle } from '.
+import { useStudioShortcuts } from '.
+import { useStudioUI } from '.
+import { useSupremeProtocol } from '..
+import { useSwarmDIS } from '..
+import { useSyntaxWorker } from '..
+import { useSystemState } from '.
+import { useSystemStore } from '..
+import { useTabManager } from '.
+import { useTaskManager } from '.
+import { useTaskStore } from '..
+import { useTerminalLogic } from '.
+import { useTheme } from "..
+import { useTheme } from '..
+import { useToast } from "..
+import { useToast } from '.
+import { useToast } from '..
+import { useTrashBin } from '.
+import { VaeSelector } from '.
+import { validateAndHealCode } from ".
+import Validate from ".
+import { validateGeminiKey } from ".
+import { validateKeyAgainstProvider } from "..
+import validateRouter from ".
+import { VariationGenerator } from '.
+import { vectorStore } from "..
+import { vectorStore } from '..
+import { VectorStore } from '..
+import { VerbosityLevelSelector } from '.
+import { vfs as vfsService } from '.
+import { vfs as vfsService } from '..
+import { vfs as virtualFS } from '.
+import { vfs as virtualFS } from '..
+import { vfsExtraService } from '.
+import { vfsExtraService } from '..
+import { vfs } from "..
+import { vfs } from '.
+import { vfs } from '..
+import { viewsTemplate } from '.
+import VirtualKeyboard from '..
+import { VramUsageGauge } from '.
+import { WakeUpDeviceButton } from '.
+import { WatermarkEditor } from '.
+import { weaver } from '.
+import { webContainerBootstrapper } from '.
+import { webcontainerService } from '.
+import { webcontainerService } from '..
+import { webcontainerService, IWebContainerProcess } from '.
+import { webcontainerService, webContainerBootstrapper } from '..
+import Webhooks from ".
+import webhooksRouter from ".
+import { webLlmService } from "..
+import { webLlmService } from '..
+import WebPreview from '.
+import WebPreviewToolbar from '.
+import WebProjectRenderer from '.
+import webRouter from '..
+import { webStorage } from '..
+import WelcomeScreen from '.
+import { WhiteBalanceToggle } from '.
+import { WindowState } from '..
+import { WorkspaceSwitcher } from '.
+import { WorldSimulator } from '..
+import { writeAuditLog } from "..
+import { XmlParser } from '..
+import { yjsService } from '..
+import { YoutubeAdapter } from '.
+import { ZoomSlider } from '.
+input-otp
+@isomorphic-git
+isomorphic-git
+jsdom
+jsonwebtoken
+jszip
+lodash
+lucide-react
+memfs
+@mlc-ai
+@monaco-editor
+@mozilla
+multer
+next-themes
+node:child_process
+node-cron
+node-fetch
+node:fs
+node:module
+node:path
+node:url
+orval
+os
+path
+pg
+pino
+pino-http
+prismjs
+process
+puppeteer-core
+@radix-ui
+react
+react-day-picker
+react-diff-viewer-continued
+react-dom
+react-markdown
+react-resizable-panels
+@react-three
+react-virtuoso
+recharts
+rehype-katex
+rehype-raw
+rehype-sanitize
+remark-gfm
+remark-math
+@replit
+rxdb
+rxjs
+shell-quote
+socket.io
+socket.io-client
+sonner
+source-map-js
+@sqlite.org
+sql.js
+@supabase
+@tailwindcss
+tailwind-merge
+@tanstack
+three
+util
+vaul
+vite
+@vitejs
+@webcontainer
+web-tree-sitter
+@workspace
+wouter
+xterm
+xterm-addon-fit
+xterm-addon-serialize
+xterm-addon-web-links
+y-indexeddb
+yjs
+y-monaco
+y-webrtc
+y-websocket
+zod
+zustand

@@ -1,0 +1,47 @@
+{
+  "name": "HAM AI Studio (Quantum Engine)",
+  "image": "mcr.microsoft.com/devcontainers/javascript-node:24",
+  "postCreateCommand": "npm install",
+  "postStartCommand": "npm run dev",
+  "forwardPorts": [3000],
+  "portsAttributes": {
+    "3000": {
+      "label": "HAM AI Studio",
+      "onAutoForward": "openPreview",
+      "protocol": "http"
+    }
+  },
+  "remoteEnv": {
+    "NODE_OPTIONS": "--max-old-space-size=4096",
+    "PORT": "3000",
+    "NODE_ENV": "development"
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "dbaeumer.vscode-eslint",
+        "esbenp.prettier-vscode",
+        "GitHub.copilot",
+        "GitHub.copilot-chat",
+        "ms-vscode.vscode-typescript-next",
+        "bradlc.vscode-tailwindcss",
+        "ms-vscode.live-server"
+      ],
+      "settings": {
+        "editor.formatOnSave": true,
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "typescript.tsdk": "node_modules/typescript/lib",
+        "files.exclude": {
+          "node_modules": true,
+          "dist": true,
+          "android": true
+        }
+      }
+    }
+  },
+  "features": {
+    "ghcr.io/devcontainers/features/node:1": {
+      "version": "24"
+    }
+  }
+}

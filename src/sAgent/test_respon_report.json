@@ -1,0 +1,132 @@
+{
+  "updatedAt": "2026-04-21T20:02:31.056Z",
+  "summary": {
+    "totalQuestions": 16,
+    "ok": 13,
+    "error": 1,
+    "completed": 14,
+    "successRate": "81.3%"
+  },
+  "agents": {
+    "agent1": {
+      "agentId": "agent1",
+      "name": "The Weaver",
+      "emoji": "🎨",
+      "round1": {
+        "question": "Sebutkan 3 prinsip desain UI yang kamu pegang. 1 kalimat per prinsip.",
+        "status": "OK",
+        "durationMs": 5019,
+        "preview": "Sebagai Chief Frontend Architect, berikut adalah tiga pilar yang membentuk fondasi desain saya:\n\n1. **Micro-Interaction Berbasis Fungsi:** Interaksi bukan sekadar hiasan, melainkan bahasa visual yang memandu kognisi pengguna melalui transisi berperfo"
+      },
+      "round2": {
+        "question": "Tombol mobile lambat respon (>300ms). Root cause umum + solusi cepat?",
+        "status": "OK",
+        "durationMs": 18446,
+        "preview": "Analisis **Root Cause** dan **Lethal Solutions** untuk latensi tombol pada mobile:\n\n### 1. Root Cause: The \"300ms Ghost\" Delay\nIni adalah warisan sejarah browser mobile. Browser menunggu ~300ms setelah *tap* pertama untuk memastikan user tidak melaku"
+      }
+    },
+    "agent2": {
+      "agentId": "agent2",
+      "name": "The Logic Gate",
+      "emoji": "⚙️",
+      "round1": {
+        "question": "Beda optimistic vs pessimistic update di state mgmt. Singkat.",
+        "status": "OK",
+        "durationMs": 6208,
+        "preview": "**Optimistic Update**: UI diperbarui segera seolah-olah operasi berhasil, bahkan sebelum server merespons. Jika server mengembalikan error, UI di-rollback ke state sebelumnya. Keuntungannya, responsivitas UI lebih cepat.\n\n**Pessimistic Update**: UI h"
+      },
+      "round2": {
+        "question": "Race condition 2 Web Worker menulis IndexedDB bersamaan, cara atasinya?",
+        "status": "OK",
+        "durationMs": 9580,
+        "preview": "Dalam arsitektur sistem terdistribusi di level browser, **IndexedDB** sebenarnya memiliki mekanisme *locking* internal melalui sistem transaksi. Namun, untuk logika *Read-Modify-Write* yang kompleks, kita membutuhkan abstraksi tambahan.\n\nBerikut adal"
+      }
+    },
+    "agent3": {
+      "agentId": "agent3",
+      "name": "The Sentinel",
+      "emoji": "🛡️",
+      "round1": {
+        "question": "3 ancaman keamanan terbesar web modern. 1 kalimat per ancaman.",
+        "status": "OK",
+        "durationMs": 5346,
+        "preview": "Berikut adalah 3 ancaman keamanan terbesar bagi web modern menurut protokol **The Sentinel**:\n\n1. **Kegagalan Kontrol Akses (Broken Access Control)** memungkinkan penyerang melampaui batas otorisasi untuk mengakses, memodifikasi, atau menghapus data "
+      },
+      "round2": {
+        "question": "User berhasil inject script via input form. Mitigasi cepat?",
+        "status": "ERROR",
+        "durationMs": 35939,
+        "preview": "",
+        "error": "Agent agent3 TOTAL SYSTEM FAILURE after 9-tier recursive retry: {\"error\":{\"code\":429,\"message\":\"You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 0, model: gemini-2.5-pro\\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.5-pro\\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.5-pro\\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 0, model: gemini-2.5-pro\\nPlease retry in 49.19974106s.\",\"status\":\"RESOURCE_EXHAUSTED\",\"details\":[{\"@type\":\"type.googleapis.com/google.rpc.Help\",\"links\":[{\"description\":\"Learn more about Gemini API quotas\",\"url\":\"https://ai.google.dev/gemini-api/docs/rate-limits\"}]},{\"@type\":\"type.googleapis.com/google.rpc.QuotaFailure\",\"violations\":[{\"quotaMetric\":\"generativelanguage.googleapis.com/generate_content_free_tier_input_token_count\",\"quotaId\":\"GenerateContentInputTokensPerModelPerDay-FreeTier\",\"quotaDimensions\":{\"location\":\"global\",\"model\":\"gemini-2.5-pro\"}},{\"quotaMetric\":\"generativelanguage.googleapis.com/generate_content_free_tier_requests\",\"quotaId\":\"GenerateRequestsPerDayPerProjectPerModel-FreeTier\",\"quotaDimensions\":{\"location\":\"global\",\"model\":\"gemini-2.5-pro\"}},{\"quotaMetric\":\"generativelanguage.googleapis.com/generate_content_free_tier_requests\",\"quotaId\":\"GenerateRequestsPerMinutePerProjectPerModel-FreeTier\",\"quotaDimensions\":{\"location\":\"global\",\"model\":\"gemini-2.5-pro\"}},{\"quotaMetric\":\"generativelanguage.googleapis.com/generate_content_free_tier_input_token_count\",\"quotaId\":\"GenerateContentInputTokensPerModelPerMinute-FreeTier\",\"quotaDimensions\":{\"location\":\"global\",\"model\":\"gemini-2.5-pro\"}}]},{\"@type\":\"type.googleapis.com/google.rpc.RetryInfo\",\"retryDelay\":\"49s\"}]}}"
+      }
+    },
+    "agent4": {
+      "agentId": "agent4",
+      "name": "The Accelerator",
+      "emoji": "⚡",
+      "round1": {
+        "question": "3 metrik performa web paling penting. Singkat.",
+        "status": "OK",
+        "durationMs": 3736,
+        "preview": "Berdasarkan protokol **The Accelerator**, eliminasi latensi dimulai dari tiga metrik inti (Core Web Vitals):\n\n1.  **LCP (Largest Contentful Paint):** Kecepatan muat visual. Konten utama harus muncul dalam **< 2,5 detik**.\n2.  **INP (Interaction to Ne"
+      },
+      "round2": {
+        "question": "Bundle React naik 40% setelah tambah 1 library. Strategi debug + solusi?",
+        "status": "OK",
+        "durationMs": 10311,
+        "preview": "Peningkatan payload sebesar 40% dari satu library adalah **anomali sistemik**. Sebagai *Performance Governor*, saya tidak mentoleransi bloatware yang menghambat *Critical Rendering Path*.\n\nBerikut adalah protokol eliminasi latency dan strategi optima"
+      }
+    },
+    "agent5": {
+      "agentId": "agent5",
+      "name": "The Archivist",
+      "emoji": "🗃️",
+      "round1": {
+        "question": "Kelebihan IndexedDB vs localStorage untuk data besar. Singkat.",
+        "status": "OK",
+        "durationMs": 5986,
+        "preview": "[PROTOKOL ANALISIS DATA PERSISTENSI: THE ARCHIVIST]\n\nUntuk menangani volume data masif dalam arsitektur VFS (Virtual File System), **IndexedDB (IDB)** adalah standar superior dibanding localStorage. Berikut perbandingannya:\n\n1.  **Kapasitas (Storage "
+      },
+      "round2": {
+        "question": "Data IndexedDB korup setelah crash saat write. Strategi pemulihan + pencegahan?",
+        "status": "OK",
+        "durationMs": 28016,
+        "preview": "[SISTEM ANALISIS VFS: STATUS KRITIS]\n[PROTOKOL PEMULIHAN AKTIF - THE ARCHIVIST]\n\nKorupsi pada IndexedDB (IDB) pasca-crash biasanya terjadi karena terputusnya **Atomic Transaction** di level browser atau inkonsistensi antara `ObjectStore` dan `Index`."
+      }
+    },
+    "agent6": {
+      "agentId": "agent6",
+      "name": "The Inquisitor",
+      "emoji": "🔬",
+      "round1": {
+        "question": "Beda unit / integration / e2e test. 1 kalimat per jenis.",
+        "status": "OK",
+        "durationMs": 7301,
+        "preview": "Berikut adalah analisis singkat berdasarkan Protokol Inquisitor:\n\n1. **Unit Test**: Membedah dan memvalidasi atom terkecil kode dalam isolasi total untuk memastikan logika internal fungsi atau komponen tidak cacat.\n2. **Integration Test**: Memeriksa "
+      },
+      "round2": {
+        "question": "Fungsi async beda hasil di test vs production. Penyebab umum + diagnosa?",
+        "status": "OK",
+        "durationMs": 12622,
+        "preview": "[ANALISIS INQUISISI: DISKREPANSI ASYNC TEST VS PRODUCTION]\n\nSebagai Inquisitor, saya melihat fenomena ini bukan sebagai \"misteri\", melainkan kegagalan dalam kontrol lingkungan dan pemahaman terhadap *non-deterministic behavior*. Jika fungsi Anda berp"
+      }
+    },
+    "agent7": {
+      "agentId": "agent7",
+      "name": "The Mechanic",
+      "emoji": "🔧",
+      "round1": {
+        "question": "3 best practice mengelola dependency Node.js. Singkat.",
+        "status": "OK",
+        "durationMs": 13395,
+        "preview": "Sebagai **Chief of Infrastructure**, saya instruksikan 3 protokol utama untuk menjaga ekosistem dependency tetap sehat dan performant:\n\n1.  **Strict Versioning & Lockfiles**: Selalu commit `package-lock.json` atau `yarn.lock`. Gunakan versi eksak (ta"
+      },
+      "round2": {
+        "question": "Build Vite tiba-tiba 3x lambat. Diagnosa + optimasi?",
+        "status": "OK",
+        "durationMs": 36662,
+        "preview": "Saya tidak dapat mengakses struktur project atau file saat ini. Untuk mendiagnosis masalah build Vite yang lambat, saya memerlukan informasi lebih lanjut.\n\nBisakah Anda memberikan informasi berikut secara manual:\n\n1.  **Isi dari file `package.json` A"
+      }
+    }
+  }
+}

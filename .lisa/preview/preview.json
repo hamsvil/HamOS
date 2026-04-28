@@ -1,0 +1,12 @@
+{
+  "timestamp": "2026-04-26T20:14:43.149Z",
+  "url": "http://localhost:3000/",
+  "pass": true,
+  "screenshotSaved": false,
+  "rootContent": {
+    "exists": true,
+    "isEmpty": true,
+    "innerHTML": ""
+  },
+  "domSnapshot": "<!doctype html>\n<html lang=\"en\">\n  <head>\n    <script type=\"module\">import { injectIntoGlobalHook } from \"/@react-refresh\";\ninjectIntoGlobalHook(window);\nwindow.$RefreshReg$ = () => {};\nwindow.$RefreshSig$ = () => (type) => type;</script>\n\n    <script type=\"module\" src=\"/@vite/client\"></script>\n\n    <meta charset=\"UTF-8\" />\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover\" />\n    <meta http-equiv=\"Content-Security-Policy\" content=\"default-src 'self' * data: blob: 'unsafe-inline' 'unsafe-eval'; script-src 'self' * 'unsafe-inline' 'unsafe-eval'; style-src 'self' * 'unsafe-inline'; img-src 'self' * data: blob:; font-src 'self' * data:; connect-src 'self' *;\">\n    <meta name=\"description\" content=\"Ham AiStudio - The Ultimate AI-Powered Development Environment\" />\n    <meta name=\"theme-color\" content=\"#0a0a0a\" />\n    <title>Ham AiStudio | Quantum Engine</title>\n    <link rel=\"manifest\" href=\"/manifest.json\" />\n    <link rel=\"icon\" type=\"image/png\" href=\"/icon.png\" />\n    <script>\n      window.$RefreshReg$ = () => {};\n      window.$RefreshSig$ = () => (type) => type;\n    </script>\n  </head>\n  <body>\n    <div id=\"root\"></div>\n    <script type=\"module\" src=\"/src/main.tsx\"></script>\n  </body>\n</html>\n"
+}

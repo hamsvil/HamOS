@@ -1,0 +1,42 @@
+import { Router, type IRouter } from "express";
+import healthRouter from "./health.js";
+import authRouter from "./auth.js";
+import keysRouter from "./keys.js";
+import validateRouter from "./validate.js";
+import analyticsRouter from "./analytics.js";
+import auditRouter from "./audit.js";
+import providersRouter from "./providers.js";
+import exportRouter from "./export.js";
+import notificationsRouter from "./notifications.js";
+import environmentsRouter from "./environments.js";
+import tagsRouter from "./tags.js";
+import searchRouter from "./search.js";
+import scheduledRouter from "./scheduled.js";
+import webhooksRouter from "./webhooks.js";
+import adminRouter from "./admin.js";
+import systemRouter from "./system.js";
+import chatRouter from "./chat.js";
+import agentRouter from "./agent.js";
+
+const router: IRouter = Router();
+
+router.use(healthRouter);
+router.use("/auth", authRouter);
+router.use("/keys", keysRouter);
+router.use("/validate", validateRouter);
+router.use("/analytics", analyticsRouter);
+router.use("/audit", auditRouter);
+router.use("/providers", providersRouter);
+router.use("/export", exportRouter);
+router.use("/notifications", notificationsRouter);
+router.use("/environments", environmentsRouter);
+router.use("/tags", tagsRouter);
+router.use("/search", searchRouter);
+router.use("/scheduled", scheduledRouter);
+router.use("/webhooks", webhooksRouter);
+router.use("/admin", adminRouter);
+router.use("/system", systemRouter);
+router.use("/chat", chatRouter);
+router.use("/agent", agentRouter);
+
+export default router;

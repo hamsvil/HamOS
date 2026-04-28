@@ -1,0 +1,200 @@
+[2026-04-25T14:37:57.649Z] SERVER BOOTED - LISTENING ON PORT 3000
+----------------------------------
+[2026-04-25T15:08:15.186Z] SERVER BOOTED - LISTENING ON PORT 3000
+----------------------------------
+[2026-04-26T10:47:56.414Z] SERVER BOOTED - LISTENING ON PORT 3000
+----------------------------------
+[2026-04-26T14:01:45.576Z] SERVER BOOTED - LISTENING ON PORT 3000
+----------------------------------
+[2026-04-26T17:59:54.117Z] SERVER BOOTED - LISTENING ON PORT 3000
+----------------------------------
+[2026-04-26T18:00:04.151Z] SERVER BOOTED - LISTENING ON PORT 3000
+----------------------------------
+[2026-04-26T18:23:45.838Z] SERVER BOOTED - LISTENING ON PORT 3000
+----------------------------------
+[2026-04-26T18:36:14.796Z] SERVER BOOTED - LISTENING ON PORT 3000
+----------------------------------
+[2026-04-26T18:36:28.290Z] SERVER BOOTED - LISTENING ON PORT 3000
+----------------------------------
+[2026-04-26T20:14:32.030Z] SERVER BOOTED - LISTENING ON PORT 3000
+----------------------------------
+[2026-04-26T22:38:17.999Z] SERVER BOOTED - LISTENING ON PORT 3000
+----------------------------------
+[2026-04-26T22:39:28.885Z] SERVER BOOTED - LISTENING ON PORT 3000
+----------------------------------
+[2026-04-26T22:41:18.809Z] SERVER BOOTED - LISTENING ON PORT 3000
+----------------------------------
+[2026-04-26T22:42:40.669Z] SERVER BOOTED - LISTENING ON PORT 3000
+----------------------------------
+[2026-04-26T22:45:34.353Z] SERVER BOOTED - LISTENING ON PORT 3000
+----------------------------------
+[2026-04-26T22:47:20.811Z] SERVER BOOTED - LISTENING ON PORT 3000
+----------------------------------
+[2026-04-28T15:37:48.340Z] SERVER BOOTED - LISTENING ON PORT 3000
+----------------------------------
+[2026-04-28T15:54:49.544Z] SERVER BOOTED - LISTENING ON PORT 3000
+----------------------------------
+[2026-04-28T15:57:27.989Z] [LOG] [SAERE] ErrorInterceptor booted with v7.0 Anonymizer.
+SOURCE: console:?:?
+STACK:
+N/A
+----------------------------------
+[2026-04-28T15:57:28.014Z] [LOG] [HAM ENGINE] BOOTING APEX V4.0...
+SOURCE: console:?:?
+STACK:
+N/A
+----------------------------------
+[2026-04-28T15:57:28.230Z] [LOG] [SAERE] ErrorInterceptor booted with v7.0 Anonymizer.
+SOURCE: console:?:?
+STACK:
+N/A
+----------------------------------
+[2026-04-28T15:57:28.244Z] [LOG] [SAERE] ErrorInterceptor booted with v7.0 Anonymizer.
+SOURCE: console:?:?
+STACK:
+N/A
+----------------------------------
+[2026-04-28T15:57:28.256Z] [LOG] [SecureVault] Initializing with dynamic entropy...
+SOURCE: console:?:?
+STACK:
+N/A
+----------------------------------
+[2026-04-28T15:57:28.271Z] [LOG] [SecureVault] Initializing with dynamic entropy...
+SOURCE: console:?:?
+STACK:
+N/A
+----------------------------------
+[2026-04-28T15:57:28.775Z] [WARN] THREE.THREE.Clock: This module has been deprecated. Please use THREE.Timer instead.
+SOURCE: console:?:?
+STACK:
+N/A
+----------------------------------
+[2026-04-28T15:57:29.185Z] [WARN] THREE.THREE.Clock: This module has been deprecated. Please use THREE.Timer instead.
+SOURCE: console:?:?
+STACK:
+N/A
+----------------------------------
+[2026-04-28T16:02:14.776Z] SERVER BOOTED - LISTENING ON PORT 3000
+----------------------------------
+[2026-04-28T16:04:41.697Z] SERVER BOOTED - LISTENING ON PORT 3000
+----------------------------------
+[2026-04-28T16:27:26.026Z] SERVER BOOTED - LISTENING ON PORT 3000
+----------------------------------
+[2026-04-28T16:30:47.455Z] SERVER BOOTED - LISTENING ON PORT 3000
+----------------------------------
+[2026-04-28T16:33:20.701Z] [LOG] [SAERE] ErrorInterceptor booted with v7.0 Anonymizer.
+SOURCE: console:?:?
+STACK:
+N/A
+----------------------------------
+[2026-04-28T16:33:20.734Z] [LOG] [HAM ENGINE] BOOTING APEX V4.0...
+SOURCE: console:?:?
+STACK:
+N/A
+----------------------------------
+[2026-04-28T16:33:21.229Z] [LOG] [SAERE] ErrorInterceptor booted with v7.0 Anonymizer.
+SOURCE: console:?:?
+STACK:
+N/A
+----------------------------------
+[2026-04-28T16:33:21.236Z] [LOG] [SAERE] ErrorInterceptor booted with v7.0 Anonymizer.
+SOURCE: console:?:?
+STACK:
+N/A
+----------------------------------
+[2026-04-28T16:33:21.388Z] [LOG] [SecureVault] Initializing with dynamic entropy...
+SOURCE: console:?:?
+STACK:
+N/A
+----------------------------------
+[2026-04-28T16:33:21.458Z] [LOG] [SecureVault] Initializing with dynamic entropy...
+SOURCE: console:?:?
+STACK:
+N/A
+----------------------------------
+[2026-04-28T16:33:22.237Z] [WARN] THREE.THREE.Clock: This module has been deprecated. Please use THREE.Timer instead.
+SOURCE: console:?:?
+STACK:
+N/A
+----------------------------------
+[2026-04-28T16:33:22.342Z] [WARN] THREE.THREE.Clock: This module has been deprecated. Please use THREE.Timer instead.
+SOURCE: console:?:?
+STACK:
+N/A
+----------------------------------
+[2026-04-28T16:53:51.756Z] SERVER BOOTED - LISTENING ON PORT 3000
+----------------------------------
+[2026-04-28T19:46:38.108Z] SERVER BOOTED - LISTENING ON PORT 3000
+----------------------------------
+[2026-04-28T19:52:24.393Z] [LOG] [HAM ENGINE] BOOTING APEX V4.0...
+SOURCE: console:?:?
+STACK:
+N/A
+----------------------------------
+[2026-04-28T19:52:24.399Z] [LOG] [SAERE] ErrorInterceptor booted with v7.0 Anonymizer.
+SOURCE: console:?:?
+STACK:
+N/A
+----------------------------------
+[2026-04-28T19:52:24.536Z] [LOG] [SAERE] ErrorInterceptor booted with v7.0 Anonymizer.
+SOURCE: console:?:?
+STACK:
+N/A
+----------------------------------
+[2026-04-28T19:52:24.546Z] [LOG] [SAERE] ErrorInterceptor booted with v7.0 Anonymizer.
+SOURCE: console:?:?
+STACK:
+N/A
+----------------------------------
+[2026-04-28T19:52:24.549Z] [LOG] [SecureVault] Initializing with dynamic entropy...
+SOURCE: console:?:?
+STACK:
+N/A
+----------------------------------
+[2026-04-28T19:52:24.553Z] [LOG] [SecureVault] Initializing with dynamic entropy...
+SOURCE: console:?:?
+STACK:
+N/A
+----------------------------------
+[2026-04-28T20:17:36.737Z] SERVER BOOTED - LISTENING ON PORT 3000
+----------------------------------
+[2026-04-28T20:19:57.642Z] [LOG] [SAERE] ErrorInterceptor booted with v7.0 Anonymizer.
+SOURCE: console:?:?
+STACK:
+N/A
+----------------------------------
+[2026-04-28T20:19:57.648Z] [LOG] [HAM ENGINE] BOOTING APEX V4.0...
+SOURCE: console:?:?
+STACK:
+N/A
+----------------------------------
+[2026-04-28T20:19:58.276Z] [LOG] [SAERE] ErrorInterceptor booted with v7.0 Anonymizer.
+SOURCE: console:?:?
+STACK:
+N/A
+----------------------------------
+[2026-04-28T20:19:58.477Z] [LOG] [SecureVault] Initializing with dynamic entropy...
+SOURCE: console:?:?
+STACK:
+N/A
+----------------------------------
+[2026-04-28T20:19:58.482Z] [LOG] [SAERE] ErrorInterceptor booted with v7.0 Anonymizer.
+SOURCE: console:?:?
+STACK:
+N/A
+----------------------------------
+[2026-04-28T20:19:58.553Z] [LOG] [SecureVault] Initializing with dynamic entropy...
+SOURCE: console:?:?
+STACK:
+N/A
+----------------------------------
+[2026-04-28T20:19:59.704Z] [WARN] THREE.THREE.Clock: This module has been deprecated. Please use THREE.Timer instead.
+SOURCE: console:?:?
+STACK:
+N/A
+----------------------------------
+[2026-04-28T20:19:59.711Z] [WARN] THREE.THREE.Clock: This module has been deprecated. Please use THREE.Timer instead.
+SOURCE: console:?:?
+STACK:
+N/A
+----------------------------------

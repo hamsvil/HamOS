@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">Ham AiStudio</string>
+    <string name="title_activity_main">Ham AiStudio</string>
+    <string name="package_name">com.hamaistudio.app</string>
+    <string name="custom_url_scheme">com.hamaistudio.app</string>
+</resources>
