@@ -326,3 +326,180 @@ N/A
 ----------------------------------
 [2026-04-28T20:52:21.019Z] SERVER BOOTED - LISTENING ON PORT 3000
 ----------------------------------
+[2026-04-28T20:52:28.283Z] [LOG] [SAERE] ErrorInterceptor booted with v7.0 Anonymizer.
+SOURCE: console:?:?
+STACK:
+N/A
+----------------------------------
+[2026-04-28T20:52:28.295Z] [LOG] [HAM ENGINE] BOOTING APEX V4.0...
+SOURCE: console:?:?
+STACK:
+N/A
+----------------------------------
+[2026-04-28T20:52:28.464Z] [LOG] [SAERE] ErrorInterceptor booted with v7.0 Anonymizer.
+SOURCE: console:?:?
+STACK:
+N/A
+----------------------------------
+[2026-04-28T20:52:28.473Z] [LOG] [SAERE] ErrorInterceptor booted with v7.0 Anonymizer.
+SOURCE: console:?:?
+STACK:
+N/A
+----------------------------------
+[2026-04-28T20:52:28.475Z] [LOG] [SecureVault] Initializing with dynamic entropy...
+SOURCE: console:?:?
+STACK:
+N/A
+----------------------------------
+[2026-04-28T20:52:28.481Z] [LOG] [SecureVault] Initializing with dynamic entropy...
+SOURCE: console:?:?
+STACK:
+N/A
+----------------------------------
+[2026-04-28T20:52:28.711Z] [WARN] THREE.THREE.Clock: This module has been deprecated. Please use THREE.Timer instead.
+SOURCE: console:?:?
+STACK:
+N/A
+----------------------------------
+[2026-04-28T20:52:28.715Z] [WARN] THREE.THREE.Clock: This module has been deprecated. Please use THREE.Timer instead.
+SOURCE: console:?:?
+STACK:
+N/A
+----------------------------------
+[2026-04-28T20:52:29.881Z] [LOG] [ModelManager] Initializing all engines concurrently...
+SOURCE: console:?:?
+STACK:
+N/A
+----------------------------------
+[2026-04-28T20:52:29.893Z] [LOG] [ModelManager] Initializing all engines concurrently...
+SOURCE: console:?:?
+STACK:
+N/A
+----------------------------------
+[2026-04-28T20:52:29.941Z] [WARN] [VFS] SharedArrayBuffer is not defined. Zero-copy context is disabled. 
+SOURCE: console:?:?
+STACK:
+N/A
+----------------------------------
+[2026-04-28T20:52:29.988Z] [WARN] -------------- RxDB Open Core RxStorage -------------------------------
+You are using the free Dexie.js based RxStorage implementation from RxDB https://rxdb.info/rx-storage-dexie.html?console=dexie 
+While this is a great option, we want to let you know that there are faster storage solutions available in our premium plugins.
+For professional users and production environments, we highly recommend considering these premium options to enhance performance and reliability.
+ https://rxdb.info/premium/?console=dexie 
+If you already purchased premium access you can disable this log by calling the setPremiumFlag() function from rxdb-premium/plugins/shared.
+---------------------------------------------------------------------
+SOURCE: console:?:?
+STACK:
+N/A
+----------------------------------
+[2026-04-28T20:52:30.019Z] [WARN] -------------- RxDB Open Core RxStorage -------------------------------
+You are using the free Dexie.js based RxStorage implementation from RxDB https://rxdb.info/rx-storage-dexie.html?console=dexie 
+While this is a great option, we want to let you know that there are faster storage solutions available in our premium plugins.
+For professional users and production environments, we highly recommend considering these premium options to enhance performance and reliability.
+ https://rxdb.info/premium/?console=dexie 
+If you already purchased premium access you can disable this log by calling the setPremiumFlag() function from rxdb-premium/plugins/shared.
+---------------------------------------------------------------------
+SOURCE: console:?:?
+STACK:
+N/A
+----------------------------------
+[2026-04-28T20:52:30.061Z] [WARN] [VFS] SharedArrayBuffer is not defined. Zero-copy context is disabled. 
+SOURCE: console:?:?
+STACK:
+N/A
+----------------------------------
+[2026-04-28T20:52:31.026Z] [LOG] [ModelManager] First engine ready: Sang Komunikator. Set as default.
+SOURCE: console:?:?
+STACK:
+N/A
+----------------------------------
+[2026-04-28T20:52:31.082Z] [LOG] [ModelManager] First engine ready: Sang Komunikator. Set as default.
+SOURCE: console:?:?
+STACK:
+N/A
+----------------------------------
+[2026-04-28T20:52:31.160Z] [LOG] [ModelManager] At least one engine is ready. Splash screen can proceed.
+SOURCE: console:?:?
+STACK:
+N/A
+----------------------------------
+[2026-04-28T20:52:31.190Z] [LOG] [ModelManager] At least one engine is ready. Splash screen can proceed.
+SOURCE: console:?:?
+STACK:
+N/A
+----------------------------------
+[2026-04-28T20:52:31.213Z] [LOG] 🚀 [SAERE_IGNITION] Starting Singularity Ignition Sequence...
+SOURCE: console:?:?
+STACK:
+N/A
+----------------------------------
+[2026-04-28T20:52:31.355Z] [LOG] 🚀 [SAERE_IGNITION] Starting Singularity Ignition Sequence...
+SOURCE: console:?:?
+STACK:
+N/A
+----------------------------------
+[2026-04-28T20:52:31.376Z] [LOG] 🧪 [TEST] HMR Death Loop Protection...
+SOURCE: console:?:?
+STACK:
+N/A
+----------------------------------
+[2026-04-28T20:52:31.395Z] [LOG] 🧪 [TEST] HMR Death Loop Protection...
+SOURCE: console:?:?
+STACK:
+N/A
+----------------------------------
+[2026-04-28T20:52:31.416Z] [WARN] ⚠️ HMR Pause not detected in simulation.
+SOURCE: console:?:?
+STACK:
+N/A
+----------------------------------
+[2026-04-28T20:52:31.449Z] [LOG] 🧪 [TEST] Offline Heuristic Resolution...
+SOURCE: console:?:?
+STACK:
+N/A
+----------------------------------
+[2026-04-28T20:52:31.475Z] [WARN] ⚠️ HMR Pause not detected in simulation.
+SOURCE: console:?:?
+STACK:
+N/A
+----------------------------------
+[2026-04-28T20:52:31.504Z] [LOG] 🧪 [TEST] Offline Heuristic Resolution...
+SOURCE: console:?:?
+STACK:
+N/A
+----------------------------------
+[2026-04-28T20:52:31.610Z] [LOG] [SAERE_LOG] [MANUAL_APPEND] .saere/core_memory.txt: SYSTEM_INIT_1777409551085
+SOURCE: console:?:?
+STACK:
+N/A
+----------------------------------
+[2026-04-28T20:52:31.650Z] [LOG] ✔️ Fetch failed as expected (Offline).
+SOURCE: console:?:?
+STACK:
+N/A
+----------------------------------
+[2026-04-28T20:52:31.698Z] [LOG] ✔️ Fetch failed as expected (Offline).
+SOURCE: console:?:?
+STACK:
+N/A
+----------------------------------
+[2026-04-28T20:52:31.732Z] [LOG] ✔️ Offline Heuristic Test Complete.
+SOURCE: console:?:?
+STACK:
+N/A
+----------------------------------
+[2026-04-28T20:52:31.766Z] [LOG] ✔️ Offline Heuristic Test Complete.
+SOURCE: console:?:?
+STACK:
+N/A
+----------------------------------
+[2026-04-28T20:52:31.781Z] [LOG] 🧪 [TEST] OOM & Spam Protection...
+SOURCE: console:?:?
+STACK:
+N/A
+----------------------------------
+[2026-04-28T20:52:31.804Z] [LOG] ✔️ Error Spam Injected. CircuitMaster monitoring active.
+SOURCE: console:?:?
+STACK:
+N/A
+----------------------------------
