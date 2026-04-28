@@ -11,6 +11,7 @@
     "lint": "NODE_OPTIONS=--max-old-space-size=4096 tsc --noEmit",
     "test": "vitest run",
     "verify:preview": "tsx scripts/verifyPreview.ts",
+    "watch:push": "NODE_OPTIONS=--max-old-space-size=4096 npx tsx scripts/autoPush.ts",
     "test:coverage": "vitest run --coverage",
     "build:analyze": "ANALYZE=true vite build",
     "android:build": "npm run build && npx cap sync android && cd android && ./gradlew assembleDebug"
